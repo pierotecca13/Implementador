@@ -1,0 +1,13 @@
+Formulario de Registro:
+Usuarios:
+- Ya existe un proceso que hace inserciones en la tabla eslabon. Ahora luego de esto debe insertar en la tabla usuario lo siguiente.
+- Tantos usuario como URL acceso: existan (unicos)
+- usuarios.username=interfaz
+- usuarios.password=5af0563e8527d1c6b50424729e91c48a
+- usuarios.apeynom=Interfaz
+- usuarios.cargo=SOPORTE-BDEV
+- usuarios.id_eslabon=select id_eslabon from eslabon where url=camp URL acceso:;
+- usuarios.id_perfil=1
+- usuario.activo=1
+- usuarios.fecha_alta=hoy formato yyyy-mm-dd
+- Si son dos urls unicas por ejemplo a.com y a.com/1, se deberán insertar dos usuarios interfaz apuntando a su correcto eslabon.id_eslabon
