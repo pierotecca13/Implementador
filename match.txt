@@ -1,13 +1,29 @@
-Formulario de Registro:
-Usuarios:
-- Ya existe un proceso que hace inserciones en la tabla eslabon. Ahora luego de esto debe insertar en la tabla usuario lo siguiente.
-- Tantos usuario como URL acceso: existan (unicos)
-- usuarios.username=interfaz
-- usuarios.password=5af0563e8527d1c6b50424729e91c48a
-- usuarios.apeynom=Interfaz
-- usuarios.cargo=SOPORTE-BDEV
-- usuarios.id_eslabon=select id_eslabon from eslabon where url=camp URL acceso:;
-- usuarios.id_perfil=1
-- usuario.activo=1
-- usuarios.fecha_alta=hoy formato yyyy-mm-dd
-- Si son dos urls unicas por ejemplo a.com y a.com/1, se deberán insertar dos usuarios interfaz apuntando a su correcto eslabon.id_eslabon
+Necesito que me crees un script, lo puedes dejar en la carpeta del proyecto que cuando lo ejecute haga lo siguiente:
+- Lo que debemos hacer es conectarnos a https://trazabilidad.pami.org.ar/trazamed/consultaCatalogoByGTIN.tz y descargar el archivo excel que figura con nombre Exportar.
+- Dentro del archivo hay una columna que se llama GTIN, DESCRIPCION, GLN/CUFE, RAZON SOCIAL, CUIT
+- Eos campos matchean de la siguiente manera: GTIN=medicamento.BC_EAN_1, DESCRIPCION=medicamento.nombre, GLN/CUFE=eslabon.gln, RAZON SOCIAL=eslabon.rsoc, CUIT=eslabon.cuit
+- Los insert deben ser con ignore
+- Los campos a insetar en la tabla eslabon:
+	- eslabon.id_empresa=1
+	- eslabon.rsoc=RAZON SOCIAL
+	- eslabon.gln=GLN/CUFE
+	- eslabon.cuit=CUIT
+	- eslabon.activo=1
+- Los campos a insertar en la tabla medicamento:
+	- medicamento.id_lab=eslabon.id_eslabon teniendo como relación el GLN/CUFE del archivo para ese GTIN dela archivo
+	- medicamento.nombre=DESCRIPCION
+	- medicamento.bc_ean_1=GTIN
+	- medicamento.trazable=1
+	- medicamento.exigible=1
+	- medicamento.activo=1
+	- medicamento.dosis=1
+	- medicamento.en_listado_anmat=Sin definir
+- Hazlo bien performante porque estamos hablando de muchos registros, alrededor de 30000 en cada tabla.
+- Te dejo el archivo describe con el detalle de las tablas eslabon y medicamento.
+- Al ejecutar debe salir como un popup que permita ingresar los siguientes datos:
+	DB_HOST=localhost
+	DB_PORT=3306
+	DB_USER=tu_usuario
+	DB_PASSWORD=tu_contraseña
+	DB_NAME=nombre_base_de_datos
+- Tener en cuenta que hoy es una base de datos local, pero podría poner datos de una base de empresa y yo debo estar conectado a la vpn para que funcione

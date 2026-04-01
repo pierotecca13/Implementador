@@ -1,0 +1,9 @@
+Formulario de Produto:
+Tenemos que hacer una nueva validación en esta pestaña y un nuevo proceso:
+- Si no hay nada de información a partir de la línea 10, es decir, se cumple lo que dice en la línea 8: *Dejar en blanco para dar de alta todo el catálogo de ANMAT, se tiene que hacer un proceso de alta masiva de productos en la base de datos.
+- El insert siempre debe ser con ingnore, porque puede ser que alguno ya exista.
+- No solamente debe hacer el insert en la tabla medicamento sino también en la tabla eslabon ya que hay una relación.
+- El proceso debe indicarme un mensaje que diga: Está vacía la pestaña Formulario de Productos, ¿Desea importar de forma masiva los productos de ANMAT?. Si ponemos Y se empieza el proceso y si ponemos N debe continuar con la validació del resto de cosas del archivo pero no hacer ningún alta relacionada a esta pestaña.
+- No se debe romper ninguna lógica de lo que ya existe cuando si hay productos cargados, y si hay al menos un dato cargado, debe ignorar este flujo masivo y no realizar la pregunta.
+- Lo que debemos hacer es conectarnos a https://trazabilidad.pami.org.ar/trazamed/consultaCatalogoByGTIN.tz y descargar el archivo excel que figura con nombre Exportar.
+- Dentro del archivo hay una columna que se llama 
