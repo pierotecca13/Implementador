@@ -1,6 +1,6 @@
 """Abstract repository interfaces — defines the contract, not the implementation."""
 from abc import ABC, abstractmethod
-from typing import List, Optional
+from typing import List, Optional, Set, Tuple
 
 from domain.models import Eslabon, Medicamento, EslabonEslabon, Parametro, Perfil, Printer, Usuario
 
@@ -8,8 +8,12 @@ from domain.models import Eslabon, Medicamento, EslabonEslabon, Parametro, Perfi
 class EslabonRepository(ABC):
 
     @abstractmethod
-    def insert_ignore(self, eslabon: Eslabon) -> bool:
-        """INSERT IGNORE a single Eslabon. Returns True if inserted."""
+    def get_existing_glns(self) -> set:
+        """Return all existing GLN values as a set."""
+
+    @abstractmethod
+    def insert(self, eslabon: Eslabon) -> None:
+        """INSERT a single Eslabon (caller guarantees no duplicate GLN)."""
 
     @abstractmethod
     def get_ids_with_url(self) -> List[int]:
@@ -23,6 +27,10 @@ class EslabonRepository(ABC):
     def get_id_by_url(self, url: str) -> Optional[int]:
         """Return ID_ESLABON matching the given URL, or None if not found."""
 
+    @abstractmethod
+    def get_id_by_gln(self, gln: str) -> Optional[int]:
+        """Return ID_ESLABON matching the given GLN, or None if not found."""
+
 
 class MedicamentoRepository(ABC):
 
@@ -34,8 +42,12 @@ class MedicamentoRepository(ABC):
 class EslabonEslabonRepository(ABC):
 
     @abstractmethod
-    def insert_ignore(self, rel: EslabonEslabon) -> bool:
-        """INSERT IGNORE a single EslabonEslabon relation. Returns True if inserted."""
+    def get_existing_relations(self) -> set:
+        """Return all existing (ID_ESLABON, ID_RELACION, TIPO) tuples as a set."""
+
+    @abstractmethod
+    def insert(self, rel: EslabonEslabon) -> None:
+        """INSERT a single EslabonEslabon relation (caller guarantees no duplicate)."""
 
 
 class ConfiguracionRepository(ABC):
@@ -59,12 +71,24 @@ class PerfilRepository(ABC):
 class PrinterRepository(ABC):
 
     @abstractmethod
-    def insert_ignore(self, printer: Printer) -> bool:
-        """INSERT IGNORE a single Printer. Returns True if inserted."""
+    def get_existing_nombres(self) -> set:
+        """Return all existing printer nombres as a set."""
+
+    @abstractmethod
+    def insert(self, printer: Printer) -> None:
+        """INSERT a single Printer (caller guarantees no duplicate nombre)."""
 
 
 class UsuarioRepository(ABC):
 
     @abstractmethod
-    def insert_ignore(self, usuario: Usuario) -> bool:
-        """INSERT IGNORE a single Usuario (PASSWORD hashed via MD5 in SQL)."""
+    def get_existing_user_keys(self) -> set:
+        """Return all existing (USERNAME, ID_ESLABON) tuples as a set."""
+
+    @abstractmethod
+    def insert(self, usuario: Usuario) -> None:
+        """INSERT a single Usuario (PASSWORD hashed via MD5 in SQL)."""
+
+    @abstractmethod
+    def insert_prehashed(self, usuario: Usuario) -> None:
+        """INSERT a single Usuario with PASSWORD already hashed."""

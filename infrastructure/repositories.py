@@ -23,9 +23,17 @@ class MySQLEslabonRepository(EslabonRepository):
     def __init__(self, connection: MySQLConnection):
         self._conn = connection
 
-    def insert_ignore(self, eslabon: Eslabon) -> bool:
+    def get_existing_glns(self) -> set:
+        """Carga todos los GLN existentes en un set para chequeo en memoria."""
+        cursor = self._conn.cursor()
+        cursor.execute("SELECT GLN FROM eslabon")
+        glns = {row[0] for row in cursor.fetchall()}
+        cursor.close()
+        return glns
+
+    def insert(self, eslabon: Eslabon) -> None:
         sql = """
-            INSERT IGNORE INTO eslabon
+            INSERT INTO eslabon
                 (ID_EMPRESA, RSOC, GLN, CUIT, USER_ANMAT, PASS_ANMAT, URL, DIRECCION, ACTIVO, IMAGEN)
             VALUES
                 (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
@@ -45,9 +53,7 @@ class MySQLEslabonRepository(EslabonRepository):
         )
         cursor = self._conn.cursor()
         cursor.execute(sql, params)
-        inserted = cursor.rowcount > 0
         cursor.close()
-        return inserted
 
     def get_ids_with_url(self) -> List[int]:
         cursor = self._conn.cursor()
@@ -82,6 +88,15 @@ class MySQLEslabonRepository(EslabonRepository):
         cursor = self._conn.cursor()
         cursor.execute(
             "SELECT ID_ESLABON FROM eslabon WHERE TRIM(URL) = TRIM(%s) LIMIT 1", (url,)
+        )
+        row = cursor.fetchone()
+        cursor.close()
+        return row[0] if row else None
+
+    def get_id_by_gln(self, gln: str) -> Optional[int]:
+        cursor = self._conn.cursor()
+        cursor.execute(
+            "SELECT ID_ESLABON FROM eslabon WHERE GLN = %s LIMIT 1", (gln,)
         )
         row = cursor.fetchone()
         cursor.close()
@@ -125,9 +140,17 @@ class MySQLEslabonEslabonRepository(EslabonEslabonRepository):
     def __init__(self, connection: MySQLConnection):
         self._conn = connection
 
-    def insert_ignore(self, rel: EslabonEslabon) -> bool:
+    def get_existing_relations(self) -> set:
+        """Carga todas las tuplas (ID_ESLABON, ID_RELACION, TIPO) existentes en un set."""
+        cursor = self._conn.cursor()
+        cursor.execute("SELECT ID_ESLABON, ID_RELACION, TIPO FROM eslabon_eslabon")
+        relations = {(row[0], row[1], row[2]) for row in cursor.fetchall()}
+        cursor.close()
+        return relations
+
+    def insert(self, rel: EslabonEslabon) -> None:
         sql = """
-            INSERT IGNORE INTO eslabon_eslabon
+            INSERT INTO eslabon_eslabon
                 (ID_ESLABON, ID_RELACION, TIPO, ACTIVO, FECHA_ALTA)
             VALUES
                 (%s, %s, %s, %s, %s)
@@ -141,9 +164,7 @@ class MySQLEslabonEslabonRepository(EslabonEslabonRepository):
         )
         cursor = self._conn.cursor()
         cursor.execute(sql, params)
-        inserted = cursor.rowcount > 0
         cursor.close()
-        return inserted
 
 
 class MySQLConfiguracionRepository(ConfiguracionRepository):
@@ -217,9 +238,17 @@ class MySQLPrinterRepository(PrinterRepository):
     def __init__(self, connection: MySQLConnection):
         self._conn = connection
 
-    def insert_ignore(self, printer: Printer) -> bool:
+    def get_existing_nombres(self) -> set:
+        """Carga todos los nombres de printer existentes en un set para chequeo en memoria."""
+        cursor = self._conn.cursor()
+        cursor.execute("SELECT nombre FROM printer")
+        nombres = {row[0] for row in cursor.fetchall()}
+        cursor.close()
+        return nombres
+
+    def insert(self, printer: Printer) -> None:
         sql = """
-            INSERT IGNORE INTO printer
+            INSERT INTO printer
                 (nombre, print_max, tipo, genera_packs, genera_pallets,
                  linea_produccion, id_pattern, plugin, class, activo,
                  id_category, state, HOST, PORT)
@@ -244,9 +273,7 @@ class MySQLPrinterRepository(PrinterRepository):
         )
         cursor = self._conn.cursor()
         cursor.execute(sql, params)
-        inserted = cursor.rowcount > 0
         cursor.close()
-        return inserted
 
 
 class MySQLUsuarioRepository(UsuarioRepository):
@@ -254,13 +281,18 @@ class MySQLUsuarioRepository(UsuarioRepository):
     def __init__(self, connection: MySQLConnection):
         self._conn = connection
 
-    def insert_ignore(self, usuario: Usuario) -> bool:
-        """
-        INSERT IGNORE — PASSWORD is hashed via MySQL's MD5() function directly in SQL
-        so the hash matches what the application expects when validating logins.
-        """
+    def get_existing_user_keys(self) -> set:
+        """Carga todas las tuplas (USERNAME, ID_ESLABON) existentes en un set."""
+        cursor = self._conn.cursor()
+        cursor.execute("SELECT USERNAME, ID_ESLABON FROM usuarios")
+        keys = {(row[0], row[1]) for row in cursor.fetchall()}
+        cursor.close()
+        return keys
+
+    def insert(self, usuario: Usuario) -> None:
+        """INSERT con PASSWORD hasheada via MD5() en SQL."""
         sql = """
-            INSERT IGNORE INTO usuarios
+            INSERT INTO usuarios
                 (APEYNOM, USERNAME, PASSWORD, ID_PERFIL, CARGO, MAIL,
                  FACTURA, FECHA_VTO, ID_ESLABON, ACTIVO, FECHA_ALTA)
             VALUES
@@ -281,17 +313,12 @@ class MySQLUsuarioRepository(UsuarioRepository):
         )
         cursor = self._conn.cursor()
         cursor.execute(sql, params)
-        inserted = cursor.rowcount > 0
         cursor.close()
-        return inserted
 
-    def insert_ignore_prehashed(self, usuario: Usuario) -> bool:
-        """
-        INSERT IGNORE — PASSWORD se almacena tal cual (ya viene hasheada).
-        Usar cuando el hash fue generado externamente, no como texto plano.
-        """
+    def insert_prehashed(self, usuario: Usuario) -> None:
+        """INSERT con PASSWORD ya hasheada externamente."""
         sql = """
-            INSERT IGNORE INTO usuarios
+            INSERT INTO usuarios
                 (APEYNOM, USERNAME, PASSWORD, ID_PERFIL, CARGO, MAIL,
                  FACTURA, FECHA_VTO, ID_ESLABON, ACTIVO, FECHA_ALTA)
             VALUES
@@ -312,9 +339,7 @@ class MySQLUsuarioRepository(UsuarioRepository):
         )
         cursor = self._conn.cursor()
         cursor.execute(sql, params)
-        inserted = cursor.rowcount > 0
         cursor.close()
-        return inserted
 
 
 class MySQLStockRepository:

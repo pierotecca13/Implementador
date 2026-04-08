@@ -54,6 +54,7 @@ class ImportResult:
         self.ok = 0
         self.errors = 0
         self.skipped = 0
+        self.ignored = 0
 
     def record_ok(self):
         self.total += 1
@@ -67,10 +68,14 @@ class ImportResult:
         self.total += 1
         self.skipped += 1
 
+    def record_ignored(self):
+        self.total += 1
+        self.ignored += 1
+
     def __str__(self) -> str:
         base = (
             f" [{self.section:<35}] "
-            f"{self.total:>3} filas | {self.ok:>3} OK | {self.errors:>3} errores"
+            f"{self.total:>3} filas | {self.ok:>3} insertados | {self.ignored:>3} ignorados | {self.errors:>3} errores"
         )
         if self.skipped:
             base += f" | {self.skipped:>3} omitidos (no existen en BD)"
@@ -107,7 +112,7 @@ class ImportService:
         results: List[ImportResult] = []
 
         try:
-            r1 = self._import_registro(registro)
+            r1, new_registro = self._import_registro(registro)
             results.append(r1)
 
             id_lab = self._eslabon_repo.get_lab_id()
@@ -116,10 +121,10 @@ class ImportService:
             r2 = self._import_productos(productos, id_lab)
             results.append(r2)
 
-            r3 = self._import_proveedores(proveedores)
+            r3, new_proveedores = self._import_proveedores(proveedores)
             results.append(r3)
 
-            r4 = self._import_relaciones()
+            r4 = self._import_relaciones(new_registro, new_proveedores)
             results.append(r4)
 
             r5 = self._import_parametros(parametros)
@@ -150,27 +155,41 @@ class ImportService:
 
     # ── private steps ─────────────────────────────────────────────────────────
 
-    def _import_registro(self, eslabones: List[Eslabon]) -> ImportResult:
+    def _import_registro(self, eslabones: List[Eslabon]):
         result = ImportResult("Formulario de Registro")
+        newly_inserted: List[Eslabon] = []
+        existing_glns = self._eslabon_repo.get_existing_glns()
         for eslabon in eslabones:
+            if eslabon.GLN in existing_glns:
+                result.record_ignored()
+                logger.debug(f"  eslabon ya existe, ignorado — GLN={eslabon.GLN}")
+                continue
             try:
-                self._eslabon_repo.insert_ignore(eslabon)
+                self._eslabon_repo.insert(eslabon)
+                existing_glns.add(eslabon.GLN)
                 result.record_ok()
-                logger.debug(f"  eslabon INSERT IGNORE OK — RSOC={eslabon.RSOC}")
+                newly_inserted.append(eslabon)
+                logger.debug(f"  eslabon INSERT OK — RSOC={eslabon.RSOC}")
             except Exception as exc:
                 result.record_error()
                 logger.error(f"  eslabon INSERT error — RSOC={eslabon.RSOC}: {exc}")
                 raise
 
-        # Insertar un usuario "interfaz" por cada URL única del sheet de Registro
-        unique_urls = list({e.URL for e in eslabones if e.URL})
+        # Insertar un usuario "interfaz" solo para los eslabones recién insertados
+        new_urls = list({e.URL for e in newly_inserted if e.URL})
+        existing_user_keys = self._usuario_repo.get_existing_user_keys()
         today = date.today()
-        for url in unique_urls:
+        for url in new_urls:
             id_eslabon = self._eslabon_repo.get_id_by_url(url)
             if id_eslabon is None:
                 logger.warning(
                     f"  No se encontró eslabon para URL '{url}' — usuario interfaz omitido."
                 )
+                continue
+            key = ("interfaz", id_eslabon)
+            if key in existing_user_keys:
+                result.record_ignored()
+                logger.debug(f"  usuario interfaz ya existe, ignorado — ID_ESLABON={id_eslabon}")
                 continue
             usuario = Usuario(
                 APEYNOM="Interfaz",
@@ -186,69 +205,112 @@ class ImportService:
                 FECHA_ALTA=today,
             )
             try:
-                self._usuario_repo.insert_ignore_prehashed(usuario)
+                self._usuario_repo.insert_prehashed(usuario)
+                existing_user_keys.add(key)
                 result.record_ok()
                 logger.debug(
-                    f"  usuario interfaz INSERT IGNORE OK — URL={url}, ID_ESLABON={id_eslabon}"
+                    f"  usuario interfaz INSERT OK — URL={url}, ID_ESLABON={id_eslabon}"
                 )
             except Exception as exc:
                 result.record_error()
                 logger.error(f"  usuario interfaz INSERT error — URL={url}: {exc}")
                 raise
 
-        return result
+        return result, newly_inserted
 
     def _import_productos(self, medicamentos: List[Medicamento], id_lab: int) -> ImportResult:
         result = ImportResult("Formulario de Productos")
         for med in medicamentos:
             med.ID_LAB = id_lab
             try:
-                self._medicamento_repo.insert_ignore(med)
-                result.record_ok()
-                logger.debug(f"  medicamento INSERT IGNORE OK — NOMBRE={med.NOMBRE}")
+                inserted = self._medicamento_repo.insert_ignore(med)
+                if inserted:
+                    result.record_ok()
+                    logger.debug(f"  medicamento INSERT OK — NOMBRE={med.NOMBRE}")
+                else:
+                    result.record_ignored()
+                    logger.debug(f"  medicamento ya existe, ignorado — BC_EAN_1={med.BC_EAN_1}")
             except Exception as exc:
                 result.record_error()
                 logger.error(f"  medicamento INSERT error — NOMBRE={med.NOMBRE}: {exc}")
                 raise
         return result
 
-    def _import_proveedores(self, eslabones: List[Eslabon]) -> ImportResult:
+    def _import_proveedores(self, eslabones: List[Eslabon]):
         result = ImportResult("Formulario Proveedores Clientes")
+        newly_inserted: List[Eslabon] = []
+        existing_glns = self._eslabon_repo.get_existing_glns()
         for eslabon in eslabones:
+            if eslabon.GLN in existing_glns:
+                result.record_ignored()
+                logger.debug(f"  eslabon ya existe, ignorado — GLN={eslabon.GLN}")
+                continue
             try:
-                self._eslabon_repo.insert_ignore(eslabon)
+                self._eslabon_repo.insert(eslabon)
+                existing_glns.add(eslabon.GLN)
                 result.record_ok()
-                logger.debug(f"  eslabon INSERT IGNORE OK — RSOC={eslabon.RSOC}")
+                newly_inserted.append(eslabon)
+                logger.debug(f"  eslabon INSERT OK — RSOC={eslabon.RSOC}")
             except Exception as exc:
                 result.record_error()
                 logger.error(f"  eslabon INSERT error — RSOC={eslabon.RSOC}: {exc}")
                 raise
-        return result
+        return result, newly_inserted
 
-    def _import_relaciones(self) -> ImportResult:
+    def _import_relaciones(self, new_registro: List[Eslabon], new_proveedores: List[Eslabon]) -> ImportResult:
         result = ImportResult("eslabon_eslabon - relaciones")
-        ids_with_url    = self._eslabon_repo.get_ids_with_url()
-        ids_without_url = self._eslabon_repo.get_ids_without_url()
+
+        # Resolver IDs de nuevos eslabones con URL (registro/laboratorio)
+        ids_with_url = []
+        for e in new_registro:
+            if e.URL:
+                id_eslabon = self._eslabon_repo.get_id_by_url(e.URL)
+                if id_eslabon is not None:
+                    ids_with_url.append(id_eslabon)
+
+        # Resolver IDs de nuevos eslabones sin URL (proveedores/clientes)
+        ids_without_url = []
+        for e in new_proveedores:
+            id_eslabon = self._eslabon_repo.get_id_by_gln(e.GLN)
+            if id_eslabon is not None:
+                ids_without_url.append(id_eslabon)
+
+        if not ids_with_url or not ids_without_url:
+            logger.info(
+                f"  Relaciones: sin nuevos eslabones para relacionar "
+                f"({len(ids_with_url)} con URL, {len(ids_without_url)} sin URL) — omitido"
+            )
+            return result
 
         logger.info(
-            f"  Relaciones: {len(ids_with_url)} eslabones con URL x "
-            f"{len(ids_without_url)} eslabones sin URL = "
+            f"  Relaciones: {len(ids_with_url)} eslabones nuevos con URL x "
+            f"{len(ids_without_url)} eslabones nuevos sin URL = "
             f"{len(ids_with_url) * len(ids_without_url) * 2} filas esperadas"
         )
 
+        existing_relations = self._eslabon_eslabon_repo.get_existing_relations()
         today = date.today()
         for id_with in ids_with_url:
             for id_without in ids_without_url:
                 for tipo in ("PR", "CL"):
+                    key = (id_with, id_without, tipo)
+                    if key in existing_relations:
+                        result.record_ignored()
+                        logger.debug(
+                            f"  eslabon_eslabon ya existe, ignorado — "
+                            f"ID_ESLABON={id_with}, ID_RELACION={id_without}, TIPO={tipo}"
+                        )
+                        continue
                     rel = EslabonEslabon(
                         ID_ESLABON=id_with, ID_RELACION=id_without,
                         TIPO=tipo, ACTIVO=1, FECHA_ALTA=today,
                     )
                     try:
-                        self._eslabon_eslabon_repo.insert_ignore(rel)
+                        self._eslabon_eslabon_repo.insert(rel)
+                        existing_relations.add(key)
                         result.record_ok()
                         logger.debug(
-                            f"  eslabon_eslabon INSERT IGNORE OK — "
+                            f"  eslabon_eslabon INSERT OK — "
                             f"ID_ESLABON={id_with}, ID_RELACION={id_without}, TIPO={tipo}"
                         )
                     except Exception as exc:
@@ -285,17 +347,23 @@ class ImportService:
         the configuracion rows dictated by each printer type.
         """
         result = ImportResult("Formulario de Impresoras")
+        existing_nombres = self._printer_repo.get_existing_nombres()
         for printer in printers:
-            try:
-                self._printer_repo.insert_ignore(printer)
-                result.record_ok()
-                logger.debug(
-                    f"  printer INSERT IGNORE OK — nombre={printer.nombre}, tipo={printer.tipo}"
-                )
-            except Exception as exc:
-                result.record_error()
-                logger.error(f"  printer INSERT error — nombre={printer.nombre}: {exc}")
-                raise
+            if printer.nombre in existing_nombres:
+                result.record_ignored()
+                logger.debug(f"  printer ya existe, ignorado — nombre={printer.nombre}")
+            else:
+                try:
+                    self._printer_repo.insert(printer)
+                    existing_nombres.add(printer.nombre)
+                    result.record_ok()
+                    logger.debug(
+                        f"  printer INSERT OK — nombre={printer.nombre}, tipo={printer.tipo}"
+                    )
+                except Exception as exc:
+                    result.record_error()
+                    logger.error(f"  printer INSERT error — nombre={printer.nombre}: {exc}")
+                    raise
 
             for nombre_cfg, valor_cfg in printer.configuracion_updates:
                 if nombre_cfg in SPECIAL_QUOTED_PARAMS:
@@ -340,9 +408,11 @@ class ImportService:
     def _import_usuarios(self, usuarios: List[Usuario]) -> ImportResult:
         """
         Resolve ID_PERFIL (from perfil.NOMBRE) and ID_ESLABON (from eslabon.URL),
-        then INSERT IGNORE each usuario. PASSWORD is hashed via MD5() in SQL.
+        then inserta cada usuario si no existe la combinación (USERNAME, ID_ESLABON).
+        PASSWORD is hashed via MD5() in SQL.
         """
         result = ImportResult("Formulario de Usuarios")
+        existing_user_keys = self._usuario_repo.get_existing_user_keys()
 
         for usuario in usuarios:
             # Resolve perfil name → ID_PERFIL
@@ -369,11 +439,21 @@ class ImportService:
                 raise ValueError(msg)
             usuario.ID_ESLABON = id_eslabon
 
+            key = (usuario.USERNAME, id_eslabon)
+            if key in existing_user_keys:
+                result.record_ignored()
+                logger.debug(
+                    f"  usuario ya existe, ignorado — USERNAME={usuario.USERNAME}, "
+                    f"ID_ESLABON={id_eslabon}"
+                )
+                continue
+
             try:
-                self._usuario_repo.insert_ignore(usuario)
+                self._usuario_repo.insert(usuario)
+                existing_user_keys.add(key)
                 result.record_ok()
                 logger.debug(
-                    f"  usuario INSERT IGNORE OK — USERNAME={usuario.USERNAME}, "
+                    f"  usuario INSERT OK — USERNAME={usuario.USERNAME}, "
                     f"ID_PERFIL={id_perfil}, ID_ESLABON={id_eslabon}"
                 )
             except Exception as exc:
