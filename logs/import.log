@@ -2757,3 +2757,373 @@ mysql.connector.errors.IntegrityError: 1452 (23000): Cannot add or update a chil
 2026-04-08 18:14:03 [DEBUG]   perfil INSERT IGNORE OK — ID=5, NOMBRE=Logística
 2026-04-08 18:14:05 [DEBUG]   usuario ya existe, ignorado — USERNAME=Miravea, ID_ESLABON=1253
 2026-04-08 18:14:06 [DEBUG]   usuario ya existe, ignorado — USERNAME=Ruaa, ID_ESLABON=1253
+2026-04-08 18:34:30 [INFO] Abriendo fichero Excel: .\Formulario_Masterdata.xlsx
+2026-04-08 18:34:31 [DEBUG] [Formulario de Registro] 2 filas leídas.
+2026-04-08 18:34:31 [DEBUG] [Formulario de Productos] 10 filas leídas.
+2026-04-08 18:34:31 [DEBUG] [Formulario Proveedores Clientes] 9 filas leídas.
+2026-04-08 18:34:31 [DEBUG] [Formulario de Usuarios] 10 filas leídas.
+2026-04-08 18:34:31 [DEBUG] [Parámetros] Columnas detectadas → NOMBRE=col1, VALOR=col3
+2026-04-08 18:34:31 [DEBUG] [Parámetros] 29 filas leídas.
+2026-04-08 18:34:31 [DEBUG]   [Formulario de Impresoras] Fila 10: 'Impresora Item' omitida (Cantidad=0).
+2026-04-08 18:34:31 [DEBUG]   [Formulario de Impresoras] Fila 11: 'Impresora Agrupación' omitida (Cantidad=0).
+2026-04-08 18:34:31 [DEBUG]   [Formulario de Impresoras] Fila 13: 'Onelite' omitida (Cantidad=0).
+2026-04-08 18:34:31 [DEBUG] [Formulario de Impresoras] 1 impresoras activas leídas.
+2026-04-08 18:34:31 [DEBUG] [Formulario de Stock] Columnas detectadas: {'lote': 2, 'gtin': 0, 'vto': 3, 'serie': 1, 'pack': 4, 'pallet': 5, 'url': 6}
+2026-04-08 18:34:31 [DEBUG] [Formulario de Stock] 0 filas leídas.
+2026-04-08 18:34:31 [INFO] Fichero leído — Registro: 2 filas, Productos: 10 filas, Proveedores: 9 filas, Usuarios: 10 filas, Parámetros: 29 filas, Impresoras: 1 filas activas, Stock: 0 series
+2026-04-08 18:34:31 [DEBUG]   eslabon INSERT OK — RSOC=PRUEBA 1
+2026-04-08 18:34:31 [DEBUG]   eslabon INSERT OK — RSOC=PRUEBA 2
+2026-04-08 18:34:31 [DEBUG]   usuario interfaz INSERT OK — URL=prueba-testing.verifarma.com/segundo, ID_ESLABON=2152
+2026-04-08 18:34:31 [DEBUG]   usuario interfaz INSERT OK — URL=prueba-testing.verifarma.com, ID_ESLABON=2151
+2026-04-08 18:34:31 [INFO]   ID_LAB resuelto dinámicamente: 2151
+2026-04-08 18:34:31 [DEBUG]   medicamento INSERT OK — NOMBRE=ACTOS 15 MG COMPX15
+2026-04-08 18:34:31 [DEBUG]   medicamento INSERT OK — NOMBRE=ACTOS 15 MG COMPX30
+2026-04-08 18:34:31 [DEBUG]   medicamento INSERT OK — NOMBRE=ACTOS 30 MG COMPX15
+2026-04-08 18:34:31 [DEBUG]   medicamento INSERT OK — NOMBRE=ACTOS 30 MG COMPX30
+2026-04-08 18:34:31 [DEBUG]   medicamento INSERT OK — NOMBRE=ACTOS M 500 MG15 MG COMPX15
+2026-04-08 18:34:31 [DEBUG]   medicamento INSERT OK — NOMBRE=ACTOS M 500 MG15 MG COMPX30
+2026-04-08 18:34:31 [DEBUG]   medicamento INSERT OK — NOMBRE=ACTOS M 850 MG15 MG COMPX15
+2026-04-08 18:34:31 [DEBUG]   medicamento INSERT OK — NOMBRE=ACTOS M 850 MG15 MG COMPX30
+2026-04-08 18:34:31 [DEBUG]   medicamento INSERT OK — NOMBRE=AKINETON AX5 X1 ML
+2026-04-08 18:34:31 [DEBUG]   medicamento INSERT OK — NOMBRE=AKINETON COMPX20
+2026-04-08 18:34:31 [DEBUG]   eslabon INSERT OK — RSOC=ALCON
+2026-04-08 18:34:31 [DEBUG]   eslabon INSERT OK — RSOC=ANDRÓMACO
+2026-04-08 18:34:31 [DEBUG]   eslabon INSERT OK — RSOC=ARISTON
+2026-04-08 18:34:31 [DEBUG]   eslabon INSERT OK — RSOC=AULO GELIO ARG.
+2026-04-08 18:34:31 [DEBUG]   eslabon INSERT OK — RSOC=EUROFARMA
+2026-04-08 18:34:31 [DEBUG]   eslabon INSERT OK — RSOC=BAGÓ
+2026-04-08 18:34:31 [DEBUG]   eslabon INSERT OK — RSOC=BAJER
+2026-04-08 18:34:31 [DEBUG]   eslabon INSERT OK — RSOC=BALIARDA
+2026-04-08 18:34:31 [DEBUG]   eslabon INSERT OK — RSOC=BENITOL
+2026-04-08 18:34:31 [INFO]   Relaciones: 2 eslabones nuevos con URL x 9 eslabones nuevos sin URL = 36 filas esperadas
+2026-04-08 18:34:31 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2151, ID_RELACION=2153, TIPO=PR
+2026-04-08 18:34:31 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2151, ID_RELACION=2153, TIPO=CL
+2026-04-08 18:34:31 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2151, ID_RELACION=2154, TIPO=PR
+2026-04-08 18:34:31 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2151, ID_RELACION=2154, TIPO=CL
+2026-04-08 18:34:31 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2151, ID_RELACION=2155, TIPO=PR
+2026-04-08 18:34:31 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2151, ID_RELACION=2155, TIPO=CL
+2026-04-08 18:34:31 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2151, ID_RELACION=2156, TIPO=PR
+2026-04-08 18:34:31 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2151, ID_RELACION=2156, TIPO=CL
+2026-04-08 18:34:31 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2151, ID_RELACION=2157, TIPO=PR
+2026-04-08 18:34:31 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2151, ID_RELACION=2157, TIPO=CL
+2026-04-08 18:34:31 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2151, ID_RELACION=2158, TIPO=PR
+2026-04-08 18:34:31 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2151, ID_RELACION=2158, TIPO=CL
+2026-04-08 18:34:31 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2151, ID_RELACION=2159, TIPO=PR
+2026-04-08 18:34:31 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2151, ID_RELACION=2159, TIPO=CL
+2026-04-08 18:34:31 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2151, ID_RELACION=2160, TIPO=PR
+2026-04-08 18:34:31 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2151, ID_RELACION=2160, TIPO=CL
+2026-04-08 18:34:31 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2151, ID_RELACION=2161, TIPO=PR
+2026-04-08 18:34:31 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2151, ID_RELACION=2161, TIPO=CL
+2026-04-08 18:34:31 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2152, ID_RELACION=2153, TIPO=PR
+2026-04-08 18:34:31 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2152, ID_RELACION=2153, TIPO=CL
+2026-04-08 18:34:31 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2152, ID_RELACION=2154, TIPO=PR
+2026-04-08 18:34:31 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2152, ID_RELACION=2154, TIPO=CL
+2026-04-08 18:34:31 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2152, ID_RELACION=2155, TIPO=PR
+2026-04-08 18:34:31 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2152, ID_RELACION=2155, TIPO=CL
+2026-04-08 18:34:31 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2152, ID_RELACION=2156, TIPO=PR
+2026-04-08 18:34:31 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2152, ID_RELACION=2156, TIPO=CL
+2026-04-08 18:34:31 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2152, ID_RELACION=2157, TIPO=PR
+2026-04-08 18:34:31 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2152, ID_RELACION=2157, TIPO=CL
+2026-04-08 18:34:31 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2152, ID_RELACION=2158, TIPO=PR
+2026-04-08 18:34:31 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2152, ID_RELACION=2158, TIPO=CL
+2026-04-08 18:34:31 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2152, ID_RELACION=2159, TIPO=PR
+2026-04-08 18:34:31 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2152, ID_RELACION=2159, TIPO=CL
+2026-04-08 18:34:31 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2152, ID_RELACION=2160, TIPO=PR
+2026-04-08 18:34:31 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2152, ID_RELACION=2160, TIPO=CL
+2026-04-08 18:34:31 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2152, ID_RELACION=2161, TIPO=PR
+2026-04-08 18:34:31 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2152, ID_RELACION=2161, TIPO=CL
+2026-04-08 18:34:31 [DEBUG]   configuracion UPDATE OK — NOMBRE=INACTIVE_TIME_OUT (sin cambio, valor identico)
+2026-04-08 18:34:31 [DEBUG]   configuracion UPDATE OK — NOMBRE=CANT_DASH (sin cambio, valor identico)
+2026-04-08 18:34:31 [DEBUG]   configuracion UPDATE OK — NOMBRE=TABLE_SIZE (sin cambio, valor identico)
+2026-04-08 18:34:31 [DEBUG]   configuracion UPDATE OK — NOMBRE=VENCIMIENTO_LICENCIA_USUARIO
+2026-04-08 18:34:31 [DEBUG]   configuracion UPDATE OK — NOMBRE=DIAS_VTO_PASSWORD
+2026-04-08 18:34:31 [DEBUG]   configuracion UPDATE OK — NOMBRE=CANT_FALLOS_LOGIN
+2026-04-08 18:34:31 [DEBUG]   configuracion UPDATE OK — NOMBRE=URL_ESLABON_UNICA
+2026-04-08 18:34:31 [DEBUG]   configuracion UPDATE OK — NOMBRE=PRINTER_ITEM_PLUGIN (sin cambio, valor identico)
+2026-04-08 18:34:31 [DEBUG]   configuracion UPDATE OK — NOMBRE=DESPACHAR_E_IMPRIMIR (sin cambio, valor identico)
+2026-04-08 18:34:31 [DEBUG]   configuracion UPDATE OK — NOMBRE=SERIAL_SIZE (sin cambio, valor identico)
+2026-04-08 18:34:31 [DEBUG]   configuracion UPDATE OK — NOMBRE=SSCC_COMPANY_PREFFIX
+2026-04-08 18:34:31 [DEBUG]   configuracion UPDATE OK — NOMBRE=SERIAL_SECUENCIAL (sin cambio, valor identico)
+2026-04-08 18:34:31 [DEBUG]   configuracion UPDATE OK — NOMBRE=SERIAL_ALPHANUMERIC (sin cambio, valor identico)
+2026-04-08 18:34:31 [DEBUG]   configuracion UPDATE OK — NOMBRE=CREAR_Y_DESPACHAR_LIBERADO (sin cambio, valor identico)
+2026-04-08 18:34:31 [DEBUG]   configuracion UPDATE OK — NOMBRE=DESPACHAR_EN_CUARENTENA
+2026-04-08 18:34:31 [DEBUG]   configuracion UPDATE OK — NOMBRE=CREAR_Y_PACK
+2026-04-08 18:34:31 [DEBUG]   configuracion UPDATE OK — NOMBRE=CREAR_LIBERADO (sin cambio, valor identico)
+2026-04-08 18:34:31 [DEBUG]   configuracion UPDATE OK — NOMBRE=USE_LOTE_DETALLE (sin cambio, valor identico)
+2026-04-08 18:34:31 [DEBUG]   configuracion UPDATE OK — NOMBRE=PREPARAR_Y_DESPACHAR
+2026-04-08 18:34:31 [DEBUG]   configuracion UPDATE OK — NOMBRE=DESPACHAR_E_INFORMAR
+2026-04-08 18:34:31 [DEBUG]   configuracion UPDATE OK — NOMBRE=RECIBIR_E_INFORMAR
+2026-04-08 18:34:31 [DEBUG]   configuracion UPDATE OK — NOMBRE=DEVOLVER_E_INFORMAR
+2026-04-08 18:34:31 [DEBUG]   configuracion UPDATE OK — NOMBRE=LIBERAR_E_INFORMAR (sin cambio, valor identico)
+2026-04-08 18:34:31 [DEBUG]   configuracion UPDATE OK — NOMBRE=VENDER_E_INFORMAR (sin cambio, valor identico)
+2026-04-08 18:34:31 [DEBUG]   configuracion UPDATE OK — NOMBRE=DISPENSAR_E_INFORMAR (sin cambio, valor identico)
+2026-04-08 18:34:31 [DEBUG]   configuracion UPDATE OK — NOMBRE=LOTE_MAX_SIZE
+2026-04-08 18:34:31 [DEBUG]   configuracion UPDATE OK — NOMBRE=PREGUNTAR_TIPO_DESPACHO
+2026-04-08 18:34:31 [DEBUG]   configuracion UPDATE OK — NOMBRE=USE_VALIDACION_LOTE
+2026-04-08 18:34:31 [DEBUG]   configuracion UPDATE OK — NOMBRE=DESPACHO_LOTE_COMPLETO
+2026-04-08 18:34:31 [DEBUG]   printer INSERT OK — nombre=Lixis, tipo=item
+2026-04-08 18:34:31 [DEBUG]   perfil INSERT IGNORE OK — ID=2, NOMBRE=Administrador
+2026-04-08 18:34:31 [DEBUG]   perfil INSERT IGNORE OK — ID=3, NOMBRE=Calidad
+2026-04-08 18:34:31 [DEBUG]   perfil INSERT IGNORE OK — ID=4, NOMBRE=Producción
+2026-04-08 18:34:31 [DEBUG]   perfil INSERT IGNORE OK — ID=5, NOMBRE=Logística
+2026-04-08 18:34:31 [DEBUG]   usuario INSERT OK — USERNAME=a1, ID_PERFIL=2, ID_ESLABON=2151
+2026-04-08 18:34:31 [DEBUG]   usuario INSERT OK — USERNAME=a2, ID_PERFIL=3, ID_ESLABON=2151
+2026-04-08 18:34:31 [DEBUG]   usuario INSERT OK — USERNAME=a3, ID_PERFIL=4, ID_ESLABON=2151
+2026-04-08 18:34:31 [DEBUG]   usuario INSERT OK — USERNAME=a4, ID_PERFIL=4, ID_ESLABON=2151
+2026-04-08 18:34:31 [DEBUG]   usuario INSERT OK — USERNAME=a5, ID_PERFIL=5, ID_ESLABON=2151
+2026-04-08 18:34:31 [DEBUG]   usuario INSERT OK — USERNAME=a6, ID_PERFIL=5, ID_ESLABON=2151
+2026-04-08 18:34:31 [DEBUG]   usuario INSERT OK — USERNAME=a7, ID_PERFIL=2, ID_ESLABON=2152
+2026-04-08 18:34:31 [DEBUG]   usuario INSERT OK — USERNAME=a8, ID_PERFIL=3, ID_ESLABON=2152
+2026-04-08 18:34:31 [DEBUG]   usuario INSERT OK — USERNAME=a9, ID_PERFIL=4, ID_ESLABON=2152
+2026-04-08 18:34:31 [DEBUG]   usuario INSERT OK — USERNAME=a10, ID_PERFIL=5, ID_ESLABON=2152
+2026-04-08 18:36:21 [INFO] Abriendo fichero Excel: .\Formulario_Masterdata.xlsx
+2026-04-08 18:36:21 [DEBUG] [Formulario de Registro] 2 filas leídas.
+2026-04-08 18:36:21 [DEBUG] [Formulario de Productos] 10 filas leídas.
+2026-04-08 18:36:21 [DEBUG] [Formulario Proveedores Clientes] 9 filas leídas.
+2026-04-08 18:36:21 [DEBUG] [Formulario de Usuarios] 10 filas leídas.
+2026-04-08 18:36:21 [DEBUG] [Parámetros] Columnas detectadas → NOMBRE=col1, VALOR=col3
+2026-04-08 18:36:21 [DEBUG] [Parámetros] 29 filas leídas.
+2026-04-08 18:36:21 [DEBUG]   [Formulario de Impresoras] Fila 10: 'Impresora Item' omitida (Cantidad=0).
+2026-04-08 18:36:21 [DEBUG]   [Formulario de Impresoras] Fila 11: 'Impresora Agrupación' omitida (Cantidad=0).
+2026-04-08 18:36:21 [DEBUG]   [Formulario de Impresoras] Fila 13: 'Onelite' omitida (Cantidad=0).
+2026-04-08 18:36:21 [DEBUG] [Formulario de Impresoras] 1 impresoras activas leídas.
+2026-04-08 18:36:21 [DEBUG] [Formulario de Stock] Columnas detectadas: {'lote': 2, 'gtin': 0, 'vto': 3, 'serie': 1, 'pack': 4, 'pallet': 5, 'url': 6}
+2026-04-08 18:36:21 [DEBUG] [Formulario de Stock] 0 filas leídas.
+2026-04-08 18:36:21 [INFO] Fichero leído — Registro: 2 filas, Productos: 10 filas, Proveedores: 9 filas, Usuarios: 10 filas, Parámetros: 29 filas, Impresoras: 1 filas activas, Stock: 0 series
+2026-04-08 18:36:22 [DEBUG]   eslabon ya existe, ignorado — GLN=7798645330001
+2026-04-08 18:36:22 [DEBUG]   eslabon ya existe, ignorado — GLN=7798645330002
+2026-04-08 18:36:22 [INFO]   ID_LAB resuelto dinámicamente: 2151
+2026-04-08 18:36:22 [DEBUG]   medicamento ya existe, ignorado — BC_EAN_1=7790440485910
+2026-04-08 18:36:22 [DEBUG]   medicamento ya existe, ignorado — BC_EAN_1=7790440485927
+2026-04-08 18:36:22 [DEBUG]   medicamento ya existe, ignorado — BC_EAN_1=7790440486016
+2026-04-08 18:36:22 [DEBUG]   medicamento ya existe, ignorado — BC_EAN_1=7790440486023
+2026-04-08 18:36:22 [DEBUG]   medicamento ya existe, ignorado — BC_EAN_1=7790440203514
+2026-04-08 18:36:22 [DEBUG]   medicamento ya existe, ignorado — BC_EAN_1=7790440203521
+2026-04-08 18:36:22 [DEBUG]   medicamento ya existe, ignorado — BC_EAN_1=7790440203415
+2026-04-08 18:36:22 [DEBUG]   medicamento ya existe, ignorado — BC_EAN_1=7790440203422
+2026-04-08 18:36:22 [DEBUG]   medicamento ya existe, ignorado — BC_EAN_1=7798049640068
+2026-04-08 18:36:22 [DEBUG]   medicamento ya existe, ignorado — BC_EAN_1=7790440527719
+2026-04-08 18:36:22 [DEBUG]   eslabon ya existe, ignorado — GLN=7793213000006
+2026-04-08 18:36:22 [DEBUG]   eslabon ya existe, ignorado — GLN=7795362000005
+2026-04-08 18:36:22 [DEBUG]   eslabon ya existe, ignorado — GLN=7791763000002
+2026-04-08 18:36:22 [DEBUG]   eslabon ya existe, ignorado — GLN=7795348000005
+2026-04-08 18:36:22 [DEBUG]   eslabon ya existe, ignorado — GLN=7795336000000
+2026-04-08 18:36:22 [DEBUG]   eslabon ya existe, ignorado — GLN=7795325000004
+2026-04-08 18:36:22 [DEBUG]   eslabon ya existe, ignorado — GLN=7792371000002
+2026-04-08 18:36:22 [DEBUG]   eslabon ya existe, ignorado — GLN=7793236000007
+2026-04-08 18:36:22 [DEBUG]   eslabon ya existe, ignorado — GLN=7795381000000
+2026-04-08 18:36:22 [INFO]   Relaciones: sin nuevos eslabones para relacionar (0 con URL, 0 sin URL) — omitido
+2026-04-08 18:36:22 [DEBUG]   configuracion UPDATE OK — NOMBRE=INACTIVE_TIME_OUT (sin cambio, valor identico)
+2026-04-08 18:36:22 [DEBUG]   configuracion UPDATE OK — NOMBRE=CANT_DASH (sin cambio, valor identico)
+2026-04-08 18:36:22 [DEBUG]   configuracion UPDATE OK — NOMBRE=TABLE_SIZE (sin cambio, valor identico)
+2026-04-08 18:36:22 [DEBUG]   configuracion UPDATE OK — NOMBRE=VENCIMIENTO_LICENCIA_USUARIO (sin cambio, valor identico)
+2026-04-08 18:36:22 [DEBUG]   configuracion UPDATE OK — NOMBRE=DIAS_VTO_PASSWORD (sin cambio, valor identico)
+2026-04-08 18:36:22 [DEBUG]   configuracion UPDATE OK — NOMBRE=CANT_FALLOS_LOGIN (sin cambio, valor identico)
+2026-04-08 18:36:22 [DEBUG]   configuracion UPDATE OK — NOMBRE=URL_ESLABON_UNICA (sin cambio, valor identico)
+2026-04-08 18:36:22 [DEBUG]   configuracion UPDATE OK — NOMBRE=PRINTER_ITEM_PLUGIN (sin cambio, valor identico)
+2026-04-08 18:36:22 [DEBUG]   configuracion UPDATE OK — NOMBRE=DESPACHAR_E_IMPRIMIR (sin cambio, valor identico)
+2026-04-08 18:36:22 [DEBUG]   configuracion UPDATE OK — NOMBRE=SERIAL_SIZE (sin cambio, valor identico)
+2026-04-08 18:36:22 [DEBUG]   configuracion UPDATE OK — NOMBRE=SSCC_COMPANY_PREFFIX (sin cambio, valor identico)
+2026-04-08 18:36:22 [DEBUG]   configuracion UPDATE OK — NOMBRE=SERIAL_SECUENCIAL (sin cambio, valor identico)
+2026-04-08 18:36:22 [DEBUG]   configuracion UPDATE OK — NOMBRE=SERIAL_ALPHANUMERIC (sin cambio, valor identico)
+2026-04-08 18:36:22 [DEBUG]   configuracion UPDATE OK — NOMBRE=CREAR_Y_DESPACHAR_LIBERADO (sin cambio, valor identico)
+2026-04-08 18:36:22 [DEBUG]   configuracion UPDATE OK — NOMBRE=DESPACHAR_EN_CUARENTENA (sin cambio, valor identico)
+2026-04-08 18:36:22 [DEBUG]   configuracion UPDATE OK — NOMBRE=CREAR_Y_PACK (sin cambio, valor identico)
+2026-04-08 18:36:22 [DEBUG]   configuracion UPDATE OK — NOMBRE=CREAR_LIBERADO (sin cambio, valor identico)
+2026-04-08 18:36:22 [DEBUG]   configuracion UPDATE OK — NOMBRE=USE_LOTE_DETALLE (sin cambio, valor identico)
+2026-04-08 18:36:22 [DEBUG]   configuracion UPDATE OK — NOMBRE=PREPARAR_Y_DESPACHAR (sin cambio, valor identico)
+2026-04-08 18:36:22 [DEBUG]   configuracion UPDATE OK — NOMBRE=DESPACHAR_E_INFORMAR (sin cambio, valor identico)
+2026-04-08 18:36:22 [DEBUG]   configuracion UPDATE OK — NOMBRE=RECIBIR_E_INFORMAR (sin cambio, valor identico)
+2026-04-08 18:36:22 [DEBUG]   configuracion UPDATE OK — NOMBRE=DEVOLVER_E_INFORMAR (sin cambio, valor identico)
+2026-04-08 18:36:22 [DEBUG]   configuracion UPDATE OK — NOMBRE=LIBERAR_E_INFORMAR (sin cambio, valor identico)
+2026-04-08 18:36:22 [DEBUG]   configuracion UPDATE OK — NOMBRE=VENDER_E_INFORMAR (sin cambio, valor identico)
+2026-04-08 18:36:22 [DEBUG]   configuracion UPDATE OK — NOMBRE=DISPENSAR_E_INFORMAR (sin cambio, valor identico)
+2026-04-08 18:36:22 [DEBUG]   configuracion UPDATE OK — NOMBRE=LOTE_MAX_SIZE (sin cambio, valor identico)
+2026-04-08 18:36:22 [DEBUG]   configuracion UPDATE OK — NOMBRE=PREGUNTAR_TIPO_DESPACHO (sin cambio, valor identico)
+2026-04-08 18:36:22 [DEBUG]   configuracion UPDATE OK — NOMBRE=USE_VALIDACION_LOTE (sin cambio, valor identico)
+2026-04-08 18:36:22 [DEBUG]   configuracion UPDATE OK — NOMBRE=DESPACHO_LOTE_COMPLETO (sin cambio, valor identico)
+2026-04-08 18:36:22 [DEBUG]   printer ya existe, ignorado — nombre=Lixis
+2026-04-08 18:36:22 [DEBUG]   perfil INSERT IGNORE OK — ID=2, NOMBRE=Administrador
+2026-04-08 18:36:22 [DEBUG]   perfil INSERT IGNORE OK — ID=3, NOMBRE=Calidad
+2026-04-08 18:36:22 [DEBUG]   perfil INSERT IGNORE OK — ID=4, NOMBRE=Producción
+2026-04-08 18:36:22 [DEBUG]   perfil INSERT IGNORE OK — ID=5, NOMBRE=Logística
+2026-04-08 18:36:22 [DEBUG]   usuario ya existe, ignorado — USERNAME=a1, ID_ESLABON=2151
+2026-04-08 18:36:22 [DEBUG]   usuario ya existe, ignorado — USERNAME=a2, ID_ESLABON=2151
+2026-04-08 18:36:22 [DEBUG]   usuario ya existe, ignorado — USERNAME=a3, ID_ESLABON=2151
+2026-04-08 18:36:22 [DEBUG]   usuario ya existe, ignorado — USERNAME=a4, ID_ESLABON=2151
+2026-04-08 18:36:22 [DEBUG]   usuario ya existe, ignorado — USERNAME=a5, ID_ESLABON=2151
+2026-04-08 18:36:22 [DEBUG]   usuario ya existe, ignorado — USERNAME=a6, ID_ESLABON=2151
+2026-04-08 18:36:22 [DEBUG]   usuario ya existe, ignorado — USERNAME=a7, ID_ESLABON=2152
+2026-04-08 18:36:22 [DEBUG]   usuario ya existe, ignorado — USERNAME=a8, ID_ESLABON=2152
+2026-04-08 18:36:22 [DEBUG]   usuario ya existe, ignorado — USERNAME=a9, ID_ESLABON=2152
+2026-04-08 18:36:22 [DEBUG]   usuario ya existe, ignorado — USERNAME=a10, ID_ESLABON=2152
+2026-04-08 18:37:33 [INFO] Abriendo fichero Excel: .\Formulario_Masterdata.xlsx
+2026-04-08 18:37:33 [DEBUG] [Formulario de Registro] 2 filas leídas.
+2026-04-08 18:37:33 [DEBUG] [Formulario de Productos] 11 filas leídas.
+2026-04-08 18:37:33 [DEBUG] [Formulario Proveedores Clientes] 10 filas leídas.
+2026-04-08 18:37:33 [DEBUG] [Formulario de Usuarios] 10 filas leídas.
+2026-04-08 18:37:33 [DEBUG] [Parámetros] Columnas detectadas → NOMBRE=col1, VALOR=col3
+2026-04-08 18:37:34 [DEBUG] [Parámetros] 29 filas leídas.
+2026-04-08 18:37:34 [DEBUG]   [Formulario de Impresoras] Fila 10: 'Impresora Item' omitida (Cantidad=0).
+2026-04-08 18:37:34 [DEBUG]   [Formulario de Impresoras] Fila 11: 'Impresora Agrupación' omitida (Cantidad=0).
+2026-04-08 18:37:34 [DEBUG]   [Formulario de Impresoras] Fila 13: 'Onelite' omitida (Cantidad=0).
+2026-04-08 18:37:34 [DEBUG] [Formulario de Impresoras] 1 impresoras activas leídas.
+2026-04-08 18:37:34 [DEBUG] [Formulario de Stock] Columnas detectadas: {'lote': 2, 'gtin': 0, 'vto': 3, 'serie': 1, 'pack': 4, 'pallet': 5, 'url': 6}
+2026-04-08 18:37:34 [DEBUG] [Formulario de Stock] 0 filas leídas.
+2026-04-08 18:37:34 [INFO] Fichero leído — Registro: 2 filas, Productos: 11 filas, Proveedores: 10 filas, Usuarios: 10 filas, Parámetros: 29 filas, Impresoras: 1 filas activas, Stock: 0 series
+2026-04-08 18:37:34 [DEBUG]   eslabon ya existe, ignorado — GLN=7798645330001
+2026-04-08 18:37:34 [DEBUG]   eslabon ya existe, ignorado — GLN=7798645330002
+2026-04-08 18:37:34 [INFO]   ID_LAB resuelto dinámicamente: 2151
+2026-04-08 18:37:34 [DEBUG]   medicamento ya existe, ignorado — BC_EAN_1=7790440485910
+2026-04-08 18:37:34 [DEBUG]   medicamento ya existe, ignorado — BC_EAN_1=7790440485927
+2026-04-08 18:37:34 [DEBUG]   medicamento ya existe, ignorado — BC_EAN_1=7790440486016
+2026-04-08 18:37:34 [DEBUG]   medicamento ya existe, ignorado — BC_EAN_1=7790440486023
+2026-04-08 18:37:34 [DEBUG]   medicamento ya existe, ignorado — BC_EAN_1=7790440203514
+2026-04-08 18:37:34 [DEBUG]   medicamento ya existe, ignorado — BC_EAN_1=7790440203521
+2026-04-08 18:37:34 [DEBUG]   medicamento ya existe, ignorado — BC_EAN_1=7790440203415
+2026-04-08 18:37:34 [DEBUG]   medicamento ya existe, ignorado — BC_EAN_1=7790440203422
+2026-04-08 18:37:34 [DEBUG]   medicamento ya existe, ignorado — BC_EAN_1=7798049640068
+2026-04-08 18:37:34 [DEBUG]   medicamento ya existe, ignorado — BC_EAN_1=7790440527719
+2026-04-08 18:37:34 [DEBUG]   medicamento INSERT OK — NOMBRE=AKINETON COMPX20
+2026-04-08 18:37:34 [DEBUG]   eslabon ya existe, ignorado — GLN=7793213000006
+2026-04-08 18:37:34 [DEBUG]   eslabon ya existe, ignorado — GLN=7795362000005
+2026-04-08 18:37:34 [DEBUG]   eslabon ya existe, ignorado — GLN=7791763000002
+2026-04-08 18:37:34 [DEBUG]   eslabon ya existe, ignorado — GLN=7795348000005
+2026-04-08 18:37:34 [DEBUG]   eslabon ya existe, ignorado — GLN=7795336000000
+2026-04-08 18:37:34 [DEBUG]   eslabon ya existe, ignorado — GLN=7795325000004
+2026-04-08 18:37:34 [DEBUG]   eslabon ya existe, ignorado — GLN=7792371000002
+2026-04-08 18:37:34 [DEBUG]   eslabon ya existe, ignorado — GLN=7793236000007
+2026-04-08 18:37:34 [DEBUG]   eslabon ya existe, ignorado — GLN=7795381000000
+2026-04-08 18:37:34 [DEBUG]   eslabon INSERT OK — RSOC=BENITOL
+2026-04-08 18:37:34 [INFO]   Relaciones: sin nuevos eslabones para relacionar (0 con URL, 1 sin URL) — omitido
+2026-04-08 18:37:34 [DEBUG]   configuracion UPDATE OK — NOMBRE=INACTIVE_TIME_OUT (sin cambio, valor identico)
+2026-04-08 18:37:34 [DEBUG]   configuracion UPDATE OK — NOMBRE=CANT_DASH (sin cambio, valor identico)
+2026-04-08 18:37:34 [DEBUG]   configuracion UPDATE OK — NOMBRE=TABLE_SIZE (sin cambio, valor identico)
+2026-04-08 18:37:34 [DEBUG]   configuracion UPDATE OK — NOMBRE=VENCIMIENTO_LICENCIA_USUARIO (sin cambio, valor identico)
+2026-04-08 18:37:34 [DEBUG]   configuracion UPDATE OK — NOMBRE=DIAS_VTO_PASSWORD (sin cambio, valor identico)
+2026-04-08 18:37:34 [DEBUG]   configuracion UPDATE OK — NOMBRE=CANT_FALLOS_LOGIN (sin cambio, valor identico)
+2026-04-08 18:37:34 [DEBUG]   configuracion UPDATE OK — NOMBRE=URL_ESLABON_UNICA (sin cambio, valor identico)
+2026-04-08 18:37:34 [DEBUG]   configuracion UPDATE OK — NOMBRE=PRINTER_ITEM_PLUGIN (sin cambio, valor identico)
+2026-04-08 18:37:34 [DEBUG]   configuracion UPDATE OK — NOMBRE=DESPACHAR_E_IMPRIMIR (sin cambio, valor identico)
+2026-04-08 18:37:34 [DEBUG]   configuracion UPDATE OK — NOMBRE=SERIAL_SIZE (sin cambio, valor identico)
+2026-04-08 18:37:34 [DEBUG]   configuracion UPDATE OK — NOMBRE=SSCC_COMPANY_PREFFIX (sin cambio, valor identico)
+2026-04-08 18:37:34 [DEBUG]   configuracion UPDATE OK — NOMBRE=SERIAL_SECUENCIAL (sin cambio, valor identico)
+2026-04-08 18:37:34 [DEBUG]   configuracion UPDATE OK — NOMBRE=SERIAL_ALPHANUMERIC (sin cambio, valor identico)
+2026-04-08 18:37:34 [DEBUG]   configuracion UPDATE OK — NOMBRE=CREAR_Y_DESPACHAR_LIBERADO (sin cambio, valor identico)
+2026-04-08 18:37:34 [DEBUG]   configuracion UPDATE OK — NOMBRE=DESPACHAR_EN_CUARENTENA (sin cambio, valor identico)
+2026-04-08 18:37:34 [DEBUG]   configuracion UPDATE OK — NOMBRE=CREAR_Y_PACK (sin cambio, valor identico)
+2026-04-08 18:37:34 [DEBUG]   configuracion UPDATE OK — NOMBRE=CREAR_LIBERADO (sin cambio, valor identico)
+2026-04-08 18:37:34 [DEBUG]   configuracion UPDATE OK — NOMBRE=USE_LOTE_DETALLE (sin cambio, valor identico)
+2026-04-08 18:37:34 [DEBUG]   configuracion UPDATE OK — NOMBRE=PREPARAR_Y_DESPACHAR (sin cambio, valor identico)
+2026-04-08 18:37:34 [DEBUG]   configuracion UPDATE OK — NOMBRE=DESPACHAR_E_INFORMAR (sin cambio, valor identico)
+2026-04-08 18:37:34 [DEBUG]   configuracion UPDATE OK — NOMBRE=RECIBIR_E_INFORMAR (sin cambio, valor identico)
+2026-04-08 18:37:34 [DEBUG]   configuracion UPDATE OK — NOMBRE=DEVOLVER_E_INFORMAR (sin cambio, valor identico)
+2026-04-08 18:37:34 [DEBUG]   configuracion UPDATE OK — NOMBRE=LIBERAR_E_INFORMAR (sin cambio, valor identico)
+2026-04-08 18:37:34 [DEBUG]   configuracion UPDATE OK — NOMBRE=VENDER_E_INFORMAR (sin cambio, valor identico)
+2026-04-08 18:37:34 [DEBUG]   configuracion UPDATE OK — NOMBRE=DISPENSAR_E_INFORMAR (sin cambio, valor identico)
+2026-04-08 18:37:34 [DEBUG]   configuracion UPDATE OK — NOMBRE=LOTE_MAX_SIZE (sin cambio, valor identico)
+2026-04-08 18:37:34 [DEBUG]   configuracion UPDATE OK — NOMBRE=PREGUNTAR_TIPO_DESPACHO (sin cambio, valor identico)
+2026-04-08 18:37:34 [DEBUG]   configuracion UPDATE OK — NOMBRE=USE_VALIDACION_LOTE (sin cambio, valor identico)
+2026-04-08 18:37:34 [DEBUG]   configuracion UPDATE OK — NOMBRE=DESPACHO_LOTE_COMPLETO (sin cambio, valor identico)
+2026-04-08 18:37:34 [DEBUG]   printer ya existe, ignorado — nombre=Lixis
+2026-04-08 18:37:34 [DEBUG]   perfil INSERT IGNORE OK — ID=2, NOMBRE=Administrador
+2026-04-08 18:37:34 [DEBUG]   perfil INSERT IGNORE OK — ID=3, NOMBRE=Calidad
+2026-04-08 18:37:34 [DEBUG]   perfil INSERT IGNORE OK — ID=4, NOMBRE=Producción
+2026-04-08 18:37:34 [DEBUG]   perfil INSERT IGNORE OK — ID=5, NOMBRE=Logística
+2026-04-08 18:37:34 [DEBUG]   usuario ya existe, ignorado — USERNAME=a1, ID_ESLABON=2151
+2026-04-08 18:37:34 [DEBUG]   usuario ya existe, ignorado — USERNAME=a2, ID_ESLABON=2151
+2026-04-08 18:37:34 [DEBUG]   usuario ya existe, ignorado — USERNAME=a3, ID_ESLABON=2151
+2026-04-08 18:37:34 [DEBUG]   usuario ya existe, ignorado — USERNAME=a4, ID_ESLABON=2151
+2026-04-08 18:37:34 [DEBUG]   usuario ya existe, ignorado — USERNAME=a5, ID_ESLABON=2151
+2026-04-08 18:37:34 [DEBUG]   usuario ya existe, ignorado — USERNAME=a6, ID_ESLABON=2151
+2026-04-08 18:37:34 [DEBUG]   usuario ya existe, ignorado — USERNAME=a7, ID_ESLABON=2152
+2026-04-08 18:37:34 [DEBUG]   usuario ya existe, ignorado — USERNAME=a8, ID_ESLABON=2152
+2026-04-08 18:37:34 [DEBUG]   usuario ya existe, ignorado — USERNAME=a9, ID_ESLABON=2152
+2026-04-08 18:37:34 [DEBUG]   usuario ya existe, ignorado — USERNAME=a10, ID_ESLABON=2152
+2026-04-08 18:41:35 [INFO] Abriendo fichero Excel: .\Formulario_Masterdata.xlsx
+2026-04-08 18:41:35 [DEBUG] [Formulario de Registro] 2 filas leídas.
+2026-04-08 18:41:35 [DEBUG] [Formulario de Productos] 11 filas leídas.
+2026-04-08 18:41:36 [DEBUG] [Formulario Proveedores Clientes] 10 filas leídas.
+2026-04-08 18:41:36 [DEBUG] [Formulario de Usuarios] 10 filas leídas.
+2026-04-08 18:41:36 [DEBUG] [Parámetros] Columnas detectadas → NOMBRE=col1, VALOR=col3
+2026-04-08 18:41:36 [DEBUG] [Parámetros] 29 filas leídas.
+2026-04-08 18:41:36 [DEBUG]   [Formulario de Impresoras] Fila 10: 'Impresora Item' omitida (Cantidad=0).
+2026-04-08 18:41:36 [DEBUG]   [Formulario de Impresoras] Fila 11: 'Impresora Agrupación' omitida (Cantidad=0).
+2026-04-08 18:41:36 [DEBUG]   [Formulario de Impresoras] Fila 13: 'Onelite' omitida (Cantidad=0).
+2026-04-08 18:41:36 [DEBUG] [Formulario de Impresoras] 1 impresoras activas leídas.
+2026-04-08 18:41:36 [DEBUG] [Formulario de Stock] Columnas detectadas: {'lote': 2, 'gtin': 0, 'vto': 3, 'serie': 1, 'pack': 4, 'pallet': 5, 'url': 6}
+2026-04-08 18:41:36 [DEBUG] [Formulario de Stock] 0 filas leídas.
+2026-04-08 18:41:36 [INFO] Fichero leído — Registro: 2 filas, Productos: 11 filas, Proveedores: 10 filas, Usuarios: 10 filas, Parámetros: 29 filas, Impresoras: 1 filas activas, Stock: 0 series
+2026-04-08 18:41:36 [DEBUG]   eslabon ya existe, ignorado — GLN=7798645330001
+2026-04-08 18:41:36 [DEBUG]   eslabon ya existe, ignorado — GLN=7798645330002
+2026-04-08 18:41:36 [INFO]   ID_LAB resuelto dinámicamente: 2151
+2026-04-08 18:41:36 [DEBUG]   medicamento ya existe, ignorado — BC_EAN_1=7790440485910
+2026-04-08 18:41:36 [DEBUG]   medicamento ya existe, ignorado — BC_EAN_1=7790440485927
+2026-04-08 18:41:36 [DEBUG]   medicamento ya existe, ignorado — BC_EAN_1=7790440486016
+2026-04-08 18:41:36 [DEBUG]   medicamento ya existe, ignorado — BC_EAN_1=7790440486023
+2026-04-08 18:41:36 [DEBUG]   medicamento ya existe, ignorado — BC_EAN_1=7790440203514
+2026-04-08 18:41:36 [DEBUG]   medicamento ya existe, ignorado — BC_EAN_1=7790440203521
+2026-04-08 18:41:36 [DEBUG]   medicamento ya existe, ignorado — BC_EAN_1=7790440203415
+2026-04-08 18:41:36 [DEBUG]   medicamento ya existe, ignorado — BC_EAN_1=7790440203422
+2026-04-08 18:41:36 [DEBUG]   medicamento ya existe, ignorado — BC_EAN_1=7798049640068
+2026-04-08 18:41:36 [DEBUG]   medicamento ya existe, ignorado — BC_EAN_1=7790440527719
+2026-04-08 18:41:36 [DEBUG]   medicamento INSERT OK — NOMBRE=AKINETON COMPX20
+2026-04-08 18:41:36 [DEBUG]   eslabon ya existe, ignorado — GLN=7793213000006
+2026-04-08 18:41:36 [DEBUG]   eslabon ya existe, ignorado — GLN=7795362000005
+2026-04-08 18:41:36 [DEBUG]   eslabon ya existe, ignorado — GLN=7791763000002
+2026-04-08 18:41:36 [DEBUG]   eslabon ya existe, ignorado — GLN=7795348000005
+2026-04-08 18:41:36 [DEBUG]   eslabon ya existe, ignorado — GLN=7795336000000
+2026-04-08 18:41:36 [DEBUG]   eslabon ya existe, ignorado — GLN=7795325000004
+2026-04-08 18:41:36 [DEBUG]   eslabon ya existe, ignorado — GLN=7792371000002
+2026-04-08 18:41:36 [DEBUG]   eslabon ya existe, ignorado — GLN=7793236000007
+2026-04-08 18:41:36 [DEBUG]   eslabon ya existe, ignorado — GLN=7795381000000
+2026-04-08 18:41:36 [DEBUG]   eslabon INSERT OK — RSOC=BENITOL
+2026-04-08 18:41:36 [INFO]   Relaciones: 2 pares x 2 tipos = 4 filas esperadas
+2026-04-08 18:41:36 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2152, ID_RELACION=2163, TIPO=PR
+2026-04-08 18:41:36 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2152, ID_RELACION=2163, TIPO=CL
+2026-04-08 18:41:36 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2151, ID_RELACION=2163, TIPO=PR
+2026-04-08 18:41:36 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2151, ID_RELACION=2163, TIPO=CL
+2026-04-08 18:41:36 [DEBUG]   configuracion UPDATE OK — NOMBRE=INACTIVE_TIME_OUT (sin cambio, valor identico)
+2026-04-08 18:41:36 [DEBUG]   configuracion UPDATE OK — NOMBRE=CANT_DASH (sin cambio, valor identico)
+2026-04-08 18:41:36 [DEBUG]   configuracion UPDATE OK — NOMBRE=TABLE_SIZE (sin cambio, valor identico)
+2026-04-08 18:41:36 [DEBUG]   configuracion UPDATE OK — NOMBRE=VENCIMIENTO_LICENCIA_USUARIO (sin cambio, valor identico)
+2026-04-08 18:41:36 [DEBUG]   configuracion UPDATE OK — NOMBRE=DIAS_VTO_PASSWORD (sin cambio, valor identico)
+2026-04-08 18:41:36 [DEBUG]   configuracion UPDATE OK — NOMBRE=CANT_FALLOS_LOGIN (sin cambio, valor identico)
+2026-04-08 18:41:36 [DEBUG]   configuracion UPDATE OK — NOMBRE=URL_ESLABON_UNICA (sin cambio, valor identico)
+2026-04-08 18:41:36 [DEBUG]   configuracion UPDATE OK — NOMBRE=PRINTER_ITEM_PLUGIN (sin cambio, valor identico)
+2026-04-08 18:41:36 [DEBUG]   configuracion UPDATE OK — NOMBRE=DESPACHAR_E_IMPRIMIR (sin cambio, valor identico)
+2026-04-08 18:41:36 [DEBUG]   configuracion UPDATE OK — NOMBRE=SERIAL_SIZE (sin cambio, valor identico)
+2026-04-08 18:41:36 [DEBUG]   configuracion UPDATE OK — NOMBRE=SSCC_COMPANY_PREFFIX (sin cambio, valor identico)
+2026-04-08 18:41:36 [DEBUG]   configuracion UPDATE OK — NOMBRE=SERIAL_SECUENCIAL (sin cambio, valor identico)
+2026-04-08 18:41:36 [DEBUG]   configuracion UPDATE OK — NOMBRE=SERIAL_ALPHANUMERIC (sin cambio, valor identico)
+2026-04-08 18:41:36 [DEBUG]   configuracion UPDATE OK — NOMBRE=CREAR_Y_DESPACHAR_LIBERADO (sin cambio, valor identico)
+2026-04-08 18:41:36 [DEBUG]   configuracion UPDATE OK — NOMBRE=DESPACHAR_EN_CUARENTENA (sin cambio, valor identico)
+2026-04-08 18:41:36 [DEBUG]   configuracion UPDATE OK — NOMBRE=CREAR_Y_PACK (sin cambio, valor identico)
+2026-04-08 18:41:36 [DEBUG]   configuracion UPDATE OK — NOMBRE=CREAR_LIBERADO (sin cambio, valor identico)
+2026-04-08 18:41:36 [DEBUG]   configuracion UPDATE OK — NOMBRE=USE_LOTE_DETALLE (sin cambio, valor identico)
+2026-04-08 18:41:36 [DEBUG]   configuracion UPDATE OK — NOMBRE=PREPARAR_Y_DESPACHAR (sin cambio, valor identico)
+2026-04-08 18:41:36 [DEBUG]   configuracion UPDATE OK — NOMBRE=DESPACHAR_E_INFORMAR (sin cambio, valor identico)
+2026-04-08 18:41:36 [DEBUG]   configuracion UPDATE OK — NOMBRE=RECIBIR_E_INFORMAR (sin cambio, valor identico)
+2026-04-08 18:41:36 [DEBUG]   configuracion UPDATE OK — NOMBRE=DEVOLVER_E_INFORMAR (sin cambio, valor identico)
+2026-04-08 18:41:36 [DEBUG]   configuracion UPDATE OK — NOMBRE=LIBERAR_E_INFORMAR (sin cambio, valor identico)
+2026-04-08 18:41:36 [DEBUG]   configuracion UPDATE OK — NOMBRE=VENDER_E_INFORMAR (sin cambio, valor identico)
+2026-04-08 18:41:36 [DEBUG]   configuracion UPDATE OK — NOMBRE=DISPENSAR_E_INFORMAR (sin cambio, valor identico)
+2026-04-08 18:41:36 [DEBUG]   configuracion UPDATE OK — NOMBRE=LOTE_MAX_SIZE (sin cambio, valor identico)
+2026-04-08 18:41:36 [DEBUG]   configuracion UPDATE OK — NOMBRE=PREGUNTAR_TIPO_DESPACHO (sin cambio, valor identico)
+2026-04-08 18:41:36 [DEBUG]   configuracion UPDATE OK — NOMBRE=USE_VALIDACION_LOTE (sin cambio, valor identico)
+2026-04-08 18:41:36 [DEBUG]   configuracion UPDATE OK — NOMBRE=DESPACHO_LOTE_COMPLETO (sin cambio, valor identico)
+2026-04-08 18:41:36 [DEBUG]   printer ya existe, ignorado — nombre=Lixis
+2026-04-08 18:41:36 [DEBUG]   perfil INSERT IGNORE OK — ID=2, NOMBRE=Administrador
+2026-04-08 18:41:36 [DEBUG]   perfil INSERT IGNORE OK — ID=3, NOMBRE=Calidad
+2026-04-08 18:41:36 [DEBUG]   perfil INSERT IGNORE OK — ID=4, NOMBRE=Producción
+2026-04-08 18:41:36 [DEBUG]   perfil INSERT IGNORE OK — ID=5, NOMBRE=Logística
+2026-04-08 18:41:36 [DEBUG]   usuario ya existe, ignorado — USERNAME=a1, ID_ESLABON=2151
+2026-04-08 18:41:36 [DEBUG]   usuario ya existe, ignorado — USERNAME=a2, ID_ESLABON=2151
+2026-04-08 18:41:36 [DEBUG]   usuario ya existe, ignorado — USERNAME=a3, ID_ESLABON=2151
+2026-04-08 18:41:36 [DEBUG]   usuario ya existe, ignorado — USERNAME=a4, ID_ESLABON=2151
+2026-04-08 18:41:36 [DEBUG]   usuario ya existe, ignorado — USERNAME=a5, ID_ESLABON=2151
+2026-04-08 18:41:36 [DEBUG]   usuario ya existe, ignorado — USERNAME=a6, ID_ESLABON=2151
+2026-04-08 18:41:36 [DEBUG]   usuario ya existe, ignorado — USERNAME=a7, ID_ESLABON=2152
+2026-04-08 18:41:36 [DEBUG]   usuario ya existe, ignorado — USERNAME=a8, ID_ESLABON=2152
+2026-04-08 18:41:36 [DEBUG]   usuario ya existe, ignorado — USERNAME=a9, ID_ESLABON=2152
+2026-04-08 18:41:36 [DEBUG]   usuario ya existe, ignorado — USERNAME=a10, ID_ESLABON=2152

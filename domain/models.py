@@ -29,6 +29,8 @@ class Medicamento:
     EXIGIBLE: int = 1
     ACTIVO: int = 1
     SERIE: int = 1
+    CANTIDAD_CAPAS_PACK: Optional[int] = None
+    LEVEL_AGGREGATION: Optional[int] = None
 
 
 @dataclass

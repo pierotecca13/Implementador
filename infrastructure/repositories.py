@@ -112,9 +112,10 @@ class MySQLMedicamentoRepository(MedicamentoRepository):
         sql = """
             INSERT IGNORE INTO medicamento
                 (ID_LAB, NOMBRE, BC_EAN_1, BC_EAN_2, ITEMS_POR_PACK,
-                 PACKS_POR_PALLET, TRAZABLE, EXIGIBLE, ACTIVO, SERIE)
+                 PACKS_POR_PALLET, TRAZABLE, EXIGIBLE, ACTIVO, SERIE,
+                 cantidad_capas_pack, level_aggregation)
             VALUES
-                (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
         """
         params = (
             med.ID_LAB,
@@ -127,6 +128,8 @@ class MySQLMedicamentoRepository(MedicamentoRepository):
             med.EXIGIBLE,
             med.ACTIVO,
             med.SERIE,
+            med.CANTIDAD_CAPAS_PACK,
+            med.LEVEL_AGGREGATION,
         )
         cursor = self._conn.cursor()
         cursor.execute(sql, params)

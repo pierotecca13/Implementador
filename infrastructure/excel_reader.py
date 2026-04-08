@@ -148,11 +148,13 @@ def read_formulario_productos(wb: openpyxl.Workbook) -> List[Medicamento]:
     Sheet: 'Formulario de Productos' → list[Medicamento]
 
     Column layout (header row 9):
-      A: Nombre          → NOMBRE
-      B: GTIN            → BC_EAN_1
-      C: Código ERP      → BC_EAN_2
-      D: Items por Pack  → ITEMS_POR_PACK
-      E: Packs por Pallet→ PACKS_POR_PALLET
+      A: Nombre              → NOMBRE
+      B: GTIN                → BC_EAN_1
+      C: Código ERP          → BC_EAN_2
+      D: Items por Pack      → ITEMS_POR_PACK
+      E: Packs por Pallet    → PACKS_POR_PALLET
+      F: Capas por Pack      → CANTIDAD_CAPAS_PACK
+      G: Nivel de Agregación → LEVEL_AGGREGATION
     """
     ws = wb[SHEET_PRODUCTOS]
     medicamentos: List[Medicamento] = []
@@ -162,10 +164,12 @@ def read_formulario_productos(wb: openpyxl.Workbook) -> List[Medicamento]:
         if nombre is None:
             break
 
-        bc_ean_1        = _to_str(_cell_value(ws, row, 2))
-        bc_ean_2        = _to_str(_cell_value(ws, row, 3))
-        items_por_pack  = _to_int(_cell_value(ws, row, 4))
-        packs_por_pallet= _to_int(_cell_value(ws, row, 5))
+        bc_ean_1           = _to_str(_cell_value(ws, row, 2))
+        bc_ean_2           = _to_str(_cell_value(ws, row, 3))
+        items_por_pack     = _to_int(_cell_value(ws, row, 4))
+        packs_por_pallet   = _to_int(_cell_value(ws, row, 5))
+        cantidad_capas_pack= _to_int(_cell_value(ws, row, 6))
+        level_aggregation  = _to_int(_cell_value(ws, row, 7))
 
         medicamentos.append(Medicamento(
             NOMBRE=_to_str(nombre),
@@ -178,6 +182,8 @@ def read_formulario_productos(wb: openpyxl.Workbook) -> List[Medicamento]:
             EXIGIBLE=1,
             ACTIVO=1,
             SERIE=1,
+            CANTIDAD_CAPAS_PACK=cantidad_capas_pack,
+            LEVEL_AGGREGATION=level_aggregation,
         ))
 
     logger.debug(f"[{SHEET_PRODUCTOS}] {len(medicamentos)} filas leídas.")

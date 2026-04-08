@@ -260,66 +260,71 @@ class ImportService:
     def _import_relaciones(self, new_registro: List[Eslabon], new_proveedores: List[Eslabon]) -> ImportResult:
         result = ImportResult("eslabon_eslabon - relaciones")
 
-        # Resolver IDs de nuevos eslabones con URL (registro/laboratorio)
-        ids_with_url = []
+        # IDs de nuevos eslabones con URL (laboratorios recién insertados)
+        new_ids_with_url = []
         for e in new_registro:
             if e.URL:
                 id_eslabon = self._eslabon_repo.get_id_by_url(e.URL)
                 if id_eslabon is not None:
-                    ids_with_url.append(id_eslabon)
+                    new_ids_with_url.append(id_eslabon)
 
-        # Resolver IDs de nuevos eslabones sin URL (proveedores/clientes)
-        ids_without_url = []
+        # IDs de nuevos eslabones sin URL (proveedores/clientes recién insertados)
+        new_ids_without_url = []
         for e in new_proveedores:
             id_eslabon = self._eslabon_repo.get_id_by_gln(e.GLN)
             if id_eslabon is not None:
-                ids_without_url.append(id_eslabon)
+                new_ids_without_url.append(id_eslabon)
 
-        if not ids_with_url or not ids_without_url:
-            logger.info(
-                f"  Relaciones: sin nuevos eslabones para relacionar "
-                f"({len(ids_with_url)} con URL, {len(ids_without_url)} sin URL) — omitido"
-            )
+        if not new_ids_with_url and not new_ids_without_url:
+            logger.info("  Relaciones: ningún eslabon nuevo — omitido")
             return result
 
-        logger.info(
-            f"  Relaciones: {len(ids_with_url)} eslabones nuevos con URL x "
-            f"{len(ids_without_url)} eslabones nuevos sin URL = "
-            f"{len(ids_with_url) * len(ids_without_url) * 2} filas esperadas"
-        )
+        # Construir pares a insertar: cada nuevo debe relacionarse con TODOS los del lado opuesto
+        pairs: set = set()
+        if new_ids_without_url:
+            all_ids_with_url = self._eslabon_repo.get_ids_with_url()
+            for id_with in all_ids_with_url:
+                for id_without in new_ids_without_url:
+                    pairs.add((id_with, id_without))
+        if new_ids_with_url:
+            all_ids_without_url = self._eslabon_repo.get_ids_without_url()
+            for id_with in new_ids_with_url:
+                for id_without in all_ids_without_url:
+                    pairs.add((id_with, id_without))
+
+        logger.info(f"  Relaciones: {len(pairs)} pares x 2 tipos = {len(pairs) * 2} filas esperadas")
 
         existing_relations = self._eslabon_eslabon_repo.get_existing_relations()
         today = date.today()
-        for id_with in ids_with_url:
-            for id_without in ids_without_url:
-                for tipo in ("PR", "CL"):
-                    key = (id_with, id_without, tipo)
-                    if key in existing_relations:
-                        result.record_ignored()
-                        logger.debug(
-                            f"  eslabon_eslabon ya existe, ignorado — "
-                            f"ID_ESLABON={id_with}, ID_RELACION={id_without}, TIPO={tipo}"
-                        )
-                        continue
-                    rel = EslabonEslabon(
-                        ID_ESLABON=id_with, ID_RELACION=id_without,
-                        TIPO=tipo, ACTIVO=1, FECHA_ALTA=today,
+        for (id_with, id_without) in pairs:
+            for tipo in ("PR", "CL"):
+                key = (id_with, id_without, tipo)
+                if key in existing_relations:
+                    result.record_ignored()
+                    logger.debug(
+                        f"  eslabon_eslabon ya existe, ignorado — "
+                        f"ID_ESLABON={id_with}, ID_RELACION={id_without}, TIPO={tipo}"
                     )
-                    try:
-                        self._eslabon_eslabon_repo.insert(rel)
-                        existing_relations.add(key)
-                        result.record_ok()
-                        logger.debug(
-                            f"  eslabon_eslabon INSERT OK — "
-                            f"ID_ESLABON={id_with}, ID_RELACION={id_without}, TIPO={tipo}"
-                        )
-                    except Exception as exc:
-                        result.record_error()
-                        logger.error(
-                            f"  eslabon_eslabon INSERT error — "
-                            f"ID_ESLABON={id_with}, ID_RELACION={id_without}, TIPO={tipo}: {exc}"
-                        )
-                        raise
+                    continue
+                rel = EslabonEslabon(
+                    ID_ESLABON=id_with, ID_RELACION=id_without,
+                    TIPO=tipo, ACTIVO=1, FECHA_ALTA=today,
+                )
+                try:
+                    self._eslabon_eslabon_repo.insert(rel)
+                    existing_relations.add(key)
+                    result.record_ok()
+                    logger.debug(
+                        f"  eslabon_eslabon INSERT OK — "
+                        f"ID_ESLABON={id_with}, ID_RELACION={id_without}, TIPO={tipo}"
+                    )
+                except Exception as exc:
+                    result.record_error()
+                    logger.error(
+                        f"  eslabon_eslabon INSERT error — "
+                        f"ID_ESLABON={id_with}, ID_RELACION={id_without}, TIPO={tipo}: {exc}"
+                    )
+                    raise
         return result
 
     def _import_parametros(self, parametros: List[Parametro]) -> ImportResult:
