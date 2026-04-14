@@ -17,13 +17,14 @@ from datetime import date, datetime
 from typing import List
 import calendar
 
-from domain.models import Eslabon, Medicamento, EslabonEslabon, Parametro, Perfil, Printer, Usuario, StockRow
+from domain.models import Eslabon, Medicamento, EslabonEslabon, Parametro, Perfil, Printer, Usuario, StockRow, PerfilPermisoRaw
 from infrastructure.repositories import (
     MySQLEslabonRepository,
     MySQLMedicamentoRepository,
     MySQLEslabonEslabonRepository,
     MySQLConfiguracionRepository,
     MySQLPerfilRepository,
+    MySQLPerfilPermisoRepository,
     MySQLPrinterRepository,
     MySQLUsuarioRepository,
     MySQLStockRepository,
@@ -91,6 +92,7 @@ class ImportService:
         self._eslabon_eslabon_repo = MySQLEslabonEslabonRepository(connection)
         self._configuracion_repo   = MySQLConfiguracionRepository(connection)
         self._perfil_repo          = MySQLPerfilRepository(connection)
+        self._perfil_permiso_repo  = MySQLPerfilPermisoRepository(connection)
         self._printer_repo         = MySQLPrinterRepository(connection)
         self._usuario_repo         = MySQLUsuarioRepository(connection)
         self._stock_repo           = MySQLStockRepository(connection)
@@ -106,9 +108,12 @@ class ImportService:
         impresoras: List[Printer],
         usuarios: List[Usuario],
         stock: List[StockRow] = None,
+        perfil_permiso: List[PerfilPermisoRaw] = None,
     ) -> bool:
         if stock is None:
             stock = []
+        if perfil_permiso is None:
+            perfil_permiso = []
         results: List[ImportResult] = []
 
         try:
@@ -135,6 +140,9 @@ class ImportService:
 
             r7 = self._import_perfiles()
             results.append(r7)
+
+            r_pp = self._import_perfil_permiso(perfil_permiso)
+            results.append(r_pp)
 
             r8 = self._import_usuarios(usuarios)
             results.append(r8)
@@ -408,6 +416,71 @@ class ImportService:
                 result.record_error()
                 logger.error(f"  perfil INSERT error — NOMBRE={perfil.NOMBRE}: {exc}")
                 raise
+        return result
+
+    def _import_perfil_permiso(self, rows: List[PerfilPermisoRaw]) -> ImportResult:
+        """
+        Asocia perfiles existentes con permisos en perfil_permiso (HABILITADO=1).
+
+        Performance: un único SELECT carga todos los permisos en memoria;
+        otro SELECT carga las claves existentes. El INSERT final es un único executemany.
+        """
+        result = ImportResult("Perfil Permiso")
+        if not rows:
+            return result
+
+        # Carga batch única de lookups — sin N+1 queries
+        permisos_dict = self._perfil_permiso_repo.get_all_permisos()
+        existing_keys = self._perfil_permiso_repo.get_existing_keys()
+
+        # Cache de ID_PERFIL por nombre para evitar queries repetidas del mismo perfil
+        perfil_id_cache: dict = {}
+
+        to_insert = []
+        for row in rows:
+            # Resolver ID_PERFIL (con cache en memoria)
+            if row.nombre_perfil not in perfil_id_cache:
+                id_perfil = self._perfil_repo.get_id_by_nombre(row.nombre_perfil)
+                if id_perfil is None:
+                    msg = (
+                        f"[Perfil Permiso] Perfil '{row.nombre_perfil}' "
+                        f"no encontrado en tabla perfil."
+                    )
+                    logger.error(f"  {msg}")
+                    raise ValueError(msg)
+                perfil_id_cache[row.nombre_perfil] = id_perfil
+            id_perfil = perfil_id_cache[row.nombre_perfil]
+
+            # Resolver lista de ID_PERMISO desde (ACCION, MODULO, SCRIPT)
+            # Una misma combinación puede tener múltiples ID_PERMISO — se insertan todos
+            key_permiso = (row.accion, row.modulo, row.script)
+            id_permisos = permisos_dict.get(key_permiso)
+            if not id_permisos:
+                msg = (
+                    f"[Perfil Permiso] Permiso no encontrado — "
+                    f"ACCION='{row.accion}', MODULO='{row.modulo}', SCRIPT='{row.script}'"
+                )
+                logger.error(f"  {msg}")
+                raise ValueError(msg)
+
+            for id_permiso in id_permisos:
+                key_pp = (id_permiso, id_perfil)
+                if key_pp in existing_keys:
+                    result.record_ignored()
+                    logger.debug(
+                        f"  perfil_permiso ya existe, ignorado — "
+                        f"ID_PERMISO={id_permiso}, ID_PERFIL={id_perfil}"
+                    )
+                    continue
+
+                to_insert.append((id_permiso, id_perfil, 1))
+                existing_keys.add(key_pp)   # evita duplicados dentro del mismo archivo
+                result.record_ok()
+
+        self._perfil_permiso_repo.bulk_insert_ignore(to_insert)
+        logger.info(
+            f"  Perfil Permiso: {result.ok} insertados, {result.ignored} ignorados."
+        )
         return result
 
     def _import_usuarios(self, usuarios: List[Usuario]) -> ImportResult:

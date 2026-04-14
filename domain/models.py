@@ -86,6 +86,14 @@ class StockRow:
 
 
 @dataclass
+class PerfilPermisoRaw:
+    nombre_perfil: str          # ej. "Administrador" → ID_PERFIL=2
+    accion: str                 # permiso.ACCION
+    modulo: Optional[str]       # permiso.MODULO
+    script: Optional[str]       # permiso.SCRIPT
+
+
+@dataclass
 class Usuario:
     APEYNOM: Optional[str]
     USERNAME: str

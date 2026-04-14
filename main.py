@@ -55,7 +55,8 @@ def main() -> int:
         f"Usuarios: {len(data['usuarios'])} filas, "
         f"Parámetros: {len(data['parametros'])} filas, "
         f"Impresoras: {len(data['impresoras'])} filas activas, "
-        f"Stock: {len(data['stock'])} series"
+        f"Stock: {len(data['stock'])} series, "
+        f"Perfil Permiso: {len(data['perfil_permiso'])} filas"
     )
 
     # 2. Connect to MySQL
@@ -76,6 +77,7 @@ def main() -> int:
             impresoras=data["impresoras"],
             usuarios=data["usuarios"],
             stock=data["stock"],
+            perfil_permiso=data["perfil_permiso"],
         )
         return 0 if success else 1
     finally:

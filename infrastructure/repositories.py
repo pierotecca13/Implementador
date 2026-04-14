@@ -345,6 +345,49 @@ class MySQLUsuarioRepository(UsuarioRepository):
         cursor.close()
 
 
+class MySQLPerfilPermisoRepository:
+
+    def __init__(self, connection: MySQLConnection):
+        self._conn = connection
+
+    def get_all_permisos(self) -> dict:
+        """Carga todos los permisos en dict {(ACCION, MODULO, SCRIPT): List[ID_PERMISO]}
+        para resolución en memoria sin N+1 queries.
+        Una misma combinación (ACCION, MODULO, SCRIPT) puede tener múltiples ID_PERMISO."""
+        cursor = self._conn.cursor()
+        cursor.execute("SELECT ID_PERMISO, ACCION, MODULO, SCRIPT FROM permiso")
+        result: dict = {}
+        for row in cursor.fetchall():
+            key = (row[1], row[2], row[3])
+            result.setdefault(key, []).append(row[0])
+        cursor.close()
+        return result
+
+    def get_existing_keys(self) -> set:
+        """Carga todas las (ID_PERMISO, ID_PERFIL) existentes en un set."""
+        cursor = self._conn.cursor()
+        cursor.execute("SELECT ID_PERMISO, ID_PERFIL FROM perfil_permiso")
+        keys = {(row[0], row[1]) for row in cursor.fetchall()}
+        cursor.close()
+        return keys
+
+    def bulk_insert_ignore(self, rows: List[tuple]) -> int:
+        """INSERT IGNORE INTO perfil_permiso(ID_PERMISO, ID_PERFIL, HABILITADO).
+        rows: list of (id_permiso, id_perfil, habilitado).
+        Retorna rowcount total."""
+        if not rows:
+            return 0
+        sql = """
+            INSERT IGNORE INTO perfil_permiso (ID_PERMISO, ID_PERFIL, HABILITADO)
+            VALUES (%s, %s, %s)
+        """
+        cursor = self._conn.cursor()
+        cursor.executemany(sql, rows)
+        inserted = cursor.rowcount
+        cursor.close()
+        return inserted
+
+
 class MySQLStockRepository:
     """
     Repositorio optimizado para el alta masiva de stock.

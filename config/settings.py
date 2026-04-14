@@ -11,8 +11,9 @@ SHEET_PROVEEDORES       = "Formulario Proveedores Clientes"
 SHEET_USUARIOS          = "Formulario de Usuarios"
 SHEET_PARAMETROS        = "Parámetros"
 
-SHEET_IMPRESORAS = "Formulario de Impresoras"
-SHEET_STOCK      = "Formulario de Stock"
+SHEET_IMPRESORAS     = "Formulario de Impresoras"
+SHEET_STOCK          = "Formulario de Stock"
+SHEET_PERFIL_PERMISO = "Perfil Permiso"
 
 # Filas por batch en bulk inserts (etiqueta / item / log_estado)
 STOCK_CHUNK_SIZE = 5_000

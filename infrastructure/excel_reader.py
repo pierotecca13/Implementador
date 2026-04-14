@@ -6,11 +6,11 @@ import openpyxl
 
 import unicodedata
 
-from domain.models import Eslabon, Medicamento, Parametro, Printer, Usuario, StockRow
+from domain.models import Eslabon, Medicamento, Parametro, Perfil, Printer, Usuario, StockRow, PerfilPermisoRaw
 from config.settings import (
     HEADER_ROW, DATA_START_ROW,
     SHEET_REGISTRO, SHEET_PRODUCTOS, SHEET_PROVEEDORES, SHEET_PARAMETROS,
-    SHEET_USUARIOS, SHEET_IMPRESORAS, SHEET_STOCK,
+    SHEET_USUARIOS, SHEET_IMPRESORAS, SHEET_STOCK, SHEET_PERFIL_PERMISO,
     EMPRESA_LOOKUP, SPECIAL_QUOTED_PARAMS, DEFAULT_PASSWORD, PRINTER_TYPE_MAP,
 )
 from utils.logger import get_logger
@@ -551,6 +551,76 @@ def read_formulario_stock(wb: openpyxl.Workbook) -> List[StockRow]:
     return rows
 
 
+def read_perfil_permiso(wb: openpyxl.Workbook) -> List[PerfilPermisoRaw]:
+    """
+    Sheet: 'Perfil Permiso' → list[PerfilPermisoRaw]
+
+    Columnas detectadas dinámicamente desde la fila de cabecera (HEADER_ROW):
+      Nombre de perfil  → nombre_perfil
+      Acción:           → accion
+      Módulo:           → modulo
+      Script:           → script
+    """
+    ws = wb[SHEET_PERFIL_PERMISO]
+
+    ALIASES: dict[str, list[str]] = {
+        "perfil": ["nombre de perfil", "nombre de perfil:"],
+        "accion": ["acción:", "accion:", "acción", "accion"],
+        "modulo": ["módulo:", "modulo:", "módulo", "modulo"],
+        "script": ["script:", "script"],
+    }
+
+    header_map: dict[str, int] = {}
+    for row in ws.iter_rows(min_row=HEADER_ROW, max_row=HEADER_ROW, values_only=True):
+        for idx, cell_val in enumerate(row):
+            if cell_val is not None:
+                header_map[str(cell_val).strip().lower()] = idx
+        break
+
+    col_map: dict[str, int] = {}
+    for key, aliases in ALIASES.items():
+        for alias in aliases:
+            if alias in header_map:
+                col_map[key] = header_map[alias]
+                break
+        if key not in col_map:
+            raise ValueError(
+                f"[{SHEET_PERFIL_PERMISO}] Columna no encontrada: '{key}'. "
+                f"Aliases buscados: {aliases}. "
+                f"Cabeceras detectadas: {list(header_map.keys())}"
+            )
+
+    logger.debug(f"[{SHEET_PERFIL_PERMISO}] Columnas detectadas: {col_map}")
+
+    rows: List[PerfilPermisoRaw] = []
+    for row_values in ws.iter_rows(min_row=DATA_START_ROW, values_only=True):
+        def _get(key):
+            idx = col_map[key]
+            val = row_values[idx] if idx < len(row_values) else None
+            return str(val).strip() if val is not None and str(val).strip() else None
+
+        nombre_perfil = _get("perfil")
+        if nombre_perfil is None:
+            break
+
+        accion = _get("accion")
+        if not accion:
+            raise ValueError(
+                f"[{SHEET_PERFIL_PERMISO}] 'Acción' no puede estar vacío "
+                f"para el perfil '{nombre_perfil}'."
+            )
+
+        rows.append(PerfilPermisoRaw(
+            nombre_perfil=nombre_perfil,
+            accion=accion,
+            modulo=_get("modulo"),
+            script=_get("script"),
+        ))
+
+    logger.debug(f"[{SHEET_PERFIL_PERMISO}] {len(rows)} filas leídas.")
+    return rows
+
+
 # ── public entry point ────────────────────────────────────────────────────────
 
 def read_workbook(path: str):
@@ -593,5 +663,11 @@ def read_workbook(path: str):
         result["stock"] = read_formulario_stock(wb)
     else:
         logger.info(f"Pestaña '{SHEET_STOCK}' no encontrada — omitida.")
+
+    result["perfil_permiso"] = []
+    if SHEET_PERFIL_PERMISO in available:
+        result["perfil_permiso"] = read_perfil_permiso(wb)
+    else:
+        logger.info(f"Pestaña '{SHEET_PERFIL_PERMISO}' no encontrada — omitida.")
 
     return result

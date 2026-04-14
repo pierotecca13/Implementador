@@ -3127,3 +3127,1491 @@ mysql.connector.errors.IntegrityError: 1452 (23000): Cannot add or update a chil
 2026-04-08 18:41:36 [DEBUG]   usuario ya existe, ignorado — USERNAME=a8, ID_ESLABON=2152
 2026-04-08 18:41:36 [DEBUG]   usuario ya existe, ignorado — USERNAME=a9, ID_ESLABON=2152
 2026-04-08 18:41:36 [DEBUG]   usuario ya existe, ignorado — USERNAME=a10, ID_ESLABON=2152
+2026-04-14 09:00:19 [INFO] Abriendo fichero Excel: Formulario_Masterdata.xlsx
+2026-04-14 09:00:19 [DEBUG] [Formulario de Registro] 2 filas leídas.
+2026-04-14 09:00:19 [DEBUG] [Formulario de Productos] 11 filas leídas.
+2026-04-14 09:00:19 [DEBUG] [Formulario Proveedores Clientes] 10 filas leídas.
+2026-04-14 09:00:19 [DEBUG] [Formulario de Usuarios] 10 filas leídas.
+2026-04-14 09:00:19 [DEBUG] [Parámetros] Columnas detectadas → NOMBRE=col1, VALOR=col3
+2026-04-14 09:00:19 [DEBUG] [Parámetros] 29 filas leídas.
+2026-04-14 09:00:19 [DEBUG]   [Formulario de Impresoras] Fila 10: 'Impresora Item' omitida (Cantidad=0).
+2026-04-14 09:00:19 [DEBUG]   [Formulario de Impresoras] Fila 11: 'Impresora Agrupación' omitida (Cantidad=0).
+2026-04-14 09:00:19 [DEBUG]   [Formulario de Impresoras] Fila 13: 'Onelite' omitida (Cantidad=0).
+2026-04-14 09:00:19 [DEBUG] [Formulario de Impresoras] 1 impresoras activas leídas.
+2026-04-14 09:00:19 [DEBUG] [Formulario de Stock] Columnas detectadas: {'lote': 2, 'gtin': 0, 'vto': 3, 'serie': 1, 'pack': 4, 'pallet': 5, 'url': 6}
+2026-04-14 09:00:19 [DEBUG] [Formulario de Stock] 0 filas leídas.
+2026-04-14 09:00:19 [DEBUG] [Perfil Permiso] Columnas detectadas: {'perfil': 0, 'accion': 1, 'modulo': 2, 'script': 3}
+2026-04-14 09:00:19 [DEBUG] [Perfil Permiso] 953 filas leídas.
+2026-04-14 09:00:19 [INFO] Fichero leído — Registro: 2 filas, Productos: 11 filas, Proveedores: 10 filas, Usuarios: 10 filas, Parámetros: 29 filas, Impresoras: 1 filas activas, Stock: 0 series, Perfil Permiso: 953 filas
+2026-04-14 09:00:19 [ERROR] No se pudo conectar a la base de datos: Missing environment variables: DB_HOST, DB_PORT, DB_USER, DB_PASSWORD, DB_NAME. Check your .env file.
+Traceback (most recent call last):
+  File "C:\Desarrollos\implementador\main.py", line 64, in main
+    conn = get_connection()
+  File "C:\Desarrollos\implementador\infrastructure\db_connection.py", line 15, in get_connection
+    raise EnvironmentError(
+    ...<2 lines>...
+    )
+OSError: Missing environment variables: DB_HOST, DB_PORT, DB_USER, DB_PASSWORD, DB_NAME. Check your .env file.
+2026-04-14 09:00:44 [INFO] Abriendo fichero Excel: Formulario_Masterdata.xlsx
+2026-04-14 09:00:44 [DEBUG] [Formulario de Registro] 2 filas leídas.
+2026-04-14 09:00:44 [DEBUG] [Formulario de Productos] 11 filas leídas.
+2026-04-14 09:00:44 [DEBUG] [Formulario Proveedores Clientes] 10 filas leídas.
+2026-04-14 09:00:45 [DEBUG] [Formulario de Usuarios] 10 filas leídas.
+2026-04-14 09:00:45 [DEBUG] [Parámetros] Columnas detectadas → NOMBRE=col1, VALOR=col3
+2026-04-14 09:00:45 [DEBUG] [Parámetros] 29 filas leídas.
+2026-04-14 09:00:45 [DEBUG]   [Formulario de Impresoras] Fila 10: 'Impresora Item' omitida (Cantidad=0).
+2026-04-14 09:00:45 [DEBUG]   [Formulario de Impresoras] Fila 11: 'Impresora Agrupación' omitida (Cantidad=0).
+2026-04-14 09:00:45 [DEBUG]   [Formulario de Impresoras] Fila 13: 'Onelite' omitida (Cantidad=0).
+2026-04-14 09:00:45 [DEBUG] [Formulario de Impresoras] 1 impresoras activas leídas.
+2026-04-14 09:00:45 [DEBUG] [Formulario de Stock] Columnas detectadas: {'lote': 2, 'gtin': 0, 'vto': 3, 'serie': 1, 'pack': 4, 'pallet': 5, 'url': 6}
+2026-04-14 09:00:45 [DEBUG] [Formulario de Stock] 0 filas leídas.
+2026-04-14 09:00:45 [DEBUG] [Perfil Permiso] Columnas detectadas: {'perfil': 0, 'accion': 1, 'modulo': 2, 'script': 3}
+2026-04-14 09:00:45 [DEBUG] [Perfil Permiso] 953 filas leídas.
+2026-04-14 09:00:45 [INFO] Fichero leído — Registro: 2 filas, Productos: 11 filas, Proveedores: 10 filas, Usuarios: 10 filas, Parámetros: 29 filas, Impresoras: 1 filas activas, Stock: 0 series, Perfil Permiso: 953 filas
+2026-04-14 09:00:45 [DEBUG]   eslabon INSERT OK — RSOC=PRUEBA 1
+2026-04-14 09:00:45 [DEBUG]   eslabon INSERT OK — RSOC=PRUEBA 2
+2026-04-14 09:00:45 [DEBUG]   usuario interfaz INSERT OK — URL=prueba-testing.verifarma.com/segundo, ID_ESLABON=2165
+2026-04-14 09:00:45 [DEBUG]   usuario interfaz INSERT OK — URL=prueba-testing.verifarma.com, ID_ESLABON=2164
+2026-04-14 09:00:45 [INFO]   ID_LAB resuelto dinámicamente: 2164
+2026-04-14 09:00:45 [DEBUG]   medicamento INSERT OK — NOMBRE=ACTOS 15 MG COMPX15
+2026-04-14 09:00:45 [DEBUG]   medicamento INSERT OK — NOMBRE=ACTOS 15 MG COMPX30
+2026-04-14 09:00:45 [DEBUG]   medicamento INSERT OK — NOMBRE=ACTOS 30 MG COMPX15
+2026-04-14 09:00:45 [DEBUG]   medicamento INSERT OK — NOMBRE=ACTOS 30 MG COMPX30
+2026-04-14 09:00:45 [DEBUG]   medicamento INSERT OK — NOMBRE=ACTOS M 500 MG15 MG COMPX15
+2026-04-14 09:00:45 [DEBUG]   medicamento INSERT OK — NOMBRE=ACTOS M 500 MG15 MG COMPX30
+2026-04-14 09:00:45 [DEBUG]   medicamento INSERT OK — NOMBRE=ACTOS M 850 MG15 MG COMPX15
+2026-04-14 09:00:45 [DEBUG]   medicamento INSERT OK — NOMBRE=ACTOS M 850 MG15 MG COMPX30
+2026-04-14 09:00:45 [DEBUG]   medicamento INSERT OK — NOMBRE=AKINETON AX5 X1 ML
+2026-04-14 09:00:45 [DEBUG]   medicamento INSERT OK — NOMBRE=AKINETON COMPX20
+2026-04-14 09:00:45 [DEBUG]   medicamento INSERT OK — NOMBRE=AKINETON COMPX20
+2026-04-14 09:00:45 [DEBUG]   eslabon INSERT OK — RSOC=ALCON
+2026-04-14 09:00:45 [DEBUG]   eslabon INSERT OK — RSOC=ANDRÓMACO
+2026-04-14 09:00:45 [DEBUG]   eslabon INSERT OK — RSOC=ARISTON
+2026-04-14 09:00:45 [DEBUG]   eslabon INSERT OK — RSOC=AULO GELIO ARG.
+2026-04-14 09:00:45 [DEBUG]   eslabon INSERT OK — RSOC=EUROFARMA
+2026-04-14 09:00:45 [DEBUG]   eslabon INSERT OK — RSOC=BAGÓ
+2026-04-14 09:00:45 [DEBUG]   eslabon INSERT OK — RSOC=BAJER
+2026-04-14 09:00:45 [DEBUG]   eslabon INSERT OK — RSOC=BALIARDA
+2026-04-14 09:00:45 [DEBUG]   eslabon INSERT OK — RSOC=BENITOL
+2026-04-14 09:00:45 [DEBUG]   eslabon INSERT OK — RSOC=BENITOL
+2026-04-14 09:00:45 [INFO]   Relaciones: 20 pares x 2 tipos = 40 filas esperadas
+2026-04-14 09:00:45 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2165, ID_RELACION=2166, TIPO=PR
+2026-04-14 09:00:45 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2165, ID_RELACION=2166, TIPO=CL
+2026-04-14 09:00:45 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2165, ID_RELACION=2172, TIPO=PR
+2026-04-14 09:00:45 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2165, ID_RELACION=2172, TIPO=CL
+2026-04-14 09:00:45 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2165, ID_RELACION=2169, TIPO=PR
+2026-04-14 09:00:45 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2165, ID_RELACION=2169, TIPO=CL
+2026-04-14 09:00:45 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2165, ID_RELACION=2175, TIPO=PR
+2026-04-14 09:00:45 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2165, ID_RELACION=2175, TIPO=CL
+2026-04-14 09:00:45 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2164, ID_RELACION=2170, TIPO=PR
+2026-04-14 09:00:45 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2164, ID_RELACION=2170, TIPO=CL
+2026-04-14 09:00:45 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2164, ID_RELACION=2167, TIPO=PR
+2026-04-14 09:00:45 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2164, ID_RELACION=2167, TIPO=CL
+2026-04-14 09:00:45 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2164, ID_RELACION=2173, TIPO=PR
+2026-04-14 09:00:45 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2164, ID_RELACION=2173, TIPO=CL
+2026-04-14 09:00:45 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2165, ID_RELACION=2168, TIPO=PR
+2026-04-14 09:00:45 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2165, ID_RELACION=2168, TIPO=CL
+2026-04-14 09:00:45 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2165, ID_RELACION=2171, TIPO=PR
+2026-04-14 09:00:45 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2165, ID_RELACION=2171, TIPO=CL
+2026-04-14 09:00:45 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2165, ID_RELACION=2174, TIPO=PR
+2026-04-14 09:00:45 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2165, ID_RELACION=2174, TIPO=CL
+2026-04-14 09:00:45 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2164, ID_RELACION=2166, TIPO=PR
+2026-04-14 09:00:45 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2164, ID_RELACION=2166, TIPO=CL
+2026-04-14 09:00:45 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2164, ID_RELACION=2172, TIPO=PR
+2026-04-14 09:00:45 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2164, ID_RELACION=2172, TIPO=CL
+2026-04-14 09:00:45 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2164, ID_RELACION=2169, TIPO=PR
+2026-04-14 09:00:45 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2164, ID_RELACION=2169, TIPO=CL
+2026-04-14 09:00:45 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2164, ID_RELACION=2175, TIPO=PR
+2026-04-14 09:00:45 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2164, ID_RELACION=2175, TIPO=CL
+2026-04-14 09:00:45 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2165, ID_RELACION=2170, TIPO=PR
+2026-04-14 09:00:45 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2165, ID_RELACION=2170, TIPO=CL
+2026-04-14 09:00:45 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2165, ID_RELACION=2167, TIPO=PR
+2026-04-14 09:00:45 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2165, ID_RELACION=2167, TIPO=CL
+2026-04-14 09:00:45 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2165, ID_RELACION=2173, TIPO=PR
+2026-04-14 09:00:45 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2165, ID_RELACION=2173, TIPO=CL
+2026-04-14 09:00:45 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2164, ID_RELACION=2168, TIPO=PR
+2026-04-14 09:00:45 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2164, ID_RELACION=2168, TIPO=CL
+2026-04-14 09:00:45 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2164, ID_RELACION=2171, TIPO=PR
+2026-04-14 09:00:45 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2164, ID_RELACION=2171, TIPO=CL
+2026-04-14 09:00:45 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2164, ID_RELACION=2174, TIPO=PR
+2026-04-14 09:00:45 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2164, ID_RELACION=2174, TIPO=CL
+2026-04-14 09:00:45 [DEBUG]   configuracion UPDATE OK — NOMBRE=INACTIVE_TIME_OUT (sin cambio, valor identico)
+2026-04-14 09:00:45 [DEBUG]   configuracion UPDATE OK — NOMBRE=CANT_DASH (sin cambio, valor identico)
+2026-04-14 09:00:45 [DEBUG]   configuracion UPDATE OK — NOMBRE=TABLE_SIZE (sin cambio, valor identico)
+2026-04-14 09:00:45 [DEBUG]   configuracion UPDATE OK — NOMBRE=VENCIMIENTO_LICENCIA_USUARIO (sin cambio, valor identico)
+2026-04-14 09:00:45 [DEBUG]   configuracion UPDATE OK — NOMBRE=DIAS_VTO_PASSWORD (sin cambio, valor identico)
+2026-04-14 09:00:45 [DEBUG]   configuracion UPDATE OK — NOMBRE=CANT_FALLOS_LOGIN (sin cambio, valor identico)
+2026-04-14 09:00:45 [DEBUG]   configuracion UPDATE OK — NOMBRE=URL_ESLABON_UNICA (sin cambio, valor identico)
+2026-04-14 09:00:45 [DEBUG]   configuracion UPDATE OK — NOMBRE=PRINTER_ITEM_PLUGIN (sin cambio, valor identico)
+2026-04-14 09:00:45 [DEBUG]   configuracion UPDATE OK — NOMBRE=DESPACHAR_E_IMPRIMIR (sin cambio, valor identico)
+2026-04-14 09:00:45 [DEBUG]   configuracion UPDATE OK — NOMBRE=SERIAL_SIZE (sin cambio, valor identico)
+2026-04-14 09:00:45 [DEBUG]   configuracion UPDATE OK — NOMBRE=SSCC_COMPANY_PREFFIX (sin cambio, valor identico)
+2026-04-14 09:00:45 [DEBUG]   configuracion UPDATE OK — NOMBRE=SERIAL_SECUENCIAL (sin cambio, valor identico)
+2026-04-14 09:00:45 [DEBUG]   configuracion UPDATE OK — NOMBRE=SERIAL_ALPHANUMERIC (sin cambio, valor identico)
+2026-04-14 09:00:45 [DEBUG]   configuracion UPDATE OK — NOMBRE=CREAR_Y_DESPACHAR_LIBERADO (sin cambio, valor identico)
+2026-04-14 09:00:45 [DEBUG]   configuracion UPDATE OK — NOMBRE=DESPACHAR_EN_CUARENTENA (sin cambio, valor identico)
+2026-04-14 09:00:45 [DEBUG]   configuracion UPDATE OK — NOMBRE=CREAR_Y_PACK (sin cambio, valor identico)
+2026-04-14 09:00:45 [DEBUG]   configuracion UPDATE OK — NOMBRE=CREAR_LIBERADO (sin cambio, valor identico)
+2026-04-14 09:00:45 [DEBUG]   configuracion UPDATE OK — NOMBRE=USE_LOTE_DETALLE (sin cambio, valor identico)
+2026-04-14 09:00:45 [DEBUG]   configuracion UPDATE OK — NOMBRE=PREPARAR_Y_DESPACHAR (sin cambio, valor identico)
+2026-04-14 09:00:45 [DEBUG]   configuracion UPDATE OK — NOMBRE=DESPACHAR_E_INFORMAR (sin cambio, valor identico)
+2026-04-14 09:00:45 [DEBUG]   configuracion UPDATE OK — NOMBRE=RECIBIR_E_INFORMAR (sin cambio, valor identico)
+2026-04-14 09:00:45 [DEBUG]   configuracion UPDATE OK — NOMBRE=DEVOLVER_E_INFORMAR (sin cambio, valor identico)
+2026-04-14 09:00:45 [DEBUG]   configuracion UPDATE OK — NOMBRE=LIBERAR_E_INFORMAR (sin cambio, valor identico)
+2026-04-14 09:00:45 [DEBUG]   configuracion UPDATE OK — NOMBRE=VENDER_E_INFORMAR (sin cambio, valor identico)
+2026-04-14 09:00:45 [DEBUG]   configuracion UPDATE OK — NOMBRE=DISPENSAR_E_INFORMAR (sin cambio, valor identico)
+2026-04-14 09:00:45 [DEBUG]   configuracion UPDATE OK — NOMBRE=LOTE_MAX_SIZE (sin cambio, valor identico)
+2026-04-14 09:00:45 [DEBUG]   configuracion UPDATE OK — NOMBRE=PREGUNTAR_TIPO_DESPACHO (sin cambio, valor identico)
+2026-04-14 09:00:45 [DEBUG]   configuracion UPDATE OK — NOMBRE=USE_VALIDACION_LOTE (sin cambio, valor identico)
+2026-04-14 09:00:45 [DEBUG]   configuracion UPDATE OK — NOMBRE=DESPACHO_LOTE_COMPLETO (sin cambio, valor identico)
+2026-04-14 09:00:45 [DEBUG]   printer INSERT OK — nombre=Lixis, tipo=item
+2026-04-14 09:00:45 [DEBUG]   perfil INSERT IGNORE OK — ID=2, NOMBRE=Administrador
+2026-04-14 09:00:45 [DEBUG]   perfil INSERT IGNORE OK — ID=3, NOMBRE=Calidad
+2026-04-14 09:00:45 [DEBUG]   perfil INSERT IGNORE OK — ID=4, NOMBRE=Producción
+2026-04-14 09:00:45 [DEBUG]   perfil INSERT IGNORE OK — ID=5, NOMBRE=Logística
+2026-04-14 09:00:45 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2041, ID_PERFIL=2
+2026-04-14 09:00:45 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2115, ID_PERFIL=2
+2026-04-14 09:00:45 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2116, ID_PERFIL=2
+2026-04-14 09:00:45 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2117, ID_PERFIL=2
+2026-04-14 09:00:45 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2041, ID_PERFIL=3
+2026-04-14 09:00:45 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2041, ID_PERFIL=5
+2026-04-14 09:00:45 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2115, ID_PERFIL=5
+2026-04-14 09:00:45 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2116, ID_PERFIL=5
+2026-04-14 09:00:45 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2117, ID_PERFIL=5
+2026-04-14 09:00:45 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2041, ID_PERFIL=4
+2026-04-14 09:00:45 [INFO]   Perfil Permiso: 943 insertados, 10 ignorados.
+2026-04-14 09:00:45 [DEBUG]   usuario INSERT OK — USERNAME=a1, ID_PERFIL=2, ID_ESLABON=2164
+2026-04-14 09:00:45 [DEBUG]   usuario INSERT OK — USERNAME=a2, ID_PERFIL=3, ID_ESLABON=2164
+2026-04-14 09:00:45 [DEBUG]   usuario INSERT OK — USERNAME=a3, ID_PERFIL=4, ID_ESLABON=2164
+2026-04-14 09:00:45 [DEBUG]   usuario INSERT OK — USERNAME=a4, ID_PERFIL=4, ID_ESLABON=2164
+2026-04-14 09:00:45 [DEBUG]   usuario INSERT OK — USERNAME=a5, ID_PERFIL=5, ID_ESLABON=2164
+2026-04-14 09:00:45 [DEBUG]   usuario INSERT OK — USERNAME=a6, ID_PERFIL=5, ID_ESLABON=2164
+2026-04-14 09:00:45 [DEBUG]   usuario INSERT OK — USERNAME=a7, ID_PERFIL=2, ID_ESLABON=2165
+2026-04-14 09:00:45 [DEBUG]   usuario INSERT OK — USERNAME=a8, ID_PERFIL=3, ID_ESLABON=2165
+2026-04-14 09:00:45 [DEBUG]   usuario INSERT OK — USERNAME=a9, ID_PERFIL=4, ID_ESLABON=2165
+2026-04-14 09:00:45 [DEBUG]   usuario INSERT OK — USERNAME=a10, ID_PERFIL=5, ID_ESLABON=2165
+2026-04-14 09:02:37 [INFO] Abriendo fichero Excel: Formulario_Masterdata.xlsx
+2026-04-14 09:02:37 [DEBUG] [Formulario de Registro] 2 filas leídas.
+2026-04-14 09:02:37 [DEBUG] [Formulario de Productos] 11 filas leídas.
+2026-04-14 09:02:38 [DEBUG] [Formulario Proveedores Clientes] 10 filas leídas.
+2026-04-14 09:02:38 [DEBUG] [Formulario de Usuarios] 10 filas leídas.
+2026-04-14 09:02:38 [DEBUG] [Parámetros] Columnas detectadas → NOMBRE=col1, VALOR=col3
+2026-04-14 09:02:38 [DEBUG] [Parámetros] 29 filas leídas.
+2026-04-14 09:02:38 [DEBUG]   [Formulario de Impresoras] Fila 10: 'Impresora Item' omitida (Cantidad=0).
+2026-04-14 09:02:38 [DEBUG]   [Formulario de Impresoras] Fila 11: 'Impresora Agrupación' omitida (Cantidad=0).
+2026-04-14 09:02:38 [DEBUG]   [Formulario de Impresoras] Fila 13: 'Onelite' omitida (Cantidad=0).
+2026-04-14 09:02:38 [DEBUG] [Formulario de Impresoras] 1 impresoras activas leídas.
+2026-04-14 09:02:38 [DEBUG] [Formulario de Stock] Columnas detectadas: {'lote': 2, 'gtin': 0, 'vto': 3, 'serie': 1, 'pack': 4, 'pallet': 5, 'url': 6}
+2026-04-14 09:02:38 [DEBUG] [Formulario de Stock] 0 filas leídas.
+2026-04-14 09:02:38 [DEBUG] [Perfil Permiso] Columnas detectadas: {'perfil': 0, 'accion': 1, 'modulo': 2, 'script': 3}
+2026-04-14 09:02:38 [DEBUG] [Perfil Permiso] 953 filas leídas.
+2026-04-14 09:02:38 [INFO] Fichero leído — Registro: 2 filas, Productos: 11 filas, Proveedores: 10 filas, Usuarios: 10 filas, Parámetros: 29 filas, Impresoras: 1 filas activas, Stock: 0 series, Perfil Permiso: 953 filas
+2026-04-14 09:02:38 [DEBUG]   eslabon ya existe, ignorado — GLN=7798645330001
+2026-04-14 09:02:38 [DEBUG]   eslabon ya existe, ignorado — GLN=7798645330002
+2026-04-14 09:02:38 [INFO]   ID_LAB resuelto dinámicamente: 2164
+2026-04-14 09:02:38 [DEBUG]   medicamento ya existe, ignorado — BC_EAN_1=7790440485910
+2026-04-14 09:02:38 [DEBUG]   medicamento ya existe, ignorado — BC_EAN_1=7790440485927
+2026-04-14 09:02:38 [DEBUG]   medicamento ya existe, ignorado — BC_EAN_1=7790440486016
+2026-04-14 09:02:38 [DEBUG]   medicamento ya existe, ignorado — BC_EAN_1=7790440486023
+2026-04-14 09:02:38 [DEBUG]   medicamento ya existe, ignorado — BC_EAN_1=7790440203514
+2026-04-14 09:02:38 [DEBUG]   medicamento ya existe, ignorado — BC_EAN_1=7790440203521
+2026-04-14 09:02:38 [DEBUG]   medicamento ya existe, ignorado — BC_EAN_1=7790440203415
+2026-04-14 09:02:38 [DEBUG]   medicamento ya existe, ignorado — BC_EAN_1=7790440203422
+2026-04-14 09:02:38 [DEBUG]   medicamento ya existe, ignorado — BC_EAN_1=7798049640068
+2026-04-14 09:02:38 [DEBUG]   medicamento ya existe, ignorado — BC_EAN_1=7790440527719
+2026-04-14 09:02:38 [DEBUG]   medicamento ya existe, ignorado — BC_EAN_1=7790440527711
+2026-04-14 09:02:38 [DEBUG]   eslabon ya existe, ignorado — GLN=7793213000006
+2026-04-14 09:02:38 [DEBUG]   eslabon ya existe, ignorado — GLN=7795362000005
+2026-04-14 09:02:38 [DEBUG]   eslabon ya existe, ignorado — GLN=7791763000002
+2026-04-14 09:02:38 [DEBUG]   eslabon ya existe, ignorado — GLN=7795348000005
+2026-04-14 09:02:38 [DEBUG]   eslabon ya existe, ignorado — GLN=7795336000000
+2026-04-14 09:02:38 [DEBUG]   eslabon ya existe, ignorado — GLN=7795325000004
+2026-04-14 09:02:38 [DEBUG]   eslabon ya existe, ignorado — GLN=7792371000002
+2026-04-14 09:02:38 [DEBUG]   eslabon ya existe, ignorado — GLN=7793236000007
+2026-04-14 09:02:38 [DEBUG]   eslabon ya existe, ignorado — GLN=7795381000000
+2026-04-14 09:02:38 [DEBUG]   eslabon ya existe, ignorado — GLN=7795381000099
+2026-04-14 09:02:38 [INFO]   Relaciones: ningún eslabon nuevo — omitido
+2026-04-14 09:02:38 [DEBUG]   configuracion UPDATE OK — NOMBRE=INACTIVE_TIME_OUT (sin cambio, valor identico)
+2026-04-14 09:02:38 [DEBUG]   configuracion UPDATE OK — NOMBRE=CANT_DASH (sin cambio, valor identico)
+2026-04-14 09:02:38 [DEBUG]   configuracion UPDATE OK — NOMBRE=TABLE_SIZE (sin cambio, valor identico)
+2026-04-14 09:02:38 [DEBUG]   configuracion UPDATE OK — NOMBRE=VENCIMIENTO_LICENCIA_USUARIO (sin cambio, valor identico)
+2026-04-14 09:02:38 [DEBUG]   configuracion UPDATE OK — NOMBRE=DIAS_VTO_PASSWORD (sin cambio, valor identico)
+2026-04-14 09:02:38 [DEBUG]   configuracion UPDATE OK — NOMBRE=CANT_FALLOS_LOGIN (sin cambio, valor identico)
+2026-04-14 09:02:38 [DEBUG]   configuracion UPDATE OK — NOMBRE=URL_ESLABON_UNICA (sin cambio, valor identico)
+2026-04-14 09:02:38 [DEBUG]   configuracion UPDATE OK — NOMBRE=PRINTER_ITEM_PLUGIN (sin cambio, valor identico)
+2026-04-14 09:02:38 [DEBUG]   configuracion UPDATE OK — NOMBRE=DESPACHAR_E_IMPRIMIR (sin cambio, valor identico)
+2026-04-14 09:02:38 [DEBUG]   configuracion UPDATE OK — NOMBRE=SERIAL_SIZE (sin cambio, valor identico)
+2026-04-14 09:02:38 [DEBUG]   configuracion UPDATE OK — NOMBRE=SSCC_COMPANY_PREFFIX (sin cambio, valor identico)
+2026-04-14 09:02:38 [DEBUG]   configuracion UPDATE OK — NOMBRE=SERIAL_SECUENCIAL (sin cambio, valor identico)
+2026-04-14 09:02:38 [DEBUG]   configuracion UPDATE OK — NOMBRE=SERIAL_ALPHANUMERIC (sin cambio, valor identico)
+2026-04-14 09:02:38 [DEBUG]   configuracion UPDATE OK — NOMBRE=CREAR_Y_DESPACHAR_LIBERADO (sin cambio, valor identico)
+2026-04-14 09:02:38 [DEBUG]   configuracion UPDATE OK — NOMBRE=DESPACHAR_EN_CUARENTENA (sin cambio, valor identico)
+2026-04-14 09:02:38 [DEBUG]   configuracion UPDATE OK — NOMBRE=CREAR_Y_PACK (sin cambio, valor identico)
+2026-04-14 09:02:38 [DEBUG]   configuracion UPDATE OK — NOMBRE=CREAR_LIBERADO (sin cambio, valor identico)
+2026-04-14 09:02:38 [DEBUG]   configuracion UPDATE OK — NOMBRE=USE_LOTE_DETALLE (sin cambio, valor identico)
+2026-04-14 09:02:38 [DEBUG]   configuracion UPDATE OK — NOMBRE=PREPARAR_Y_DESPACHAR (sin cambio, valor identico)
+2026-04-14 09:02:38 [DEBUG]   configuracion UPDATE OK — NOMBRE=DESPACHAR_E_INFORMAR (sin cambio, valor identico)
+2026-04-14 09:02:38 [DEBUG]   configuracion UPDATE OK — NOMBRE=RECIBIR_E_INFORMAR (sin cambio, valor identico)
+2026-04-14 09:02:38 [DEBUG]   configuracion UPDATE OK — NOMBRE=DEVOLVER_E_INFORMAR (sin cambio, valor identico)
+2026-04-14 09:02:38 [DEBUG]   configuracion UPDATE OK — NOMBRE=LIBERAR_E_INFORMAR (sin cambio, valor identico)
+2026-04-14 09:02:38 [DEBUG]   configuracion UPDATE OK — NOMBRE=VENDER_E_INFORMAR (sin cambio, valor identico)
+2026-04-14 09:02:38 [DEBUG]   configuracion UPDATE OK — NOMBRE=DISPENSAR_E_INFORMAR (sin cambio, valor identico)
+2026-04-14 09:02:38 [DEBUG]   configuracion UPDATE OK — NOMBRE=LOTE_MAX_SIZE (sin cambio, valor identico)
+2026-04-14 09:02:38 [DEBUG]   configuracion UPDATE OK — NOMBRE=PREGUNTAR_TIPO_DESPACHO (sin cambio, valor identico)
+2026-04-14 09:02:38 [DEBUG]   configuracion UPDATE OK — NOMBRE=USE_VALIDACION_LOTE (sin cambio, valor identico)
+2026-04-14 09:02:38 [DEBUG]   configuracion UPDATE OK — NOMBRE=DESPACHO_LOTE_COMPLETO (sin cambio, valor identico)
+2026-04-14 09:02:38 [DEBUG]   printer ya existe, ignorado — nombre=Lixis
+2026-04-14 09:02:38 [DEBUG]   perfil INSERT IGNORE OK — ID=2, NOMBRE=Administrador
+2026-04-14 09:02:38 [DEBUG]   perfil INSERT IGNORE OK — ID=3, NOMBRE=Calidad
+2026-04-14 09:02:38 [DEBUG]   perfil INSERT IGNORE OK — ID=4, NOMBRE=Producción
+2026-04-14 09:02:38 [DEBUG]   perfil INSERT IGNORE OK — ID=5, NOMBRE=Logística
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=6, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=7, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=8, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=14, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=15, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=16, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=17, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=18, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=19, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=20, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=21, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=22, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=23, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=24, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=26, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=27, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=28, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=29, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=30, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=31, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=32, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=33, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=34, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=35, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=36, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=37, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=38, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=39, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=40, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=41, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=42, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=43, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=44, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=45, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=46, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2087, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=48, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=49, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=50, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=51, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=52, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=53, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=54, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=55, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=56, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=57, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=58, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=59, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=60, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=61, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=62, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=63, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=64, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=65, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=66, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=67, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=68, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=69, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=70, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=71, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=72, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=73, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=74, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=75, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=76, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=77, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=78, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=79, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=80, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=81, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=82, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=83, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=84, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=85, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=86, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=87, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=88, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=89, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=90, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=91, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=92, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=94, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=95, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=96, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=97, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=98, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=99, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=100, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=101, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=102, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=103, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=104, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=106, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=107, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=109, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=110, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=111, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=112, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=114, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=116, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=117, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=119, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=120, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=121, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=122, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=123, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=124, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=125, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=126, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=127, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=128, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=129, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=130, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=131, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=132, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=133, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=134, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=135, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=136, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=137, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=138, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=139, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=140, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=141, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=142, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=143, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=144, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=145, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=146, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=147, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=148, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=149, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=150, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=151, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=152, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=153, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=154, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=155, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=156, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=157, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=158, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=159, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=160, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=161, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=162, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=163, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=164, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=165, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=166, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=167, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=168, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=169, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=170, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=171, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=172, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=173, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=174, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=175, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=176, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=177, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=178, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=179, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=180, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=181, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=183, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=184, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=185, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=186, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=190, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=191, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=192, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=193, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=194, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=195, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=196, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=197, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=198, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=199, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=200, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=202, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=203, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=204, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=205, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=208, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=209, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=210, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=211, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=212, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=213, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=214, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=215, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=216, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=230, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=231, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=232, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=235, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=236, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=237, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=238, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=239, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=240, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=241, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=242, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=243, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=244, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=245, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=247, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=248, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=252, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=253, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=254, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=255, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=256, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=257, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=260, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=261, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=262, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=265, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=267, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=268, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=269, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=270, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=271, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=272, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=273, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=276, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=277, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=278, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=279, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=280, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=281, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=282, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=284, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=285, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=286, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=289, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=290, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=299, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=300, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=301, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=304, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=305, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=308, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=310, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=311, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=328, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=329, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=330, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=347, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=348, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=349, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=350, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=351, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=352, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=373, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=374, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=375, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=379, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=380, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=381, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=390, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=394, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=395, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=396, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=400, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=406, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=407, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=408, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=409, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=415, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=422, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=423, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=424, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=425, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=426, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=427, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=428, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=429, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=430, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=431, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=432, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=437, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=440, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=441, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=443, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=444, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=450, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=451, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=454, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=455, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=456, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=463, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=464, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=467, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=468, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=475, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=476, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=477, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=515, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=593, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=604, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=615, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=618, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2001, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2003, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2018, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2022, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2023, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2028, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2041, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2041, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2046, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2060, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2061, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2078, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2080, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2081, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2111, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2112, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2113, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2114, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2115, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2116, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2117, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2118, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2115, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2116, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2117, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2124, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2125, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2126, ID_PERFIL=2
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=6, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=7, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=8, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=14, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=15, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=16, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=17, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=18, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=19, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=20, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=21, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=22, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=23, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=24, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=26, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=27, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=28, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=29, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=30, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=31, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=32, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=33, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=34, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=35, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=36, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=37, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=38, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=39, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=40, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=41, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=44, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=45, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=46, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2087, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=51, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=53, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=54, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=55, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=57, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=59, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=60, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=61, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=67, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=68, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=69, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=70, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=71, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=72, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=73, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=83, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=84, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=88, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=89, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=90, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=91, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=92, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=94, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=95, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=96, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=97, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=98, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=99, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=100, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=101, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=102, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=110, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=112, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=114, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=119, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=120, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=121, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=122, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=123, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=124, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=125, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=126, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=127, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=128, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=129, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=130, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=131, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=132, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=133, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=134, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=135, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=136, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=137, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=140, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=141, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=142, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=146, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=147, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=148, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=149, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=150, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=151, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=152, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=153, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=154, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=155, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=156, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=157, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=167, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=168, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=172, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=173, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=175, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=176, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=177, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=178, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=179, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=180, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=181, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=183, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=184, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=185, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=186, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=190, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=191, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=192, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=193, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=194, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=195, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=196, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=197, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=198, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=199, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=200, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=205, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=208, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=209, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=210, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=211, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=212, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=230, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=231, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=239, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=242, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=243, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=245, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=247, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=248, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=252, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=253, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=254, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=262, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=276, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=285, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=286, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=289, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=290, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=301, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=308, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=310, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=311, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=349, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=350, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=351, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=352, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=380, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=381, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=409, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=415, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=428, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=429, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=430, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=438, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=464, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=467, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=475, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=476, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=477, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=604, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=615, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=618, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2001, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2041, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2041, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2046, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2061, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2078, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2111, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2112, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2113, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2114, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2118, ID_PERFIL=3
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=6, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=7, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=8, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=15, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=16, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=17, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=18, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=19, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=20, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=23, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=24, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=26, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=28, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=29, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=30, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=31, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=32, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=33, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=34, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=35, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=36, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=37, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=38, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=40, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=41, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=42, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=43, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=44, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=45, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=46, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2087, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=48, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=49, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=50, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=51, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=52, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=53, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=54, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=55, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=56, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=57, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=58, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=59, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=60, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=61, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=62, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=63, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=64, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=65, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=66, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=67, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=68, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=69, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=70, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=71, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=72, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=73, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=74, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=75, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=76, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=77, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=78, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=79, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=80, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=81, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=82, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=83, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=84, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=85, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=86, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=87, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=88, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=89, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=90, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=91, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=92, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=95, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=99, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=101, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=102, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=112, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=114, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=119, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=121, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=122, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=123, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=124, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=127, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=128, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=129, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=130, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=132, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=133, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=134, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=135, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=136, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=137, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=138, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=139, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=141, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=143, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=144, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=145, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=150, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=151, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=152, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=155, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=156, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=157, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=158, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=159, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=160, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=161, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=162, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=163, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=164, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=165, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=166, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=167, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=168, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=169, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=170, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=171, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=172, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=173, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=174, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=175, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=176, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=177, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=178, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=179, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=180, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=181, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=183, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=184, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=185, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=186, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=190, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=191, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=192, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=193, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=194, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=195, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=196, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=197, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=198, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=199, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=200, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=205, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=208, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=209, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=210, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=212, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=213, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=214, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=215, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=216, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=230, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=232, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=235, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=236, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=237, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=238, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=239, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=240, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=241, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=244, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=245, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=247, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=248, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=253, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=254, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=255, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=256, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=257, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=260, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=261, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=265, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=267, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=268, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=269, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=270, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=271, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=272, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=273, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=277, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=278, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=279, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=281, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=282, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=284, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=285, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=286, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=289, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=290, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=300, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=304, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=305, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=308, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=310, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=311, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=328, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=329, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=330, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=347, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=348, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=349, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=350, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=374, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=375, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=380, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=381, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=390, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=394, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=395, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=396, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=400, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=406, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=407, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=423, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=424, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=425, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=426, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=427, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=431, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=437, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=440, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=441, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=443, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=444, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=450, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=451, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=454, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=455, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=456, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=464, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=467, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=468, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=475, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=476, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=477, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=515, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=593, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2001, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2003, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2011, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2012, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2013, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2018, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2022, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2023, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2028, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2041, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2041, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2046, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2060, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2078, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2080, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2081, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2112, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2113, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2114, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2115, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2116, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2117, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2118, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2115, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2116, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2117, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2124, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2125, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2126, ID_PERFIL=5
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=6, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=7, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=8, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=18, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=19, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=20, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=21, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=27, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2087, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=68, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=69, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=70, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=71, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=73, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=88, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=89, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=90, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=91, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=92, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=95, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=98, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=99, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=101, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=102, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=103, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=104, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=106, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=107, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=109, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=110, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=111, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=112, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=114, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=116, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=117, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=119, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=120, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=121, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=122, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=123, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=124, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=125, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=126, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=127, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=128, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=129, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=130, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=131, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=132, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=133, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=134, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=135, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=136, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=137, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=138, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=139, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=140, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=141, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=142, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=146, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=147, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=148, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=149, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=150, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=151, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=153, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=154, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=155, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=156, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=157, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=172, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=173, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=175, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=176, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=177, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=178, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=179, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=180, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=181, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=183, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=184, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=185, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=186, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=190, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=191, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=192, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=193, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=194, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=195, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=199, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=200, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=202, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=203, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=204, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=205, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=208, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=209, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=210, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=212, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=230, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=238, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=239, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=241, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=242, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=243, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=244, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=245, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=247, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=248, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=252, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=253, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=260, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=261, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=262, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=276, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=277, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=278, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=279, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=280, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=281, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=282, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=285, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=286, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=289, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=290, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=299, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=308, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=310, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=311, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=350, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=351, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=352, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=379, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=380, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=381, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=394, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=395, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=396, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=408, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=422, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=428, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=429, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=430, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=431, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=432, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=463, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=464, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=467, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=475, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=476, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=477, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=604, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=615, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2001, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2041, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2041, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2046, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2061, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2078, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2111, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2112, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2113, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2114, ID_PERFIL=4
+2026-04-14 09:02:38 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2118, ID_PERFIL=4
+2026-04-14 09:02:38 [INFO]   Perfil Permiso: 0 insertados, 953 ignorados.
+2026-04-14 09:02:38 [DEBUG]   usuario ya existe, ignorado — USERNAME=a1, ID_ESLABON=2164
+2026-04-14 09:02:38 [DEBUG]   usuario ya existe, ignorado — USERNAME=a2, ID_ESLABON=2164
+2026-04-14 09:02:38 [DEBUG]   usuario ya existe, ignorado — USERNAME=a3, ID_ESLABON=2164
+2026-04-14 09:02:38 [DEBUG]   usuario ya existe, ignorado — USERNAME=a4, ID_ESLABON=2164
+2026-04-14 09:02:38 [DEBUG]   usuario ya existe, ignorado — USERNAME=a5, ID_ESLABON=2164
+2026-04-14 09:02:38 [DEBUG]   usuario ya existe, ignorado — USERNAME=a6, ID_ESLABON=2164
+2026-04-14 09:02:38 [DEBUG]   usuario ya existe, ignorado — USERNAME=a7, ID_ESLABON=2165
+2026-04-14 09:02:38 [DEBUG]   usuario ya existe, ignorado — USERNAME=a8, ID_ESLABON=2165
+2026-04-14 09:02:38 [DEBUG]   usuario ya existe, ignorado — USERNAME=a9, ID_ESLABON=2165
+2026-04-14 09:02:38 [DEBUG]   usuario ya existe, ignorado — USERNAME=a10, ID_ESLABON=2165
+2026-04-14 09:06:18 [INFO] Abriendo fichero Excel: Formulario_Masterdata.xlsx
+2026-04-14 09:06:18 [DEBUG] [Formulario de Registro] 2 filas leídas.
+2026-04-14 09:06:18 [DEBUG] [Formulario de Productos] 11 filas leídas.
+2026-04-14 09:06:18 [DEBUG] [Formulario Proveedores Clientes] 10 filas leídas.
+2026-04-14 09:06:18 [DEBUG] [Formulario de Usuarios] 10 filas leídas.
+2026-04-14 09:06:18 [DEBUG] [Parámetros] Columnas detectadas → NOMBRE=col1, VALOR=col3
+2026-04-14 09:06:18 [DEBUG] [Parámetros] 29 filas leídas.
+2026-04-14 09:06:18 [DEBUG]   [Formulario de Impresoras] Fila 10: 'Impresora Item' omitida (Cantidad=0).
+2026-04-14 09:06:18 [DEBUG]   [Formulario de Impresoras] Fila 11: 'Impresora Agrupación' omitida (Cantidad=0).
+2026-04-14 09:06:18 [DEBUG]   [Formulario de Impresoras] Fila 13: 'Onelite' omitida (Cantidad=0).
+2026-04-14 09:06:18 [DEBUG] [Formulario de Impresoras] 1 impresoras activas leídas.
+2026-04-14 09:06:18 [DEBUG] [Formulario de Stock] Columnas detectadas: {'lote': 2, 'gtin': 0, 'vto': 3, 'serie': 1, 'pack': 4, 'pallet': 5, 'url': 6}
+2026-04-14 09:06:18 [DEBUG] [Formulario de Stock] 0 filas leídas.
+2026-04-14 09:06:18 [DEBUG] [Perfil Permiso] Columnas detectadas: {'perfil': 0, 'accion': 1, 'modulo': 2, 'script': 3}
+2026-04-14 09:06:18 [DEBUG] [Perfil Permiso] 953 filas leídas.
+2026-04-14 09:06:18 [INFO] Fichero leído — Registro: 2 filas, Productos: 11 filas, Proveedores: 10 filas, Usuarios: 10 filas, Parámetros: 29 filas, Impresoras: 1 filas activas, Stock: 0 series, Perfil Permiso: 953 filas
+2026-04-14 09:06:18 [DEBUG]   eslabon INSERT OK — RSOC=PRUEBA 1
+2026-04-14 09:06:18 [DEBUG]   eslabon INSERT OK — RSOC=PRUEBA 2
+2026-04-14 09:06:18 [DEBUG]   usuario interfaz INSERT OK — URL=prueba-testing.verifarma.com/segundo, ID_ESLABON=2177
+2026-04-14 09:06:18 [DEBUG]   usuario interfaz INSERT OK — URL=prueba-testing.verifarma.com, ID_ESLABON=2176
+2026-04-14 09:06:18 [INFO]   ID_LAB resuelto dinámicamente: 2176
+2026-04-14 09:06:18 [DEBUG]   medicamento INSERT OK — NOMBRE=ACTOS 15 MG COMPX15
+2026-04-14 09:06:18 [DEBUG]   medicamento INSERT OK — NOMBRE=ACTOS 15 MG COMPX30
+2026-04-14 09:06:18 [DEBUG]   medicamento INSERT OK — NOMBRE=ACTOS 30 MG COMPX15
+2026-04-14 09:06:18 [DEBUG]   medicamento INSERT OK — NOMBRE=ACTOS 30 MG COMPX30
+2026-04-14 09:06:18 [DEBUG]   medicamento INSERT OK — NOMBRE=ACTOS M 500 MG15 MG COMPX15
+2026-04-14 09:06:18 [DEBUG]   medicamento INSERT OK — NOMBRE=ACTOS M 500 MG15 MG COMPX30
+2026-04-14 09:06:18 [DEBUG]   medicamento INSERT OK — NOMBRE=ACTOS M 850 MG15 MG COMPX15
+2026-04-14 09:06:18 [DEBUG]   medicamento INSERT OK — NOMBRE=ACTOS M 850 MG15 MG COMPX30
+2026-04-14 09:06:18 [DEBUG]   medicamento INSERT OK — NOMBRE=AKINETON AX5 X1 ML
+2026-04-14 09:06:18 [DEBUG]   medicamento INSERT OK — NOMBRE=AKINETON COMPX20
+2026-04-14 09:06:18 [DEBUG]   medicamento INSERT OK — NOMBRE=AKINETON COMPX20
+2026-04-14 09:06:18 [DEBUG]   eslabon INSERT OK — RSOC=ALCON
+2026-04-14 09:06:18 [DEBUG]   eslabon INSERT OK — RSOC=ANDRÓMACO
+2026-04-14 09:06:18 [DEBUG]   eslabon INSERT OK — RSOC=ARISTON
+2026-04-14 09:06:18 [DEBUG]   eslabon INSERT OK — RSOC=AULO GELIO ARG.
+2026-04-14 09:06:18 [DEBUG]   eslabon INSERT OK — RSOC=EUROFARMA
+2026-04-14 09:06:18 [DEBUG]   eslabon INSERT OK — RSOC=BAGÓ
+2026-04-14 09:06:18 [DEBUG]   eslabon INSERT OK — RSOC=BAJER
+2026-04-14 09:06:18 [DEBUG]   eslabon INSERT OK — RSOC=BALIARDA
+2026-04-14 09:06:18 [DEBUG]   eslabon INSERT OK — RSOC=BENITOL
+2026-04-14 09:06:18 [DEBUG]   eslabon INSERT OK — RSOC=BENITOL
+2026-04-14 09:06:18 [INFO]   Relaciones: 20 pares x 2 tipos = 40 filas esperadas
+2026-04-14 09:06:18 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2177, ID_RELACION=2180, TIPO=PR
+2026-04-14 09:06:18 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2177, ID_RELACION=2180, TIPO=CL
+2026-04-14 09:06:18 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2177, ID_RELACION=2186, TIPO=PR
+2026-04-14 09:06:18 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2177, ID_RELACION=2186, TIPO=CL
+2026-04-14 09:06:18 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2177, ID_RELACION=2183, TIPO=PR
+2026-04-14 09:06:18 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2177, ID_RELACION=2183, TIPO=CL
+2026-04-14 09:06:18 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2176, ID_RELACION=2178, TIPO=PR
+2026-04-14 09:06:18 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2176, ID_RELACION=2178, TIPO=CL
+2026-04-14 09:06:18 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2177, ID_RELACION=2179, TIPO=PR
+2026-04-14 09:06:18 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2177, ID_RELACION=2179, TIPO=CL
+2026-04-14 09:06:18 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2176, ID_RELACION=2181, TIPO=PR
+2026-04-14 09:06:18 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2176, ID_RELACION=2181, TIPO=CL
+2026-04-14 09:06:18 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2176, ID_RELACION=2187, TIPO=PR
+2026-04-14 09:06:18 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2176, ID_RELACION=2187, TIPO=CL
+2026-04-14 09:06:18 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2177, ID_RELACION=2182, TIPO=PR
+2026-04-14 09:06:18 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2177, ID_RELACION=2182, TIPO=CL
+2026-04-14 09:06:18 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2176, ID_RELACION=2184, TIPO=PR
+2026-04-14 09:06:18 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2176, ID_RELACION=2184, TIPO=CL
+2026-04-14 09:06:18 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2177, ID_RELACION=2185, TIPO=PR
+2026-04-14 09:06:18 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2177, ID_RELACION=2185, TIPO=CL
+2026-04-14 09:06:18 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2176, ID_RELACION=2180, TIPO=PR
+2026-04-14 09:06:18 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2176, ID_RELACION=2180, TIPO=CL
+2026-04-14 09:06:18 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2176, ID_RELACION=2183, TIPO=PR
+2026-04-14 09:06:18 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2176, ID_RELACION=2183, TIPO=CL
+2026-04-14 09:06:18 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2177, ID_RELACION=2178, TIPO=PR
+2026-04-14 09:06:18 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2177, ID_RELACION=2178, TIPO=CL
+2026-04-14 09:06:18 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2177, ID_RELACION=2184, TIPO=PR
+2026-04-14 09:06:18 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2177, ID_RELACION=2184, TIPO=CL
+2026-04-14 09:06:18 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2176, ID_RELACION=2186, TIPO=PR
+2026-04-14 09:06:18 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2176, ID_RELACION=2186, TIPO=CL
+2026-04-14 09:06:18 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2177, ID_RELACION=2181, TIPO=PR
+2026-04-14 09:06:18 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2177, ID_RELACION=2181, TIPO=CL
+2026-04-14 09:06:18 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2177, ID_RELACION=2187, TIPO=PR
+2026-04-14 09:06:18 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2177, ID_RELACION=2187, TIPO=CL
+2026-04-14 09:06:18 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2176, ID_RELACION=2182, TIPO=PR
+2026-04-14 09:06:18 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2176, ID_RELACION=2182, TIPO=CL
+2026-04-14 09:06:18 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2176, ID_RELACION=2179, TIPO=PR
+2026-04-14 09:06:18 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2176, ID_RELACION=2179, TIPO=CL
+2026-04-14 09:06:18 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2176, ID_RELACION=2185, TIPO=PR
+2026-04-14 09:06:18 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2176, ID_RELACION=2185, TIPO=CL
+2026-04-14 09:06:18 [DEBUG]   configuracion UPDATE OK — NOMBRE=INACTIVE_TIME_OUT (sin cambio, valor identico)
+2026-04-14 09:06:18 [DEBUG]   configuracion UPDATE OK — NOMBRE=CANT_DASH (sin cambio, valor identico)
+2026-04-14 09:06:18 [DEBUG]   configuracion UPDATE OK — NOMBRE=TABLE_SIZE (sin cambio, valor identico)
+2026-04-14 09:06:18 [DEBUG]   configuracion UPDATE OK — NOMBRE=VENCIMIENTO_LICENCIA_USUARIO (sin cambio, valor identico)
+2026-04-14 09:06:18 [DEBUG]   configuracion UPDATE OK — NOMBRE=DIAS_VTO_PASSWORD (sin cambio, valor identico)
+2026-04-14 09:06:18 [DEBUG]   configuracion UPDATE OK — NOMBRE=CANT_FALLOS_LOGIN (sin cambio, valor identico)
+2026-04-14 09:06:18 [DEBUG]   configuracion UPDATE OK — NOMBRE=URL_ESLABON_UNICA (sin cambio, valor identico)
+2026-04-14 09:06:18 [DEBUG]   configuracion UPDATE OK — NOMBRE=PRINTER_ITEM_PLUGIN (sin cambio, valor identico)
+2026-04-14 09:06:18 [DEBUG]   configuracion UPDATE OK — NOMBRE=DESPACHAR_E_IMPRIMIR (sin cambio, valor identico)
+2026-04-14 09:06:18 [DEBUG]   configuracion UPDATE OK — NOMBRE=SERIAL_SIZE (sin cambio, valor identico)
+2026-04-14 09:06:18 [DEBUG]   configuracion UPDATE OK — NOMBRE=SSCC_COMPANY_PREFFIX (sin cambio, valor identico)
+2026-04-14 09:06:18 [DEBUG]   configuracion UPDATE OK — NOMBRE=SERIAL_SECUENCIAL (sin cambio, valor identico)
+2026-04-14 09:06:18 [DEBUG]   configuracion UPDATE OK — NOMBRE=SERIAL_ALPHANUMERIC (sin cambio, valor identico)
+2026-04-14 09:06:18 [DEBUG]   configuracion UPDATE OK — NOMBRE=CREAR_Y_DESPACHAR_LIBERADO (sin cambio, valor identico)
+2026-04-14 09:06:18 [DEBUG]   configuracion UPDATE OK — NOMBRE=DESPACHAR_EN_CUARENTENA (sin cambio, valor identico)
+2026-04-14 09:06:18 [DEBUG]   configuracion UPDATE OK — NOMBRE=CREAR_Y_PACK (sin cambio, valor identico)
+2026-04-14 09:06:18 [DEBUG]   configuracion UPDATE OK — NOMBRE=CREAR_LIBERADO (sin cambio, valor identico)
+2026-04-14 09:06:18 [DEBUG]   configuracion UPDATE OK — NOMBRE=USE_LOTE_DETALLE (sin cambio, valor identico)
+2026-04-14 09:06:18 [DEBUG]   configuracion UPDATE OK — NOMBRE=PREPARAR_Y_DESPACHAR (sin cambio, valor identico)
+2026-04-14 09:06:18 [DEBUG]   configuracion UPDATE OK — NOMBRE=DESPACHAR_E_INFORMAR (sin cambio, valor identico)
+2026-04-14 09:06:18 [DEBUG]   configuracion UPDATE OK — NOMBRE=RECIBIR_E_INFORMAR (sin cambio, valor identico)
+2026-04-14 09:06:18 [DEBUG]   configuracion UPDATE OK — NOMBRE=DEVOLVER_E_INFORMAR (sin cambio, valor identico)
+2026-04-14 09:06:18 [DEBUG]   configuracion UPDATE OK — NOMBRE=LIBERAR_E_INFORMAR (sin cambio, valor identico)
+2026-04-14 09:06:18 [DEBUG]   configuracion UPDATE OK — NOMBRE=VENDER_E_INFORMAR (sin cambio, valor identico)
+2026-04-14 09:06:18 [DEBUG]   configuracion UPDATE OK — NOMBRE=DISPENSAR_E_INFORMAR (sin cambio, valor identico)
+2026-04-14 09:06:18 [DEBUG]   configuracion UPDATE OK — NOMBRE=LOTE_MAX_SIZE (sin cambio, valor identico)
+2026-04-14 09:06:18 [DEBUG]   configuracion UPDATE OK — NOMBRE=PREGUNTAR_TIPO_DESPACHO (sin cambio, valor identico)
+2026-04-14 09:06:18 [DEBUG]   configuracion UPDATE OK — NOMBRE=USE_VALIDACION_LOTE (sin cambio, valor identico)
+2026-04-14 09:06:18 [DEBUG]   configuracion UPDATE OK — NOMBRE=DESPACHO_LOTE_COMPLETO (sin cambio, valor identico)
+2026-04-14 09:06:18 [DEBUG]   printer INSERT OK — nombre=Lixis, tipo=item
+2026-04-14 09:06:18 [DEBUG]   perfil INSERT IGNORE OK — ID=2, NOMBRE=Administrador
+2026-04-14 09:06:18 [DEBUG]   perfil INSERT IGNORE OK — ID=3, NOMBRE=Calidad
+2026-04-14 09:06:18 [DEBUG]   perfil INSERT IGNORE OK — ID=4, NOMBRE=Producción
+2026-04-14 09:06:18 [DEBUG]   perfil INSERT IGNORE OK — ID=5, NOMBRE=Logística
+2026-04-14 09:06:18 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2041, ID_PERFIL=2
+2026-04-14 09:06:18 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2120, ID_PERFIL=2
+2026-04-14 09:06:18 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2121, ID_PERFIL=2
+2026-04-14 09:06:18 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2123, ID_PERFIL=2
+2026-04-14 09:06:18 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2041, ID_PERFIL=3
+2026-04-14 09:06:18 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2041, ID_PERFIL=5
+2026-04-14 09:06:18 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2120, ID_PERFIL=5
+2026-04-14 09:06:18 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2121, ID_PERFIL=5
+2026-04-14 09:06:18 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2123, ID_PERFIL=5
+2026-04-14 09:06:18 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2041, ID_PERFIL=4
+2026-04-14 09:06:18 [INFO]   Perfil Permiso: 943 insertados, 10 ignorados.
+2026-04-14 09:06:18 [DEBUG]   usuario INSERT OK — USERNAME=a1, ID_PERFIL=2, ID_ESLABON=2176
+2026-04-14 09:06:18 [DEBUG]   usuario INSERT OK — USERNAME=a2, ID_PERFIL=3, ID_ESLABON=2176
+2026-04-14 09:06:18 [DEBUG]   usuario INSERT OK — USERNAME=a3, ID_PERFIL=4, ID_ESLABON=2176
+2026-04-14 09:06:18 [DEBUG]   usuario INSERT OK — USERNAME=a4, ID_PERFIL=4, ID_ESLABON=2176
+2026-04-14 09:06:18 [DEBUG]   usuario INSERT OK — USERNAME=a5, ID_PERFIL=5, ID_ESLABON=2176
+2026-04-14 09:06:18 [DEBUG]   usuario INSERT OK — USERNAME=a6, ID_PERFIL=5, ID_ESLABON=2176
+2026-04-14 09:06:18 [DEBUG]   usuario INSERT OK — USERNAME=a7, ID_PERFIL=2, ID_ESLABON=2177
+2026-04-14 09:06:18 [DEBUG]   usuario INSERT OK — USERNAME=a8, ID_PERFIL=3, ID_ESLABON=2177
+2026-04-14 09:06:18 [DEBUG]   usuario INSERT OK — USERNAME=a9, ID_PERFIL=4, ID_ESLABON=2177
+2026-04-14 09:06:18 [DEBUG]   usuario INSERT OK — USERNAME=a10, ID_PERFIL=5, ID_ESLABON=2177
+2026-04-14 09:14:32 [INFO] Abriendo fichero Excel: Formulario_Masterdata.xlsx
+2026-04-14 09:14:32 [DEBUG] [Formulario de Registro] 2 filas leídas.
+2026-04-14 09:14:32 [DEBUG] [Formulario de Productos] 11 filas leídas.
+2026-04-14 09:14:33 [DEBUG] [Formulario Proveedores Clientes] 10 filas leídas.
+2026-04-14 09:14:33 [DEBUG] [Formulario de Usuarios] 10 filas leídas.
+2026-04-14 09:14:33 [DEBUG] [Parámetros] Columnas detectadas → NOMBRE=col1, VALOR=col3
+2026-04-14 09:14:33 [DEBUG] [Parámetros] 29 filas leídas.
+2026-04-14 09:14:33 [DEBUG]   [Formulario de Impresoras] Fila 10: 'Impresora Item' omitida (Cantidad=0).
+2026-04-14 09:14:33 [DEBUG]   [Formulario de Impresoras] Fila 11: 'Impresora Agrupación' omitida (Cantidad=0).
+2026-04-14 09:14:33 [DEBUG]   [Formulario de Impresoras] Fila 13: 'Onelite' omitida (Cantidad=0).
+2026-04-14 09:14:33 [DEBUG] [Formulario de Impresoras] 1 impresoras activas leídas.
+2026-04-14 09:14:33 [DEBUG] [Formulario de Stock] Columnas detectadas: {'lote': 2, 'gtin': 0, 'vto': 3, 'serie': 1, 'pack': 4, 'pallet': 5, 'url': 6}
+2026-04-14 09:14:33 [DEBUG] [Formulario de Stock] 0 filas leídas.
+2026-04-14 09:14:33 [DEBUG] [Perfil Permiso] Columnas detectadas: {'perfil': 0, 'accion': 1, 'modulo': 2, 'script': 3}
+2026-04-14 09:14:33 [DEBUG] [Perfil Permiso] 953 filas leídas.
+2026-04-14 09:14:33 [INFO] Fichero leído — Registro: 2 filas, Productos: 11 filas, Proveedores: 10 filas, Usuarios: 10 filas, Parámetros: 29 filas, Impresoras: 1 filas activas, Stock: 0 series, Perfil Permiso: 953 filas
+2026-04-14 09:14:33 [DEBUG]   eslabon INSERT OK — RSOC=PRUEBA 1
+2026-04-14 09:14:33 [DEBUG]   eslabon INSERT OK — RSOC=PRUEBA 2
+2026-04-14 09:14:33 [DEBUG]   usuario interfaz INSERT OK — URL=prueba-testing.verifarma.com, ID_ESLABON=2188
+2026-04-14 09:14:33 [DEBUG]   usuario interfaz INSERT OK — URL=prueba-testing.verifarma.com/segundo, ID_ESLABON=2189
+2026-04-14 09:14:33 [INFO]   ID_LAB resuelto dinámicamente: 2188
+2026-04-14 09:14:33 [DEBUG]   medicamento INSERT OK — NOMBRE=ACTOS 15 MG COMPX15
+2026-04-14 09:14:33 [DEBUG]   medicamento INSERT OK — NOMBRE=ACTOS 15 MG COMPX30
+2026-04-14 09:14:33 [DEBUG]   medicamento INSERT OK — NOMBRE=ACTOS 30 MG COMPX15
+2026-04-14 09:14:33 [DEBUG]   medicamento INSERT OK — NOMBRE=ACTOS 30 MG COMPX30
+2026-04-14 09:14:33 [DEBUG]   medicamento INSERT OK — NOMBRE=ACTOS M 500 MG15 MG COMPX15
+2026-04-14 09:14:33 [DEBUG]   medicamento INSERT OK — NOMBRE=ACTOS M 500 MG15 MG COMPX30
+2026-04-14 09:14:33 [DEBUG]   medicamento INSERT OK — NOMBRE=ACTOS M 850 MG15 MG COMPX15
+2026-04-14 09:14:33 [DEBUG]   medicamento INSERT OK — NOMBRE=ACTOS M 850 MG15 MG COMPX30
+2026-04-14 09:14:33 [DEBUG]   medicamento INSERT OK — NOMBRE=AKINETON AX5 X1 ML
+2026-04-14 09:14:33 [DEBUG]   medicamento INSERT OK — NOMBRE=AKINETON COMPX20
+2026-04-14 09:14:33 [DEBUG]   medicamento INSERT OK — NOMBRE=AKINETON COMPX20
+2026-04-14 09:14:33 [DEBUG]   eslabon INSERT OK — RSOC=ALCON
+2026-04-14 09:14:33 [DEBUG]   eslabon INSERT OK — RSOC=ANDRÓMACO
+2026-04-14 09:14:33 [DEBUG]   eslabon INSERT OK — RSOC=ARISTON
+2026-04-14 09:14:33 [DEBUG]   eslabon INSERT OK — RSOC=AULO GELIO ARG.
+2026-04-14 09:14:33 [DEBUG]   eslabon INSERT OK — RSOC=EUROFARMA
+2026-04-14 09:14:33 [DEBUG]   eslabon INSERT OK — RSOC=BAGÓ
+2026-04-14 09:14:33 [DEBUG]   eslabon INSERT OK — RSOC=BAJER
+2026-04-14 09:14:33 [DEBUG]   eslabon INSERT OK — RSOC=BALIARDA
+2026-04-14 09:14:33 [DEBUG]   eslabon INSERT OK — RSOC=BENITOL
+2026-04-14 09:14:33 [DEBUG]   eslabon INSERT OK — RSOC=BENITOL
+2026-04-14 09:14:33 [INFO]   Relaciones: 20 pares x 2 tipos = 40 filas esperadas
+2026-04-14 09:14:33 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2188, ID_RELACION=2192, TIPO=PR
+2026-04-14 09:14:33 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2188, ID_RELACION=2192, TIPO=CL
+2026-04-14 09:14:33 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2189, ID_RELACION=2193, TIPO=PR
+2026-04-14 09:14:33 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2189, ID_RELACION=2193, TIPO=CL
+2026-04-14 09:14:33 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2188, ID_RELACION=2195, TIPO=PR
+2026-04-14 09:14:33 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2188, ID_RELACION=2195, TIPO=CL
+2026-04-14 09:14:33 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2189, ID_RELACION=2190, TIPO=PR
+2026-04-14 09:14:33 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2189, ID_RELACION=2190, TIPO=CL
+2026-04-14 09:14:33 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2189, ID_RELACION=2196, TIPO=PR
+2026-04-14 09:14:33 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2189, ID_RELACION=2196, TIPO=CL
+2026-04-14 09:14:33 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2188, ID_RELACION=2198, TIPO=PR
+2026-04-14 09:14:33 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2188, ID_RELACION=2198, TIPO=CL
+2026-04-14 09:14:33 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2189, ID_RELACION=2199, TIPO=PR
+2026-04-14 09:14:33 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2189, ID_RELACION=2199, TIPO=CL
+2026-04-14 09:14:33 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2188, ID_RELACION=2194, TIPO=PR
+2026-04-14 09:14:33 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2188, ID_RELACION=2194, TIPO=CL
+2026-04-14 09:14:33 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2188, ID_RELACION=2191, TIPO=PR
+2026-04-14 09:14:33 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2188, ID_RELACION=2191, TIPO=CL
+2026-04-14 09:14:33 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2188, ID_RELACION=2197, TIPO=PR
+2026-04-14 09:14:33 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2188, ID_RELACION=2197, TIPO=CL
+2026-04-14 09:14:33 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2189, ID_RELACION=2192, TIPO=PR
+2026-04-14 09:14:33 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2189, ID_RELACION=2192, TIPO=CL
+2026-04-14 09:14:33 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2189, ID_RELACION=2198, TIPO=PR
+2026-04-14 09:14:33 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2189, ID_RELACION=2198, TIPO=CL
+2026-04-14 09:14:33 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2189, ID_RELACION=2195, TIPO=PR
+2026-04-14 09:14:33 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2189, ID_RELACION=2195, TIPO=CL
+2026-04-14 09:14:33 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2188, ID_RELACION=2190, TIPO=PR
+2026-04-14 09:14:33 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2188, ID_RELACION=2190, TIPO=CL
+2026-04-14 09:14:33 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2188, ID_RELACION=2196, TIPO=PR
+2026-04-14 09:14:33 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2188, ID_RELACION=2196, TIPO=CL
+2026-04-14 09:14:33 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2189, ID_RELACION=2191, TIPO=PR
+2026-04-14 09:14:33 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2189, ID_RELACION=2191, TIPO=CL
+2026-04-14 09:14:33 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2188, ID_RELACION=2193, TIPO=PR
+2026-04-14 09:14:33 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2188, ID_RELACION=2193, TIPO=CL
+2026-04-14 09:14:33 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2188, ID_RELACION=2199, TIPO=PR
+2026-04-14 09:14:33 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2188, ID_RELACION=2199, TIPO=CL
+2026-04-14 09:14:33 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2189, ID_RELACION=2194, TIPO=PR
+2026-04-14 09:14:33 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2189, ID_RELACION=2194, TIPO=CL
+2026-04-14 09:14:33 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2189, ID_RELACION=2197, TIPO=PR
+2026-04-14 09:14:33 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2189, ID_RELACION=2197, TIPO=CL
+2026-04-14 09:14:33 [DEBUG]   configuracion UPDATE OK — NOMBRE=INACTIVE_TIME_OUT (sin cambio, valor identico)
+2026-04-14 09:14:33 [DEBUG]   configuracion UPDATE OK — NOMBRE=CANT_DASH (sin cambio, valor identico)
+2026-04-14 09:14:33 [DEBUG]   configuracion UPDATE OK — NOMBRE=TABLE_SIZE (sin cambio, valor identico)
+2026-04-14 09:14:33 [DEBUG]   configuracion UPDATE OK — NOMBRE=VENCIMIENTO_LICENCIA_USUARIO (sin cambio, valor identico)
+2026-04-14 09:14:33 [DEBUG]   configuracion UPDATE OK — NOMBRE=DIAS_VTO_PASSWORD (sin cambio, valor identico)
+2026-04-14 09:14:33 [DEBUG]   configuracion UPDATE OK — NOMBRE=CANT_FALLOS_LOGIN (sin cambio, valor identico)
+2026-04-14 09:14:33 [DEBUG]   configuracion UPDATE OK — NOMBRE=URL_ESLABON_UNICA (sin cambio, valor identico)
+2026-04-14 09:14:33 [DEBUG]   configuracion UPDATE OK — NOMBRE=PRINTER_ITEM_PLUGIN (sin cambio, valor identico)
+2026-04-14 09:14:33 [DEBUG]   configuracion UPDATE OK — NOMBRE=DESPACHAR_E_IMPRIMIR (sin cambio, valor identico)
+2026-04-14 09:14:33 [DEBUG]   configuracion UPDATE OK — NOMBRE=SERIAL_SIZE (sin cambio, valor identico)
+2026-04-14 09:14:33 [DEBUG]   configuracion UPDATE OK — NOMBRE=SSCC_COMPANY_PREFFIX (sin cambio, valor identico)
+2026-04-14 09:14:33 [DEBUG]   configuracion UPDATE OK — NOMBRE=SERIAL_SECUENCIAL (sin cambio, valor identico)
+2026-04-14 09:14:33 [DEBUG]   configuracion UPDATE OK — NOMBRE=SERIAL_ALPHANUMERIC (sin cambio, valor identico)
+2026-04-14 09:14:33 [DEBUG]   configuracion UPDATE OK — NOMBRE=CREAR_Y_DESPACHAR_LIBERADO (sin cambio, valor identico)
+2026-04-14 09:14:33 [DEBUG]   configuracion UPDATE OK — NOMBRE=DESPACHAR_EN_CUARENTENA (sin cambio, valor identico)
+2026-04-14 09:14:33 [DEBUG]   configuracion UPDATE OK — NOMBRE=CREAR_Y_PACK (sin cambio, valor identico)
+2026-04-14 09:14:33 [DEBUG]   configuracion UPDATE OK — NOMBRE=CREAR_LIBERADO (sin cambio, valor identico)
+2026-04-14 09:14:33 [DEBUG]   configuracion UPDATE OK — NOMBRE=USE_LOTE_DETALLE (sin cambio, valor identico)
+2026-04-14 09:14:33 [DEBUG]   configuracion UPDATE OK — NOMBRE=PREPARAR_Y_DESPACHAR (sin cambio, valor identico)
+2026-04-14 09:14:33 [DEBUG]   configuracion UPDATE OK — NOMBRE=DESPACHAR_E_INFORMAR (sin cambio, valor identico)
+2026-04-14 09:14:33 [DEBUG]   configuracion UPDATE OK — NOMBRE=RECIBIR_E_INFORMAR (sin cambio, valor identico)
+2026-04-14 09:14:33 [DEBUG]   configuracion UPDATE OK — NOMBRE=DEVOLVER_E_INFORMAR (sin cambio, valor identico)
+2026-04-14 09:14:33 [DEBUG]   configuracion UPDATE OK — NOMBRE=LIBERAR_E_INFORMAR (sin cambio, valor identico)
+2026-04-14 09:14:33 [DEBUG]   configuracion UPDATE OK — NOMBRE=VENDER_E_INFORMAR (sin cambio, valor identico)
+2026-04-14 09:14:33 [DEBUG]   configuracion UPDATE OK — NOMBRE=DISPENSAR_E_INFORMAR (sin cambio, valor identico)
+2026-04-14 09:14:33 [DEBUG]   configuracion UPDATE OK — NOMBRE=LOTE_MAX_SIZE (sin cambio, valor identico)
+2026-04-14 09:14:33 [DEBUG]   configuracion UPDATE OK — NOMBRE=PREGUNTAR_TIPO_DESPACHO (sin cambio, valor identico)
+2026-04-14 09:14:33 [DEBUG]   configuracion UPDATE OK — NOMBRE=USE_VALIDACION_LOTE (sin cambio, valor identico)
+2026-04-14 09:14:33 [DEBUG]   configuracion UPDATE OK — NOMBRE=DESPACHO_LOTE_COMPLETO (sin cambio, valor identico)
+2026-04-14 09:14:33 [DEBUG]   printer INSERT OK — nombre=Lixis, tipo=item
+2026-04-14 09:14:33 [DEBUG]   perfil INSERT IGNORE OK — ID=2, NOMBRE=Administrador
+2026-04-14 09:14:33 [DEBUG]   perfil INSERT IGNORE OK — ID=3, NOMBRE=Calidad
+2026-04-14 09:14:33 [DEBUG]   perfil INSERT IGNORE OK — ID=4, NOMBRE=Producción
+2026-04-14 09:14:33 [DEBUG]   perfil INSERT IGNORE OK — ID=5, NOMBRE=Logística
+2026-04-14 09:14:33 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2035, ID_PERFIL=2
+2026-04-14 09:14:33 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2041, ID_PERFIL=2
+2026-04-14 09:14:33 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2115, ID_PERFIL=2
+2026-04-14 09:14:33 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2120, ID_PERFIL=2
+2026-04-14 09:14:33 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2116, ID_PERFIL=2
+2026-04-14 09:14:33 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2121, ID_PERFIL=2
+2026-04-14 09:14:33 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2117, ID_PERFIL=2
+2026-04-14 09:14:33 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2123, ID_PERFIL=2
+2026-04-14 09:14:33 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2035, ID_PERFIL=3
+2026-04-14 09:14:33 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2041, ID_PERFIL=3
+2026-04-14 09:14:33 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2035, ID_PERFIL=5
+2026-04-14 09:14:33 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2041, ID_PERFIL=5
+2026-04-14 09:14:33 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2115, ID_PERFIL=5
+2026-04-14 09:14:33 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2120, ID_PERFIL=5
+2026-04-14 09:14:33 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2116, ID_PERFIL=5
+2026-04-14 09:14:33 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2121, ID_PERFIL=5
+2026-04-14 09:14:33 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2117, ID_PERFIL=5
+2026-04-14 09:14:33 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2123, ID_PERFIL=5
+2026-04-14 09:14:33 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2035, ID_PERFIL=4
+2026-04-14 09:14:33 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2041, ID_PERFIL=4
+2026-04-14 09:14:33 [INFO]   Perfil Permiso: 957 insertados, 20 ignorados.
+2026-04-14 09:14:33 [DEBUG]   usuario INSERT OK — USERNAME=a1, ID_PERFIL=2, ID_ESLABON=2188
+2026-04-14 09:14:33 [DEBUG]   usuario INSERT OK — USERNAME=a2, ID_PERFIL=3, ID_ESLABON=2188
+2026-04-14 09:14:33 [DEBUG]   usuario INSERT OK — USERNAME=a3, ID_PERFIL=4, ID_ESLABON=2188
+2026-04-14 09:14:33 [DEBUG]   usuario INSERT OK — USERNAME=a4, ID_PERFIL=4, ID_ESLABON=2188
+2026-04-14 09:14:33 [DEBUG]   usuario INSERT OK — USERNAME=a5, ID_PERFIL=5, ID_ESLABON=2188
+2026-04-14 09:14:33 [DEBUG]   usuario INSERT OK — USERNAME=a6, ID_PERFIL=5, ID_ESLABON=2188
+2026-04-14 09:14:33 [DEBUG]   usuario INSERT OK — USERNAME=a7, ID_PERFIL=2, ID_ESLABON=2189
+2026-04-14 09:14:33 [DEBUG]   usuario INSERT OK — USERNAME=a8, ID_PERFIL=3, ID_ESLABON=2189
+2026-04-14 09:14:33 [DEBUG]   usuario INSERT OK — USERNAME=a9, ID_PERFIL=4, ID_ESLABON=2189
+2026-04-14 09:14:33 [DEBUG]   usuario INSERT OK — USERNAME=a10, ID_PERFIL=5, ID_ESLABON=2189
