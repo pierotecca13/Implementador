@@ -32,6 +32,14 @@ def _to_str(val) -> str | None:
     return str(val) if val is not None else None
 
 
+def _normalize_cuit(val) -> str | None:
+    """Acepta CUIT con o sin guiones (ej: 11-11111111-1 o 11111111111) y devuelve solo dígitos."""
+    s = _to_str(val)
+    if s is None:
+        return None
+    return s.replace("-", "")
+
+
 def _to_int(val) -> int | None:
     if val is None:
         return None
@@ -118,7 +126,7 @@ def read_formulario_registro(wb: openpyxl.Workbook) -> List[Eslabon]:
             break
 
         gln        = _to_str(_cell_value(ws, row, 2))
-        cuit       = _to_str(_cell_value(ws, row, 3))
+        cuit       = _normalize_cuit(_cell_value(ws, row, 3))
         user_anmat = _to_str(_cell_value(ws, row, 4))
         pass_anmat = _to_str(_cell_value(ws, row, 5))
         url        = _to_str(_cell_value(ws, row, 6))
@@ -211,7 +219,7 @@ def read_formulario_proveedores(wb: openpyxl.Workbook) -> List[Eslabon]:
 
         direccion  = _to_str(_cell_value(ws, row, 2))
         gln        = _to_str(_cell_value(ws, row, 3))
-        cuit       = _to_str(_cell_value(ws, row, 4))
+        cuit       = _normalize_cuit(_cell_value(ws, row, 4))
         tipo_raw   = _cell_value(ws, row, 5)
 
         id_empresa, err = _lookup_empresa(tipo_raw, row)

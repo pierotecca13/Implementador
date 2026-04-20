@@ -4615,3 +4615,151 @@ OSError: Missing environment variables: DB_HOST, DB_PORT, DB_USER, DB_PASSWORD, 
 2026-04-14 09:14:33 [DEBUG]   usuario INSERT OK — USERNAME=a8, ID_PERFIL=3, ID_ESLABON=2189
 2026-04-14 09:14:33 [DEBUG]   usuario INSERT OK — USERNAME=a9, ID_PERFIL=4, ID_ESLABON=2189
 2026-04-14 09:14:33 [DEBUG]   usuario INSERT OK — USERNAME=a10, ID_PERFIL=5, ID_ESLABON=2189
+2026-04-20 15:51:00 [INFO] Abriendo fichero Excel: .\Formulario_Masterdata.xlsx
+2026-04-20 15:51:00 [DEBUG] [Formulario de Registro] 2 filas leídas.
+2026-04-20 15:51:00 [DEBUG] [Formulario de Productos] 11 filas leídas.
+2026-04-20 15:51:00 [DEBUG] [Formulario Proveedores Clientes] 10 filas leídas.
+2026-04-20 15:51:00 [DEBUG] [Formulario de Usuarios] 10 filas leídas.
+2026-04-20 15:51:00 [DEBUG] [Parámetros] Columnas detectadas → NOMBRE=col1, VALOR=col3
+2026-04-20 15:51:00 [DEBUG] [Parámetros] 29 filas leídas.
+2026-04-20 15:51:00 [DEBUG]   [Formulario de Impresoras] Fila 10: 'Impresora Item' omitida (Cantidad=0).
+2026-04-20 15:51:00 [DEBUG]   [Formulario de Impresoras] Fila 11: 'Impresora Agrupación' omitida (Cantidad=0).
+2026-04-20 15:51:00 [DEBUG]   [Formulario de Impresoras] Fila 13: 'Onelite' omitida (Cantidad=0).
+2026-04-20 15:51:00 [DEBUG] [Formulario de Impresoras] 1 impresoras activas leídas.
+2026-04-20 15:51:00 [DEBUG] [Formulario de Stock] Columnas detectadas: {'lote': 2, 'gtin': 0, 'vto': 3, 'serie': 1, 'pack': 4, 'pallet': 5, 'url': 6}
+2026-04-20 15:51:00 [DEBUG] [Formulario de Stock] 0 filas leídas.
+2026-04-20 15:51:00 [DEBUG] [Perfil Permiso] Columnas detectadas: {'perfil': 0, 'accion': 1, 'modulo': 2, 'script': 3}
+2026-04-20 15:51:00 [DEBUG] [Perfil Permiso] 953 filas leídas.
+2026-04-20 15:51:00 [INFO] Fichero leído — Registro: 2 filas, Productos: 11 filas, Proveedores: 10 filas, Usuarios: 10 filas, Parámetros: 29 filas, Impresoras: 1 filas activas, Stock: 0 series, Perfil Permiso: 953 filas
+2026-04-20 15:51:00 [DEBUG]   eslabon INSERT OK — RSOC=PRUEBA 1
+2026-04-20 15:51:00 [DEBUG]   eslabon INSERT OK — RSOC=PRUEBA 2
+2026-04-20 15:51:00 [DEBUG]   usuario interfaz INSERT OK — URL=prueba-testing.verifarma.com, ID_ESLABON=2200
+2026-04-20 15:51:00 [DEBUG]   usuario interfaz INSERT OK — URL=prueba-testing.verifarma.com/segundo, ID_ESLABON=2201
+2026-04-20 15:51:00 [INFO]   ID_LAB resuelto dinámicamente: 2200
+2026-04-20 15:51:00 [DEBUG]   medicamento INSERT OK — NOMBRE=ACTOS 15 MG COMPX15
+2026-04-20 15:51:00 [DEBUG]   medicamento INSERT OK — NOMBRE=ACTOS 15 MG COMPX30
+2026-04-20 15:51:00 [DEBUG]   medicamento INSERT OK — NOMBRE=ACTOS 30 MG COMPX15
+2026-04-20 15:51:00 [DEBUG]   medicamento INSERT OK — NOMBRE=ACTOS 30 MG COMPX30
+2026-04-20 15:51:00 [DEBUG]   medicamento INSERT OK — NOMBRE=ACTOS M 500 MG15 MG COMPX15
+2026-04-20 15:51:00 [DEBUG]   medicamento INSERT OK — NOMBRE=ACTOS M 500 MG15 MG COMPX30
+2026-04-20 15:51:00 [DEBUG]   medicamento INSERT OK — NOMBRE=ACTOS M 850 MG15 MG COMPX15
+2026-04-20 15:51:00 [DEBUG]   medicamento INSERT OK — NOMBRE=ACTOS M 850 MG15 MG COMPX30
+2026-04-20 15:51:00 [DEBUG]   medicamento INSERT OK — NOMBRE=AKINETON AX5 X1 ML
+2026-04-20 15:51:00 [DEBUG]   medicamento INSERT OK — NOMBRE=AKINETON COMPX20
+2026-04-20 15:51:00 [DEBUG]   medicamento INSERT OK — NOMBRE=AKINETON COMPX20
+2026-04-20 15:51:00 [DEBUG]   eslabon INSERT OK — RSOC=ALCON
+2026-04-20 15:51:00 [DEBUG]   eslabon INSERT OK — RSOC=ANDRÓMACO
+2026-04-20 15:51:00 [DEBUG]   eslabon INSERT OK — RSOC=ARISTON
+2026-04-20 15:51:00 [DEBUG]   eslabon INSERT OK — RSOC=AULO GELIO ARG.
+2026-04-20 15:51:00 [DEBUG]   eslabon INSERT OK — RSOC=EUROFARMA
+2026-04-20 15:51:00 [DEBUG]   eslabon INSERT OK — RSOC=BAGÓ
+2026-04-20 15:51:00 [DEBUG]   eslabon INSERT OK — RSOC=BAJER
+2026-04-20 15:51:00 [DEBUG]   eslabon INSERT OK — RSOC=BALIARDA
+2026-04-20 15:51:00 [DEBUG]   eslabon INSERT OK — RSOC=BENITOL
+2026-04-20 15:51:00 [DEBUG]   eslabon INSERT OK — RSOC=BENITOL
+2026-04-20 15:51:00 [INFO]   Relaciones: 20 pares x 2 tipos = 40 filas esperadas
+2026-04-20 15:51:00 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2201, ID_RELACION=2202, TIPO=PR
+2026-04-20 15:51:00 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2201, ID_RELACION=2202, TIPO=CL
+2026-04-20 15:51:00 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2201, ID_RELACION=2208, TIPO=PR
+2026-04-20 15:51:00 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2201, ID_RELACION=2208, TIPO=CL
+2026-04-20 15:51:00 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2201, ID_RELACION=2211, TIPO=PR
+2026-04-20 15:51:00 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2201, ID_RELACION=2211, TIPO=CL
+2026-04-20 15:51:00 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2200, ID_RELACION=2203, TIPO=PR
+2026-04-20 15:51:00 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2200, ID_RELACION=2203, TIPO=CL
+2026-04-20 15:51:00 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2200, ID_RELACION=2206, TIPO=PR
+2026-04-20 15:51:00 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2200, ID_RELACION=2206, TIPO=CL
+2026-04-20 15:51:00 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2200, ID_RELACION=2209, TIPO=PR
+2026-04-20 15:51:00 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2200, ID_RELACION=2209, TIPO=CL
+2026-04-20 15:51:00 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2201, ID_RELACION=2204, TIPO=PR
+2026-04-20 15:51:00 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2201, ID_RELACION=2204, TIPO=CL
+2026-04-20 15:51:00 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2201, ID_RELACION=2210, TIPO=PR
+2026-04-20 15:51:00 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2201, ID_RELACION=2210, TIPO=CL
+2026-04-20 15:51:00 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2201, ID_RELACION=2207, TIPO=PR
+2026-04-20 15:51:00 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2201, ID_RELACION=2207, TIPO=CL
+2026-04-20 15:51:00 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2200, ID_RELACION=2202, TIPO=PR
+2026-04-20 15:51:00 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2200, ID_RELACION=2202, TIPO=CL
+2026-04-20 15:51:00 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2200, ID_RELACION=2208, TIPO=PR
+2026-04-20 15:51:00 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2200, ID_RELACION=2208, TIPO=CL
+2026-04-20 15:51:00 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2200, ID_RELACION=2205, TIPO=PR
+2026-04-20 15:51:00 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2200, ID_RELACION=2205, TIPO=CL
+2026-04-20 15:51:00 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2200, ID_RELACION=2211, TIPO=PR
+2026-04-20 15:51:00 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2200, ID_RELACION=2211, TIPO=CL
+2026-04-20 15:51:00 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2201, ID_RELACION=2203, TIPO=PR
+2026-04-20 15:51:00 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2201, ID_RELACION=2203, TIPO=CL
+2026-04-20 15:51:00 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2201, ID_RELACION=2206, TIPO=PR
+2026-04-20 15:51:00 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2201, ID_RELACION=2206, TIPO=CL
+2026-04-20 15:51:00 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2201, ID_RELACION=2209, TIPO=PR
+2026-04-20 15:51:00 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2201, ID_RELACION=2209, TIPO=CL
+2026-04-20 15:51:00 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2200, ID_RELACION=2204, TIPO=PR
+2026-04-20 15:51:00 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2200, ID_RELACION=2204, TIPO=CL
+2026-04-20 15:51:00 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2200, ID_RELACION=2210, TIPO=PR
+2026-04-20 15:51:00 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2200, ID_RELACION=2210, TIPO=CL
+2026-04-20 15:51:00 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2200, ID_RELACION=2207, TIPO=PR
+2026-04-20 15:51:00 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2200, ID_RELACION=2207, TIPO=CL
+2026-04-20 15:51:00 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2201, ID_RELACION=2205, TIPO=PR
+2026-04-20 15:51:00 [DEBUG]   eslabon_eslabon INSERT OK — ID_ESLABON=2201, ID_RELACION=2205, TIPO=CL
+2026-04-20 15:51:00 [DEBUG]   configuracion UPDATE OK — NOMBRE=INACTIVE_TIME_OUT (sin cambio, valor identico)
+2026-04-20 15:51:00 [DEBUG]   configuracion UPDATE OK — NOMBRE=CANT_DASH (sin cambio, valor identico)
+2026-04-20 15:51:00 [DEBUG]   configuracion UPDATE OK — NOMBRE=TABLE_SIZE (sin cambio, valor identico)
+2026-04-20 15:51:00 [DEBUG]   configuracion UPDATE OK — NOMBRE=VENCIMIENTO_LICENCIA_USUARIO (sin cambio, valor identico)
+2026-04-20 15:51:00 [DEBUG]   configuracion UPDATE OK — NOMBRE=DIAS_VTO_PASSWORD (sin cambio, valor identico)
+2026-04-20 15:51:00 [DEBUG]   configuracion UPDATE OK — NOMBRE=CANT_FALLOS_LOGIN (sin cambio, valor identico)
+2026-04-20 15:51:00 [DEBUG]   configuracion UPDATE OK — NOMBRE=URL_ESLABON_UNICA (sin cambio, valor identico)
+2026-04-20 15:51:00 [DEBUG]   configuracion UPDATE OK — NOMBRE=PRINTER_ITEM_PLUGIN (sin cambio, valor identico)
+2026-04-20 15:51:00 [DEBUG]   configuracion UPDATE OK — NOMBRE=DESPACHAR_E_IMPRIMIR (sin cambio, valor identico)
+2026-04-20 15:51:00 [DEBUG]   configuracion UPDATE OK — NOMBRE=SERIAL_SIZE (sin cambio, valor identico)
+2026-04-20 15:51:00 [DEBUG]   configuracion UPDATE OK — NOMBRE=SSCC_COMPANY_PREFFIX (sin cambio, valor identico)
+2026-04-20 15:51:00 [DEBUG]   configuracion UPDATE OK — NOMBRE=SERIAL_SECUENCIAL (sin cambio, valor identico)
+2026-04-20 15:51:00 [DEBUG]   configuracion UPDATE OK — NOMBRE=SERIAL_ALPHANUMERIC (sin cambio, valor identico)
+2026-04-20 15:51:00 [DEBUG]   configuracion UPDATE OK — NOMBRE=CREAR_Y_DESPACHAR_LIBERADO (sin cambio, valor identico)
+2026-04-20 15:51:00 [DEBUG]   configuracion UPDATE OK — NOMBRE=DESPACHAR_EN_CUARENTENA (sin cambio, valor identico)
+2026-04-20 15:51:00 [DEBUG]   configuracion UPDATE OK — NOMBRE=CREAR_Y_PACK (sin cambio, valor identico)
+2026-04-20 15:51:00 [DEBUG]   configuracion UPDATE OK — NOMBRE=CREAR_LIBERADO (sin cambio, valor identico)
+2026-04-20 15:51:00 [DEBUG]   configuracion UPDATE OK — NOMBRE=USE_LOTE_DETALLE (sin cambio, valor identico)
+2026-04-20 15:51:00 [DEBUG]   configuracion UPDATE OK — NOMBRE=PREPARAR_Y_DESPACHAR (sin cambio, valor identico)
+2026-04-20 15:51:00 [DEBUG]   configuracion UPDATE OK — NOMBRE=DESPACHAR_E_INFORMAR (sin cambio, valor identico)
+2026-04-20 15:51:00 [DEBUG]   configuracion UPDATE OK — NOMBRE=RECIBIR_E_INFORMAR (sin cambio, valor identico)
+2026-04-20 15:51:00 [DEBUG]   configuracion UPDATE OK — NOMBRE=DEVOLVER_E_INFORMAR (sin cambio, valor identico)
+2026-04-20 15:51:00 [DEBUG]   configuracion UPDATE OK — NOMBRE=LIBERAR_E_INFORMAR (sin cambio, valor identico)
+2026-04-20 15:51:00 [DEBUG]   configuracion UPDATE OK — NOMBRE=VENDER_E_INFORMAR (sin cambio, valor identico)
+2026-04-20 15:51:00 [DEBUG]   configuracion UPDATE OK — NOMBRE=DISPENSAR_E_INFORMAR (sin cambio, valor identico)
+2026-04-20 15:51:00 [DEBUG]   configuracion UPDATE OK — NOMBRE=LOTE_MAX_SIZE (sin cambio, valor identico)
+2026-04-20 15:51:00 [DEBUG]   configuracion UPDATE OK — NOMBRE=PREGUNTAR_TIPO_DESPACHO (sin cambio, valor identico)
+2026-04-20 15:51:00 [DEBUG]   configuracion UPDATE OK — NOMBRE=USE_VALIDACION_LOTE (sin cambio, valor identico)
+2026-04-20 15:51:00 [DEBUG]   configuracion UPDATE OK — NOMBRE=DESPACHO_LOTE_COMPLETO (sin cambio, valor identico)
+2026-04-20 15:51:00 [DEBUG]   printer INSERT OK — nombre=Lixis, tipo=item
+2026-04-20 15:51:00 [DEBUG]   perfil INSERT IGNORE OK — ID=2, NOMBRE=Administrador
+2026-04-20 15:51:00 [DEBUG]   perfil INSERT IGNORE OK — ID=3, NOMBRE=Calidad
+2026-04-20 15:51:00 [DEBUG]   perfil INSERT IGNORE OK — ID=4, NOMBRE=Producción
+2026-04-20 15:51:00 [DEBUG]   perfil INSERT IGNORE OK — ID=5, NOMBRE=Logística
+2026-04-20 15:51:00 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2035, ID_PERFIL=2
+2026-04-20 15:51:00 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2041, ID_PERFIL=2
+2026-04-20 15:51:00 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2115, ID_PERFIL=2
+2026-04-20 15:51:00 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2120, ID_PERFIL=2
+2026-04-20 15:51:00 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2116, ID_PERFIL=2
+2026-04-20 15:51:00 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2121, ID_PERFIL=2
+2026-04-20 15:51:00 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2117, ID_PERFIL=2
+2026-04-20 15:51:00 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2123, ID_PERFIL=2
+2026-04-20 15:51:00 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2035, ID_PERFIL=3
+2026-04-20 15:51:00 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2041, ID_PERFIL=3
+2026-04-20 15:51:00 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2035, ID_PERFIL=5
+2026-04-20 15:51:00 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2041, ID_PERFIL=5
+2026-04-20 15:51:00 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2115, ID_PERFIL=5
+2026-04-20 15:51:00 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2120, ID_PERFIL=5
+2026-04-20 15:51:00 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2116, ID_PERFIL=5
+2026-04-20 15:51:00 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2121, ID_PERFIL=5
+2026-04-20 15:51:00 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2117, ID_PERFIL=5
+2026-04-20 15:51:00 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2123, ID_PERFIL=5
+2026-04-20 15:51:00 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2035, ID_PERFIL=4
+2026-04-20 15:51:00 [DEBUG]   perfil_permiso ya existe, ignorado — ID_PERMISO=2041, ID_PERFIL=4
+2026-04-20 15:51:01 [INFO]   Perfil Permiso: 957 insertados, 20 ignorados.
+2026-04-20 15:51:01 [DEBUG]   usuario INSERT OK — USERNAME=a1, ID_PERFIL=2, ID_ESLABON=2200
+2026-04-20 15:51:01 [DEBUG]   usuario INSERT OK — USERNAME=a2, ID_PERFIL=3, ID_ESLABON=2200
+2026-04-20 15:51:01 [DEBUG]   usuario INSERT OK — USERNAME=a3, ID_PERFIL=4, ID_ESLABON=2200
+2026-04-20 15:51:01 [DEBUG]   usuario INSERT OK — USERNAME=a4, ID_PERFIL=4, ID_ESLABON=2200
+2026-04-20 15:51:01 [DEBUG]   usuario INSERT OK — USERNAME=a5, ID_PERFIL=5, ID_ESLABON=2200
+2026-04-20 15:51:01 [DEBUG]   usuario INSERT OK — USERNAME=a6, ID_PERFIL=5, ID_ESLABON=2200
+2026-04-20 15:51:01 [DEBUG]   usuario INSERT OK — USERNAME=a7, ID_PERFIL=2, ID_ESLABON=2201
+2026-04-20 15:51:01 [DEBUG]   usuario INSERT OK — USERNAME=a8, ID_PERFIL=3, ID_ESLABON=2201
+2026-04-20 15:51:01 [DEBUG]   usuario INSERT OK — USERNAME=a9, ID_PERFIL=4, ID_ESLABON=2201
+2026-04-20 15:51:01 [DEBUG]   usuario INSERT OK — USERNAME=a10, ID_PERFIL=5, ID_ESLABON=2201
