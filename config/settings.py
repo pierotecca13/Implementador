@@ -115,6 +115,7 @@ SPECIAL_QUOTED_PARAMS: set[str] = {
     "PRINTER_LOGI_PALLET_PLUGIN",
     "PRINTER_LOGI_PALLET_NAME",
     "SSCC_COMPANY_PREFFIX",
+    "SERIAL_PREFFIX_COMPANY",
 }
 
 # ── Perfiles hardcodeados — siempre se insertan antes de los usuarios ─────────

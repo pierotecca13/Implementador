@@ -34,11 +34,14 @@ class MySQLEslabonRepository(EslabonRepository):
     def insert(self, eslabon: Eslabon) -> None:
         sql = """
             INSERT INTO eslabon
-                (ID_EMPRESA, RSOC, GLN, CUIT, USER_ANMAT, PASS_ANMAT, URL, DIRECCION, ACTIVO, IMAGEN)
+                (ID_EMPRESA, RSOC, GLN, CUIT, USER_ANMAT, PASS_ANMAT, URL, DIRECCION, ACTIVO, IMAGEN,
+                 WS_USER_ANMAT, WS_PASS_ANMAT)
             VALUES
-                (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
         """
         imagen = "dynamic" if eslabon.URL else None
+        ws_user_anmat = "testwservice" if eslabon.URL else None
+        ws_pass_anmat = "testwservicepsw" if eslabon.URL else None
         params = (
             eslabon.ID_EMPRESA,
             eslabon.RSOC,
@@ -50,6 +53,8 @@ class MySQLEslabonRepository(EslabonRepository):
             eslabon.DIRECCION,
             eslabon.ACTIVO,
             imagen,
+            ws_user_anmat,
+            ws_pass_anmat,
         )
         cursor = self._conn.cursor()
         cursor.execute(sql, params)
@@ -209,6 +214,42 @@ class MySQLConfiguracionRepository(ConfiguracionRepository):
         cursor.close()
         return affected  # 1 = changed, 0 = existed but same value
 
+    def get_id_by_nombre(self, nombre: str) -> Optional[int]:
+        cursor = self._conn.cursor()
+        cursor.execute(
+            "SELECT ID_CONFIGURACION FROM configuracion WHERE TRIM(NOMBRE) = TRIM(%s) LIMIT 1",
+            (nombre,)
+        )
+        row = cursor.fetchone()
+        cursor.close()
+        return row[0] if row else None
+
+    def insert_configuracion_eslabon(self, id_configuracion: int, id_eslabon: int, valor: str) -> bool:
+        """
+        Inserta en configuracion_eslabon si no existe la combinación (id_configuracion, id_eslabon).
+        Retorna True si insertó, False si ya existía.
+        """
+        cursor = self._conn.cursor()
+        cursor.execute(
+            "SELECT COUNT(*) FROM configuracion_eslabon "
+            "WHERE id_configuracion = %s AND id_eslabon = %s",
+            (id_configuracion, id_eslabon)
+        )
+        already_exists = cursor.fetchone()[0] > 0
+        cursor.close()
+
+        if already_exists:
+            return False
+
+        cursor = self._conn.cursor()
+        cursor.execute(
+            "INSERT INTO configuracion_eslabon (id_configuracion, id_eslabon, valor) "
+            "VALUES (%s, %s, %s)",
+            (id_configuracion, id_eslabon, valor)
+        )
+        cursor.close()
+        return True
+
 
 class MySQLPerfilRepository(PerfilRepository):
 
@@ -234,6 +275,14 @@ class MySQLPerfilRepository(PerfilRepository):
         row = cursor.fetchone()
         cursor.close()
         return row[0] if row else None
+
+    def insert_new(self, nombre: str) -> int:
+        """INSERT a new perfil without a fixed ID (AUTO_INCREMENT). Returns new ID_PERFIL."""
+        cursor = self._conn.cursor()
+        cursor.execute("INSERT INTO perfil (NOMBRE) VALUES (%s)", (nombre,))
+        new_id = cursor.lastrowid
+        cursor.close()
+        return new_id
 
 
 class MySQLPrinterRepository(PrinterRepository):

@@ -46,6 +46,7 @@ class EslabonEslabon:
 class Parametro:
     NOMBRE: str
     VALOR: str
+    url_acceso: Optional[str] = None  # URL(s) de eslabon separadas por coma; None → UPDATE configuracion
 
 
 @dataclass

@@ -56,6 +56,14 @@ class ConfiguracionRepository(ABC):
     def update(self, parametro: Parametro) -> int:
         """UPDATE configuracion SET VALOR WHERE NOMBRE. Returns rows affected."""
 
+    @abstractmethod
+    def get_id_by_nombre(self, nombre: str) -> Optional[int]:
+        """Return ID_CONFIGURACION matching the given NOMBRE, or None if not found."""
+
+    @abstractmethod
+    def insert_configuracion_eslabon(self, id_configuracion: int, id_eslabon: int, valor: str) -> bool:
+        """Inserta en configuracion_eslabon si no existe (id_configuracion, id_eslabon). Retorna True si insertó."""
+
 
 class PerfilRepository(ABC):
 
@@ -66,6 +74,10 @@ class PerfilRepository(ABC):
     @abstractmethod
     def get_id_by_nombre(self, nombre: str) -> Optional[int]:
         """Return ID_PERFIL matching the given NOMBRE, or None if not found."""
+
+    @abstractmethod
+    def insert_new(self, nombre: str) -> int:
+        """INSERT a new perfil without a fixed ID (AUTO_INCREMENT). Returns new ID_PERFIL."""
 
 
 class PrinterRepository(ABC):

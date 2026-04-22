@@ -288,9 +288,20 @@ def read_parametros(wb: openpyxl.Workbook) -> List[Parametro]:
     })
     col_nombre = col_map["nombre"]
     col_valor  = col_map["valor"]
+
+    # Detectar columna opcional "URL acceso" (no requerida — puede no estar en el Excel)
+    col_url_acceso = None
+    _url_acceso_aliases = {"url acceso", "url acceso:", "url_acceso", "url_acceso:"}
+    for _c in range(1, ws.max_column + 1):
+        _raw = ws.cell(row=HEADER_ROW, column=_c).value
+        if _raw is not None and str(_raw).strip().lower() in _url_acceso_aliases:
+            col_url_acceso = _c
+            break
+
     logger.debug(
         f"[{SHEET_PARAMETROS}] Columnas detectadas → "
         f"NOMBRE=col{col_nombre}, VALOR=col{col_valor}"
+        + (f", URL_ACCESO=col{col_url_acceso}" if col_url_acceso else " (sin columna URL acceso)")
     )
 
     for row in range(DATA_START_ROW, ws.max_row + 1):
@@ -314,7 +325,14 @@ def read_parametros(wb: openpyxl.Workbook) -> List[Parametro]:
         if nombre_str in SPECIAL_QUOTED_PARAMS:
             valor_str = f"'{valor_str}'"
 
-        parametros.append(Parametro(NOMBRE=nombre_str, VALOR=valor_str))
+        # URL acceso: una o varias URLs separadas por coma (None si la columna no existe o está vacía)
+        url_acceso = None
+        if col_url_acceso is not None:
+            raw_url = _cell_value(ws, row, col_url_acceso)
+            if raw_url is not None and str(raw_url).strip():
+                url_acceso = str(raw_url).strip()
+
+        parametros.append(Parametro(NOMBRE=nombre_str, VALOR=valor_str, url_acceso=url_acceso))
 
     logger.debug(f"[{SHEET_PARAMETROS}] {len(parametros)} filas leídas.")
     return parametros

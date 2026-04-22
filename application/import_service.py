@@ -338,20 +338,66 @@ class ImportService:
     def _import_parametros(self, parametros: List[Parametro]) -> ImportResult:
         result = ImportResult("Parametros")
         for param in parametros:
-            try:
-                affected = self._configuracion_repo.update(param)
-                if affected == -1:
-                    result.record_skipped()
-                else:
-                    result.record_ok()
-                    logger.debug(
-                        f"  configuracion UPDATE OK — NOMBRE={param.NOMBRE}"
-                        + (" (sin cambio, valor identico)" if affected == 0 else "")
+            if not param.url_acceso:
+                # Comportamiento original: UPDATE en configuracion
+                try:
+                    affected = self._configuracion_repo.update(param)
+                    if affected == -1:
+                        result.record_skipped()
+                    else:
+                        result.record_ok()
+                        logger.debug(
+                            f"  configuracion UPDATE OK — NOMBRE={param.NOMBRE}"
+                            + (" (sin cambio, valor identico)" if affected == 0 else "")
+                        )
+                except Exception as exc:
+                    result.record_error()
+                    logger.error(f"  configuracion UPDATE error — NOMBRE={param.NOMBRE}: {exc}")
+                    raise
+            else:
+                # Nueva lógica: INSERT en configuracion_eslabon por cada URL
+                id_configuracion = self._configuracion_repo.get_id_by_nombre(param.NOMBRE)
+                if id_configuracion is None:
+                    logger.info(
+                        f"  Parámetro '{param.NOMBRE}' no existe en configuracion — omitido."
                     )
-            except Exception as exc:
-                result.record_error()
-                logger.error(f"  configuracion UPDATE error — NOMBRE={param.NOMBRE}: {exc}")
-                raise
+                    result.record_skipped()
+                    continue
+
+                urls = [u.strip() for u in param.url_acceso.split(",") if u.strip()]
+                for url in urls:
+                    id_eslabon = self._eslabon_repo.get_id_by_url(url)
+                    if id_eslabon is None:
+                        logger.error(
+                            f"  [Parámetros] Eslabon con URL '{url}' no encontrado "
+                            f"para parámetro '{param.NOMBRE}'."
+                        )
+                        result.record_error()
+                        continue
+                    try:
+                        inserted = self._configuracion_repo.insert_configuracion_eslabon(
+                            id_configuracion, id_eslabon, param.VALOR
+                        )
+                        if inserted:
+                            result.record_ok()
+                            logger.debug(
+                                f"  configuracion_eslabon INSERT OK — "
+                                f"NOMBRE={param.NOMBRE}, URL={url}, "
+                                f"ID_CONF={id_configuracion}, ID_ESL={id_eslabon}"
+                            )
+                        else:
+                            result.record_ignored()
+                            logger.debug(
+                                f"  configuracion_eslabon ya existe, ignorado — "
+                                f"NOMBRE={param.NOMBRE}, URL={url}"
+                            )
+                    except Exception as exc:
+                        result.record_error()
+                        logger.error(
+                            f"  configuracion_eslabon INSERT error — "
+                            f"NOMBRE={param.NOMBRE}, URL={url}: {exc}"
+                        )
+                        raise
         return result
 
     def _import_impresoras(self, printers: List[Printer]) -> ImportResult:
@@ -402,19 +448,30 @@ class ImportService:
         return result
 
     def _import_perfiles(self) -> ImportResult:
-        """INSERT IGNORE the 4 hardcoded profiles that must always exist."""
+        """
+        Inserta los 4 perfiles hardcodeados si no existen por nombre.
+        Si el nombre ya existe en DB, se ignora (no se re-inserta con ID fijo).
+        """
         result = ImportResult("Perfiles")
         for p in PERFILES_HARDCODE:
-            perfil = Perfil(ID_PERFIL=p["ID_PERFIL"], NOMBRE=p["NOMBRE"])
+            nombre = p["NOMBRE"]
+            existing_id = self._perfil_repo.get_id_by_nombre(nombre)
+            if existing_id is not None:
+                result.record_ignored()
+                logger.debug(
+                    f"  perfil ya existe, ignorado — NOMBRE={nombre}, ID={existing_id}"
+                )
+                continue
+            perfil = Perfil(ID_PERFIL=p["ID_PERFIL"], NOMBRE=nombre)
             try:
                 self._perfil_repo.insert_ignore(perfil)
                 result.record_ok()
                 logger.debug(
-                    f"  perfil INSERT IGNORE OK — ID={perfil.ID_PERFIL}, NOMBRE={perfil.NOMBRE}"
+                    f"  perfil INSERT IGNORE OK — ID={perfil.ID_PERFIL}, NOMBRE={nombre}"
                 )
             except Exception as exc:
                 result.record_error()
-                logger.error(f"  perfil INSERT error — NOMBRE={perfil.NOMBRE}: {exc}")
+                logger.error(f"  perfil INSERT error — NOMBRE={nombre}: {exc}")
                 raise
         return result
 
@@ -436,19 +493,34 @@ class ImportService:
         # Cache de ID_PERFIL por nombre para evitar queries repetidas del mismo perfil
         perfil_id_cache: dict = {}
 
+        failed_perfiles: set = set()  # nombres de perfiles que no se pudieron crear
         to_insert = []
         for row in rows:
             # Resolver ID_PERFIL (con cache en memoria)
             if row.nombre_perfil not in perfil_id_cache:
                 id_perfil = self._perfil_repo.get_id_by_nombre(row.nombre_perfil)
                 if id_perfil is None:
-                    msg = (
-                        f"[Perfil Permiso] Perfil '{row.nombre_perfil}' "
-                        f"no encontrado en tabla perfil."
-                    )
-                    logger.error(f"  {msg}")
-                    raise ValueError(msg)
+                    # Perfil no existe → intentar insertar nuevo con ID automático
+                    try:
+                        id_perfil = self._perfil_repo.insert_new(row.nombre_perfil)
+                        logger.info(
+                            f"  perfil nuevo insertado — "
+                            f"NOMBRE='{row.nombre_perfil}', ID={id_perfil}"
+                        )
+                    except Exception as exc:
+                        logger.error(
+                            f"  [Perfil Permiso] No se pudo insertar perfil "
+                            f"'{row.nombre_perfil}': {exc}"
+                        )
+                        result.record_error()
+                        failed_perfiles.add(row.nombre_perfil)
+                        perfil_id_cache[row.nombre_perfil] = None
+                        continue
                 perfil_id_cache[row.nombre_perfil] = id_perfil
+
+            if row.nombre_perfil in failed_perfiles:
+                result.record_error()
+                continue
             id_perfil = perfil_id_cache[row.nombre_perfil]
 
             # Resolver lista de ID_PERMISO desde (ACCION, MODULO, SCRIPT)
